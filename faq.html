@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions | PhoneShop Help Center & Knowledge Base</title>
+  <meta name="description" content="Get instant answers about PhoneShop's 2-year official manufacturer warranties, factory-sealed authentic devices, same-day dispatch, and 30-day returns.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper" id="site-logo">
+        <img src="img/logo.png" alt="PhoneShop Logo" class="logo-img">
+        <span class="logo-text">Phone<span>Shop</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">All Phones</a>
+        <a href="brands.html" class="nav-link">Brands</a>
+        <a href="deals.html" class="nav-link">Deals <span class="nav-deal-badge">Hot</span></a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="faq.html" class="nav-link active">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-box-toggle">
+          <span class="search-icon-header">🔍</span>
+          <input type="text" class="search-input-header" id="global-search-input" placeholder="Search iPhone, Galaxy..." aria-label="Search smartphones">
+        </div>
+        <a href="cart.html" class="cart-btn" id="nav-cart-btn" aria-label="Shopping Cart">
+          🛒 Cart <span class="cart-badge">0</span>
+        </a>
+        <button class="hamburger-btn" id="nav-toggle" aria-label="Open mobile menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="drawer-close" aria-label="Close menu">&times;</button>
+    <div class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">All Phones</a>
+      <a href="brands.html">Brands</a>
+      <a href="deals.html">Flash Deals</a>
+      <a href="cart.html">My Cart (<span class="cart-badge">0</span>)</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Support</a>
+      <a href="faq.html" class="active">Warranty & FAQ</a>
+    </div>
+  </div>
+  <div class="overlay" id="drawer-overlay"></div>
+
+  <!-- Hero & Search Section -->
+  <section class="faq-hero">
+    <div class="container" style="max-width: 820px; position: relative; z-index: 2;">
+      <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius-full); padding: 6px 16px; font-size: 0.82rem; font-weight: 600; color: #60a5fa; margin-bottom: 20px;">
+        <span class="pulse-dot"></span> Official Support & Knowledge Base
+      </div>
+
+      <h1 style="font-size: 3.2rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 14px; line-height: 1.15;">
+        How Can We <span>Help You</span> Today?
+      </h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: 35px; max-width: 650px; margin-left: auto; margin-right: auto;">
+        Instant answers regarding our 2-year official warranties, factory-sealed authentic devices, express GPS delivery, and hassle-free returns.
+      </p>
+
+      <!-- Search Box with Clear Button -->
+      <div class="faq-search-wrapper">
+        <span class="faq-search-icon">🔍</span>
+        <input type="text" id="faq-search-input" class="faq-search-input" placeholder="Type a question or keyword (e.g. warranty, return, battery, shipping)..." aria-label="Search questions">
+        <span class="faq-search-clear" id="faq-search-clear" title="Clear search">&times;</span>
+      </div>
+
+      <!-- Quick Popular Tags -->
+      <div class="faq-popular-tags">
+        <span style="color: var(--text-dim);">Popular topics:</span>
+        <span class="faq-popular-tag" data-keyword="warranty">🛡️ 2-Year Warranty</span>
+        <span class="faq-popular-tag" data-keyword="sealed">✨ Factory Sealed</span>
+        <span class="faq-popular-tag" data-keyword="shipping">🚚 Express Shipping</span>
+        <span class="faq-popular-tag" data-keyword="returns">🔄 30-Day Returns</span>
+        <span class="faq-popular-tag" data-keyword="tradein">📱 Trade-In Credit</span>
+        <span class="faq-popular-tag" data-keyword="installments">💳 0% Financing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main FAQ Content Section -->
+  <section class="section" style="padding-top: 50px;">
+    <div class="container" style="max-width: 980px;">
+
+      <!-- Interactive Category Cards Grid -->
+      <div class="faq-category-grid" id="faq-category-tabs">
+        <div class="faq-category-card active" data-cat="all">
+          <div class="faq-cat-icon">📑</div>
+          <div class="faq-cat-title">All Topics</div>
+          <div class="faq-cat-count" id="count-all">10 Articles</div>
+        </div>
+
+        <div class="faq-category-card" data-cat="warranty">
+          <div class="faq-cat-icon">🛡️</div>
+          <div class="faq-cat-title">Warranty & Repairs</div>
+          <div class="faq-cat-count">2-Year Coverage</div>
+        </div>
+
+        <div class="faq-category-card" data-cat="shipping">
+          <div class="faq-cat-icon">🚚</div>
+          <div class="faq-cat-title">Shipping & Courier</div>
+          <div class="faq-cat-count">Tracked Dispatch</div>
+        </div>
+
+        <div class="faq-category-card" data-cat="returns">
+          <div class="faq-cat-icon">🔄</div>
+          <div class="faq-cat-title">Returns & Refunds</div>
+          <div class="faq-cat-count">30-Day Guarantee</div>
+        </div>
+
+        <div class="faq-category-card" data-cat="payment">
+          <div class="faq-cat-icon">💳</div>
+          <div class="faq-cat-title">Payment & Klarna</div>
+          <div class="faq-cat-count">0% Installments</div>
+        </div>
+
+        <div class="faq-category-card" data-cat="tradein">
+          <div class="faq-cat-icon">📱</div>
+          <div class="faq-cat-title">Trade-In Program</div>
+          <div class="faq-cat-count">Up to $650 Credit</div>
+        </div>
+      </div>
+
+      <!-- Active Filter Status Bar -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color);">
+        <div style="font-size: 0.95rem; color: var(--text-muted);">
+          Showing: <strong id="faq-active-filter-label" style="color: #fff;">All Questions</strong>
+          (<span id="faq-results-count" style="color: var(--primary); font-weight: 700;">10</span> found)
+        </div>
+        <button id="faq-expand-all-btn" style="color: var(--primary); font-size: 0.85rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 4px;">
+          <span>↕</span> Expand All
+        </button>
+      </div>
+
+      <!-- Accordion List Container -->
+      <div id="faq-accordion-container">
+
+        <!-- 1. Warranty Coverage -->
+        <div class="accordion-item" data-cat="warranty" data-keywords="warranty repair defect motherboard screen replacement apple samsung google">
+          <div class="accordion-header">
+            <div class="accordion-header-left">
+              <span class="accordion-cat-badge" style="color: #60a5fa; border-color: rgba(59, 130, 246, 0.4);">🛡️ Warranty</span>
+              <h3 class="accordion-header-title">What is covered under the PhoneShop 2-Year Official Warranty?</h3>
+            </div>
+            <div class="accordion-icon-circle">▼</div>
+          </div>
+          <div class="accordion-content">
+            <p>Every smartphone purchased through PhoneShop is protected by our comprehensive <strong>24-Month Hardware Warranty</strong>. This coverage protects against any spontaneous hardware defect or manufacturing anomaly, including:</p>
+            <ul style="margin: 12px 0 12px 20px; list-style: disc; color: var(--text-muted);">
+              <li>Motherboard, processor, modem, and thermal sensor failures</li>
+              <li>AMOLED / OLED screen dead pixels, touch layer responsiveness, and display driver artifacts</li>
+              <li>Camera sensor optical stabilization (OIS), autofocus actuators, and telephoto prism motors</li>
+              <li>Battery capacity loss exceeding 20% health within the warranty term</li>
+            </ul>
+
+            <div class="faq-tip-box">
+              <span>💡</span>
+              <div>
+                <strong>OEM Certified Repair Guarantee:</strong> All repairs and replacements are conducted strictly by authorized brand technicians utilizing 100% genuine factory parts with IP68 water-resistance resealing.
+              </div>
+            </div>
+
+            <div class="faq-feedback-row">
+              <span>Was this article helpful?</span>
+              <div class="faq-vote-btns">
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 128)">👍 Yes (128)</button>
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 2)">👎 No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Sealed & Authenticity -->
+        <div class="accordion-item" data-cat="warranty" data-keywords="sealed authentic genuine brand new imei serial unlocked fake original">
+          <div class="accordion-header">
+            <div class="accordion-header-left">
+              <span class="accordion-cat-badge" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.4);">✨ Authenticity</span>
+              <h3 class="accordion-header-title">Are your phones brand new, factory sealed, and unlocked?</h3>
+            </div>
+            <div class="accordion-icon-circle">▼</div>
+          </div>
+          <div class="accordion-content">
+            <p><strong>Absolutely 100% Yes.</strong> We are an authorized direct partner for Apple, Samsung, Google, Xiaomi, OnePlus, Sony, and Asus. We maintain a zero-tolerance policy against refurbished, repackaged, or grey-market devices.</p>
+            <p style="margin-top: 10px;">Every handset arrives:</p>
+            <ul style="margin: 12px 0 12px 20px; list-style: disc; color: var(--text-muted);">
+              <li>Factory sealed with tamper-evident manufacturer holographic pull tabs intact.</li>
+              <li>Factory unlocked for all 5G / LTE GSM & CDMA carriers worldwide (T-Mobile, AT&T, Verizon, Vodafone, etc.).</li>
+              <li>Fully registered with the manufacturer's global IMEI verification database.</li>
+            </ul>
+
+            <div class="faq-feedback-row">
+              <span>Was this article helpful?</span>
+              <div class="faq-vote-btns">
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 94)">👍 Yes (94)</button>
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 0)">👎 No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Filing Claim -->
+        <div class="accordion-item" data-cat="warranty" data-keywords="claim repair RMA broken process ticket replace">
+          <div class="accordion-header">
+            <div class="accordion-header-left">
+              <span class="accordion-cat-badge" style="color: #818cf8; border-color: rgba(129, 140, 248, 0.4);">🛡️ Service</span>
+              <h3 class="accordion-header-title">How do I initiate a warranty claim or hardware repair?</h3>
+            </div>
+            <div class="accordion-icon-circle">▼</div>
+          </div>
+          <div class="accordion-content">
+            <p>Our warranty claim protocol is streamlined for zero friction:</p>
+            <ol style="margin: 12px 0 12px 20px; list-style: decimal; color: var(--text-muted);">
+              <li>Visit our <a href="contact.html" style="color: var(--primary); text-decoration: underline;">Contact Support page</a> or email <a href="mailto:support@phoneshop.io" style="color: var(--primary);">support@phoneshop.io</a> with your order number and phone IMEI.</li>
+              <li>Our automated system generates an insured, prepaid priority courier shipping label within 2 hours.</li>
+              <li>Once our certified laboratory receives the device, diagnostics and repair are completed within <strong>3 to 5 business days</strong>.</li>
+            </ol>
+
+            <div class="faq-tip-box">
+              <span>🚀</span>
+              <div>
+                <strong>Need an interim device?</strong> For flagship tier repairs, ask our concierge about our complimentary courtesy loaner phone program.
+              </div>
+            </div>
+
+            <div class="faq-feedback-row">
+              <span>Was this article helpful?</span>
+              <div class="faq-vote-btns">
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 53)">👍 Yes (53)</button>
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 1)">👎 No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Shipping Speed -->
+        <div class="accordion-item" data-cat="shipping" data-keywords="shipping dispatch time delivery fast overnight express courier">
+          <div class="accordion-header">
+            <div class="accordion-header-left">
+              <span class="accordion-cat-badge" style="color: #34d399; border-color: rgba(52, 211, 153, 0.4);">🚚 Shipping</span>
+              <h3 class="accordion-header-title">How fast will my smartphone be dispatched and delivered?</h3>
+            </div>
+            <div class="accordion-icon-circle">▼</div>
+          </div>
+          <div class="accordion-content">
+            <p>We pride ourselves on the fastest fulfillment times in the consumer electronics sector:</p>
+            <ul style="margin: 12px 0 12px 20px; list-style: disc; color: var(--text-muted);">
+              <li><strong>Same-Day Dispatch:</strong> Orders placed before 3:00 PM EST (Monday–Saturday) depart our climate-controlled warehouse the very same afternoon.</li>
+              <li><strong>Standard Express Courier (Free over $500):</strong> Arrives in 1 to 2 business days via FedEx / UPS Air.</li>
+              <li><strong>Priority Same-Day Air:</strong> Delivered within 24 hours to qualifying metropolitan zip codes.</li>
+            </ul>
+
+            <div class="faq-feedback-row">
+              <span>Was this article helpful?</span>
+              <div class="faq-vote-btns">
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 87)">👍 Yes (87)</button>
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 3)">👎 No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Signature Requirement -->
+        <div class="accordion-item" data-cat="shipping" data-keywords="signature delivery secure package theft courier hold pickup">
+          <div class="accordion-header">
+            <div class="accordion-header-left">
+              <span class="accordion-cat-badge" style="color: #34d399; border-color: rgba(52, 211, 153, 0.4);">🚚 Delivery</span>
+              <h3 class="accordion-header-title">Is adult signature confirmation required upon delivery?</h3>
+            </div>
+            <div class="accordion-icon-circle">▼</div>
+          </div>
+          <div class="accordion-content">
+            <p>Because smartphones are high-value precision electronics, <strong>all parcels require a direct adult signature</strong> at the doorstep to eliminate porch piracy risk.</p>
+            <div class="faq-tip-box">
+              <span>📦</span>
+              <div>
+                <strong>Not going to be home?</strong> Use your tracking SMS or courier app to redirect the package to your nearest verified pickup depot (FedEx Office, UPS Access Point, or Walgreens) free of charge.
+              </div>
+            </div>
+
+            <div class="faq-feedback-row">
+              <span>Was this article helpful?</span>
+              <div class="faq-vote-btns">
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 41)">👍 Yes (41)</button>
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 1)">👎 No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. International Delivery -->
+        <div class="accordion-item" data-cat="shipping" data-keywords="international worldwide countries customs taxes dhl duties europe asia">
+          <div class="accordion-header">
+            <div class="accordion-header-left">
+              <span class="accordion-cat-badge" style="color: #34d399; border-color: rgba(52, 211, 153, 0.4);">🌍 Global</span>
+              <h3 class="accordion-header-title">Do you ship internationally to Canada, Europe, Asia & Australia?</h3>
+            </div>
+            <div class="accordion-icon-circle">▼</div>
+          </div>
+          <div class="accordion-content">
+            <p>Yes, PhoneShop proudly delivers to over <strong>65 countries worldwide</strong> through DHL Express Worldwide and FedEx International Priority.</p>
+            <p style="margin-top: 10px;">Import tariffs, VAT, and brokerage fees are calculated transparently during checkout so there are never any unexpected COD charges when your device crosses borders.</p>
+
+            <div class="faq-feedback-row">
+              <span>Was this article helpful?</span>
+              <div class="faq-vote-btns">
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 35)">👍 Yes (35)</button>
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 2)">👎 No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. 30-Day Money-Back Policy -->
+        <div class="accordion-item" data-cat="returns" data-keywords="returns return policy 30-day refund exchange money back satisfaction restocking">
+          <div class="accordion-header">
+            <div class="accordion-header-left">
+              <span class="accordion-cat-badge" style="color: #f43f5e; border-color: rgba(244, 63, 94, 0.4);">🔄 Returns</span>
+              <h3 class="accordion-header-title">What is your 30-Day Money-Back Guarantee policy?</h3>
+            </div>
+            <div class="accordion-icon-circle">▼</div>
+          </div>
+          <div class="accordion-content">
+            <p>We want you to be completely enamored with your new phone. If for any reason you change your mind within <strong>30 days of delivery</strong>, you may return the device for a 100% full refund or seamless exchange.</p>
+            <ul style="margin: 12px 0 12px 20px; list-style: disc; color: var(--text-muted);">
+              <li><strong>Zero Restocking Fees:</strong> Unlike carrier stores, we never penalize you for testing your device.</li>
+              <li><strong>Prepaid Return Shipping:</strong> We provide a complimentary return postage label.</li>
+              <li><strong>Condition:</strong> The phone should be returned in original cosmetic condition with the box and bundled accessories (cables, manuals).</li>
+            </ul>
+
+            <div class="faq-feedback-row">
+              <span>Was this article helpful?</span>
+              <div class="faq-vote-btns">
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 110)">👍 Yes (110)</button>
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 4)">👎 No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Refund Timing -->
+        <div class="accordion-item" data-cat="returns" data-keywords="refund timeframe days bank card credited timeline">
+          <div class="accordion-header">
+            <div class="accordion-header-left">
+              <span class="accordion-cat-badge" style="color: #f43f5e; border-color: rgba(244, 63, 94, 0.4);">💰 Refunds</span>
+              <h3 class="accordion-header-title">How long does it take for my refund to appear?</h3>
+            </div>
+            <div class="accordion-icon-circle">▼</div>
+          </div>
+          <div class="accordion-content">
+            <p>Once our intake warehouse inspects your returned phone (within 24 hours of arrival), the refund is immediately triggered to your original payment method.</p>
+            <p style="margin-top: 10px;">Credit card settlements typically post to your statement within <strong>2 to 4 business days</strong>. Apple Pay and PayPal transactions usually appear within a few hours.</p>
+
+            <div class="faq-feedback-row">
+              <span>Was this article helpful?</span>
+              <div class="faq-vote-btns">
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 49)">👍 Yes (49)</button>
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 1)">👎 No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Payments & Financing -->
+        <div class="accordion-item" data-cat="payment" data-keywords="payments klarna affirm financing installments apr monthly credit card apple pay paypal">
+          <div class="accordion-header">
+            <div class="accordion-header-left">
+              <span class="accordion-cat-badge" style="color: #a855f7; border-color: rgba(168, 85, 247, 0.4);">💳 Financing</span>
+              <h3 class="accordion-header-title">Which payment methods and 0% APR financing options are supported?</h3>
+            </div>
+            <div class="accordion-icon-circle">▼</div>
+          </div>
+          <div class="accordion-content">
+            <p>We accept all modern secure payment gateways:</p>
+            <ul style="margin: 12px 0 12px 20px; list-style: disc; color: var(--text-muted);">
+              <li><strong>ABA PAY & Bakong KHQR (Recommended):</strong> Scan and pay instantly with 0% processing fees using ABA Mobile, Bakong, or any Cambodian mobile banking app (<a href="https://pay.ababank.com/oRF8/5a5v9i4k" target="_blank" style="color: #00b2e3; font-weight: 700;">pay.ababank.com</a>).</li>
+              <li><strong>Cards:</strong> Visa, MasterCard, American Express, Discover, JCB, and UnionPay.</li>
+              <li><strong>Digital Wallets:</strong> Apple Pay, Google Pay, PayPal One-Touch.</li>
+              <li><strong>Cash on Delivery (COD):</strong> Pay upon arrival and physical inspection of your sealed flagship.</li>
+            </ul>
+
+            <div class="faq-feedback-row">
+              <span>Was this article helpful?</span>
+              <div class="faq-vote-btns">
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 62)">👍 Yes (62)</button>
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 2)">👎 No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Trade-In Program -->
+        <div class="accordion-item" data-cat="tradein" data-keywords="trade in credit old phone sell upgrade bonus assessment kit">
+          <div class="accordion-header">
+            <div class="accordion-header-left">
+              <span class="accordion-cat-badge" style="color: #f59e0b; border-color: rgba(245, 158, 11, 0.4);">📱 Trade-In</span>
+              <h3 class="accordion-header-title">How does the PhoneShop Trade-In credit program work?</h3>
+            </div>
+            <div class="accordion-icon-circle">▼</div>
+          </div>
+          <div class="accordion-content">
+            <p>Upgrading is simple with our 4-step Trade-In exchange program:</p>
+            <ol style="margin: 12px 0 12px 20px; list-style: decimal; color: var(--text-muted);">
+              <li>Select your current phone model on our <a href="deals.html" style="color: var(--primary);">Deals page</a> for an instant appraisal value (up to $650).</li>
+              <li>We send you your new sealed flagship together with a padded, shockproof prepaid trade-in return kit.</li>
+              <li>Take up to 14 days to transfer all your photos, accounts, and 2FA keys at your own convenience.</li>
+              <li>Drop your old phone in the mailer box. The verified value is credited directly back to your payment card.</li>
+            </ol>
+
+            <div class="faq-feedback-row">
+              <span>Was this article helpful?</span>
+              <div class="faq-vote-btns">
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 78)">👍 Yes (78)</button>
+                <button class="faq-vote-btn" onclick="voteHelpful(this, 3)">👎 No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Empty Search Results State -->
+      <div id="faq-empty-state" style="display: none; text-align: center; padding: 60px 20px; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px dashed var(--border-color); margin-top: 20px;">
+        <div style="font-size: 3rem; margin-bottom: 16px;">🔍</div>
+        <h3 style="font-size: 1.4rem; margin-bottom: 8px;">No matching help topics found</h3>
+        <p style="color: var(--text-muted); max-width: 440px; margin: 0 auto 24px;">
+          We couldn't find an answer matching your query. Our 24/7 human technical team is available right now to assist you directly.
+        </p>
+        <button class="btn btn-primary" onclick="resetFaqSearch()">View All Topics</button>
+      </div>
+
+      <!-- Live Concierge Help Card -->
+      <div class="faq-concierge-card" style="margin-top: 60px; margin-bottom: 20px;">
+        <div>
+          <div style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; color: #34d399; font-weight: 700; text-transform: uppercase; margin-bottom: 10px;">
+            <span class="pulse-dot"></span> 4 Smartphone Technicians Active Online
+          </div>
+          <h2 style="font-size: 1.8rem; margin-bottom: 8px; color: #fff;">Still Have Questions?</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 480px; line-height: 1.6;">
+            Speak directly with our hardware specialists. Average wait time is currently under 90 seconds.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" class="btn btn-primary" style="background: linear-gradient(135deg, #229ED9 0%, #0088cc 100%); border: none; font-weight: 700; box-shadow: 0 4px 15px rgba(34, 158, 217, 0.4);">
+            ✈️ Chat Telegram (@kimbunthonICT)
+          </a>
+          <button class="btn btn-secondary" onclick="PhoneShop.showToast('Connecting with available smartphone technician... 🎧', 'info')">
+            💬 Start Live Chat
+          </button>
+          <a href="tel:18005557466" class="btn btn-secondary">
+            📞 1-800-555-PHONE
+          </a>
+          <a href="contact.html" class="btn btn-secondary">
+            ✉️ Submit Ticket
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-wrapper">
+            <img src="img/logo.png" alt="PhoneShop" class="logo-img">
+            <span class="logo-text">Phone<span>Shop</span></span>
+          </a>
+          <p>
+            Your premier destination for official flagship smartphones, cutting-edge technology, and authentic customer care.
+          </p>
+          <div style="color: var(--text-muted); font-size: 0.85rem;">
+            📞 Support: 1-800-555-PHONE (24/7)
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Shop Brands</h4>
+          <div class="footer-links">
+            <a href="brands.html?brand=Apple">Apple iPhones</a>
+            <a href="brands.html?brand=Samsung">Samsung Galaxy</a>
+            <a href="brands.html?brand=Google">Google Pixel</a>
+            <a href="brands.html?brand=Xiaomi">Xiaomi Flagships</a>
+            <a href="brands.html?brand=OnePlus">OnePlus Devices</a>
+            <a href="brands.html?brand=Sony">Sony Xperia</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Customer Care</h4>
+          <div class="footer-links">
+            <a href="faq.html">Warranty Policy</a>
+            <a href="faq.html">Shipping & Delivery</a>
+            <a href="faq.html">Returns & Exchanges</a>
+            <a href="deals.html">Exclusive Deals</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="cart.html">View Cart</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Company</h4>
+          <div class="footer-links">
+            <a href="about.html">About PhoneShop</a>
+            <a href="about.html#locations">Store Locations</a>
+            <a href="contact.html">Corporate Inquiries</a>
+            <a href="faq.html">Trade-In Program</a>
+            <a href="404.html">System Status</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 PhoneShop Inc. All rights reserved. 100% Genuine Guaranteed.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="faq.html">Privacy Policy</a>
+          <a href="faq.html">Terms of Service</a>
+          <a href="faq.html">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="lib/icons.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let allExpanded = false;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const items = document.querySelectorAll('.accordion-item');
+      const cards = document.querySelectorAll('.faq-category-card');
+      const searchInput = document.getElementById('faq-search-input');
+      const searchClear = document.getElementById('faq-search-clear');
+      const filterLabel = document.getElementById('faq-active-filter-label');
+      const resultsCount = document.getElementById('faq-results-count');
+      const emptyState = document.getElementById('faq-empty-state');
+      const expandAllBtn = document.getElementById('faq-expand-all-btn');
+      const popularTags = document.querySelectorAll('.faq-popular-tag');
+
+      // Category titles dictionary
+      const categoryTitles = {
+        'all': 'All Questions',
+        'warranty': 'Warranty & Repair Policies',
+        'shipping': 'Shipping, Dispatch & Delivery',
+        'returns': 'Returns & Refund Guarantees',
+        'payment': 'Payment Methods & Financing',
+        'tradein': 'Trade-In Evaluation & Upgrades'
+      };
+
+      // Accordion toggle
+      items.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        header.addEventListener('click', () => {
+          const isOpen = item.classList.contains('active');
+          if (isOpen) {
+            item.classList.remove('active');
+          } else {
+            item.classList.add('active');
+          }
+        });
+      });
+
+      // Filter logic
+      function filterFaq() {
+        const activeCard = document.querySelector('.faq-category-card.active');
+        const selectedCat = activeCard ? activeCard.getAttribute('data-cat') : 'all';
+        const query = searchInput.value.toLowerCase().trim();
+
+        // Toggle clear button
+        searchClear.style.display = query.length > 0 ? 'block' : 'none';
+
+        let visibleCount = 0;
+
+        items.forEach(item => {
+          const itemCat = item.getAttribute('data-cat');
+          const itemKeywords = (item.getAttribute('data-keywords') || '').toLowerCase();
+          const itemText = item.textContent.toLowerCase();
+
+          const catMatches = (selectedCat === 'all' || itemCat === selectedCat);
+          const queryMatches = !query || itemKeywords.includes(query) || itemText.includes(query);
+
+          if (catMatches && queryMatches) {
+            item.style.display = 'block';
+            visibleCount++;
+            if (query) {
+              item.classList.add('active'); // Auto expand matching queries
+            }
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        resultsCount.textContent = visibleCount;
+        filterLabel.textContent = query ? `Results for "${query}"` : (categoryTitles[selectedCat] || 'Help Topics');
+
+        if (visibleCount === 0) {
+          emptyState.style.display = 'block';
+        } else {
+          emptyState.style.display = 'none';
+        }
+      }
+
+      // Category Cards Click
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          cards.forEach(c => c.classList.remove('active'));
+          card.classList.add('active');
+          searchInput.value = '';
+          filterFaq();
+        });
+      });
+
+      // Search input listener
+      searchInput.addEventListener('input', filterFaq);
+
+      // Search Clear button
+      searchClear.addEventListener('click', () => {
+        searchInput.value = '';
+        searchInput.focus();
+        filterFaq();
+      });
+
+      // Popular tag clicks
+      popularTags.forEach(tag => {
+        tag.addEventListener('click', () => {
+          const kw = tag.getAttribute('data-keyword');
+          searchInput.value = kw;
+          filterFaq();
+        });
+      });
+
+      // Expand / Collapse All
+      expandAllBtn.addEventListener('click', () => {
+        allExpanded = !allExpanded;
+        items.forEach(item => {
+          if (item.style.display !== 'none') {
+            if (allExpanded) {
+              item.classList.add('active');
+            } else {
+              item.classList.remove('active');
+            }
+          }
+        });
+        expandAllBtn.innerHTML = allExpanded ? '<span>↕</span> Collapse All' : '<span>↕</span> Expand All';
+      });
+
+      // Open first accordion item by default
+      if (items.length > 0) items[0].classList.add('active');
+    });
+
+    function resetFaqSearch() {
+      const searchInput = document.getElementById('faq-search-input');
+      const allTab = document.querySelector('.faq-category-card[data-cat="all"]');
+      searchInput.value = '';
+      if (allTab) allTab.click();
+    }
+
+    function voteHelpful(btn, currentCount) {
+      if (btn.classList.contains('voted')) return;
+      btn.classList.add('voted');
+      if (btn.textContent.includes('Yes')) {
+        btn.textContent = `👍 Thank you! (${currentCount + 1})`;
+        PhoneShop.showToast('Thank you for your feedback!', 'success');
+      } else {
+        btn.textContent = `👎 Noted, thank you.`;
+        PhoneShop.showToast('Feedback noted. We will improve this article!', 'info');
+      }
+    }
+  </script>
+</body>
+</html>

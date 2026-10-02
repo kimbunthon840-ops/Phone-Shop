@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Official Smartphone Brands | PhoneShop</title>
+  <meta name="description" content="Explore official collections from world-leading smartphone manufacturers: Apple, Samsung, Google Pixel, Xiaomi, OnePlus, Sony, and Asus ROG.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper" id="site-logo">
+        <img src="img/logo.png" alt="PhoneShop Logo" class="logo-img">
+        <span class="logo-text">Phone<span>Shop</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">All Phones</a>
+        <a href="brands.html" class="nav-link active">Brands</a>
+        <a href="deals.html" class="nav-link">Deals <span class="nav-deal-badge">Hot</span></a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-box-toggle">
+          <span class="search-icon-header">🔍</span>
+          <input type="text" class="search-input-header" id="global-search-input" placeholder="Search iPhone, Galaxy..." aria-label="Search smartphones">
+        </div>
+        <a href="cart.html" class="cart-btn" id="nav-cart-btn" aria-label="Shopping Cart">
+          🛒 Cart <span class="cart-badge">0</span>
+        </a>
+        <button class="hamburger-btn" id="nav-toggle" aria-label="Open mobile menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="drawer-close" aria-label="Close menu">&times;</button>
+    <div class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">All Phones</a>
+      <a href="brands.html" class="active">Brands</a>
+      <a href="deals.html">Flash Deals</a>
+      <a href="cart.html">My Cart (<span class="cart-badge">0</span>)</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Support</a>
+      <a href="faq.html">Warranty & FAQ</a>
+    </div>
+  </div>
+  <div class="overlay" id="drawer-overlay"></div>
+
+  <!-- Header Banner -->
+  <section style="background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 70%); border-bottom: 1px solid var(--border-color); padding: 50px 0 35px;">
+    <div class="container">
+      <div style="display: flex; gap: 8px; font-size: 0.85rem; color: var(--text-dim); margin-bottom: 12px;">
+        <a href="index.html">Home</a> &gt; <span style="color: var(--text-muted);">Brands</span>
+      </div>
+      <h1 style="font-size: 2.6rem; font-weight: 800; margin-bottom: 8px;">Official Brand Showcases</h1>
+      <p style="color: var(--text-muted); max-width: 620px;">
+        PhoneShop is an authorized direct partner for the globe's foremost hardware innovators. Every device ships with full brand warranty and regional support.
+      </p>
+
+      <!-- Brand Navigation Tabs -->
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px;" id="brand-tabs">
+        <button class="btn btn-secondary active brand-tab-btn" data-brand="all">All Brands</button>
+        <button class="btn btn-secondary brand-tab-btn" data-brand="Apple">🍏 Apple</button>
+        <button class="btn btn-secondary brand-tab-btn" data-brand="Samsung">🪐 Samsung</button>
+        <button class="btn btn-secondary brand-tab-btn" data-brand="Google">🔍 Google Pixel</button>
+        <button class="btn btn-secondary brand-tab-btn" data-brand="Xiaomi">🟠 Xiaomi</button>
+        <button class="btn btn-secondary brand-tab-btn" data-brand="OnePlus">🔴 OnePlus</button>
+        <button class="btn btn-secondary brand-tab-btn" data-brand="Sony">🎵 Sony</button>
+        <button class="btn btn-secondary brand-tab-btn" data-brand="Asus">🎮 Asus ROG</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Highlights Banner -->
+  <section class="section" style="padding-bottom: 40px;">
+    <div class="container" id="brand-info-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; display: grid; grid-template-columns: auto 1fr; gap: 30px; align-items: center;">
+      <div style="font-size: 4rem; width: 100px; height: 100px; background: rgba(255,255,255,0.04); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;" id="brand-icon">
+        📱
+      </div>
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+          <h2 style="font-size: 2rem;" id="brand-title">All Partner Brands</h2>
+          <span class="badge badge-new" id="brand-partner-badge">Authorized Retailer</span>
+        </div>
+        <p style="color: var(--text-muted); line-height: 1.6; font-size: 1rem;" id="brand-desc">
+          Browse our handpicked collection from premium smartphone manufacturers with official worldwide warranty, verified sealed packaging, and direct customer care support.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products by Brand -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h3 class="section-title" id="brand-section-header">Available Devices</h3>
+          <p class="section-subtitle" id="brand-count-sub">Showing all available smartphones</p>
+        </div>
+      </div>
+
+      <div class="products-grid" id="brand-products-grid">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-wrapper">
+            <img src="img/logo.png" alt="PhoneShop" class="logo-img">
+            <span class="logo-text">Phone<span>Shop</span></span>
+          </a>
+          <p>
+            Your premier destination for official flagship smartphones, cutting-edge technology, and authentic customer care.
+          </p>
+          <div style="color: var(--text-muted); font-size: 0.85rem;">
+            📞 Support: 1-800-555-PHONE (24/7)
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Shop Brands</h4>
+          <div class="footer-links">
+            <a href="brands.html?brand=Apple">Apple iPhones</a>
+            <a href="brands.html?brand=Samsung">Samsung Galaxy</a>
+            <a href="brands.html?brand=Google">Google Pixel</a>
+            <a href="brands.html?brand=Xiaomi">Xiaomi Flagships</a>
+            <a href="brands.html?brand=OnePlus">OnePlus Devices</a>
+            <a href="brands.html?brand=Sony">Sony Xperia</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Customer Care</h4>
+          <div class="footer-links">
+            <a href="faq.html">Warranty Policy</a>
+            <a href="faq.html">Shipping & Delivery</a>
+            <a href="faq.html">Returns & Exchanges</a>
+            <a href="deals.html">Exclusive Deals</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="cart.html">View Cart</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Company</h4>
+          <div class="footer-links">
+            <a href="about.html">About PhoneShop</a>
+            <a href="about.html#locations">Store Locations</a>
+            <a href="contact.html">Corporate Inquiries</a>
+            <a href="faq.html">Trade-In Program</a>
+            <a href="404.html">System Status</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 PhoneShop Inc. All rights reserved. 100% Genuine Guaranteed.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="faq.html">Privacy Policy</a>
+          <a href="faq.html">Terms of Service</a>
+          <a href="faq.html">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="lib/icons.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      let selectedBrand = urlParams.get('brand') || 'all';
+
+      const brandDetails = {
+        'all': {
+          icon: '📱',
+          title: 'All Partner Brands',
+          desc: 'Explore our complete authorized catalog of smartphones spanning ultra-premium flagships, groundbreaking foldables, and pro gaming powerhouses.'
+        },
+        'Apple': {
+          icon: '🍏',
+          title: 'Apple Inc.',
+          desc: 'Pioneering titanium construction, A18 Pro silicon, Camera Control hardware, and Apple Intelligence privacy-first ecosystem.'
+        },
+        'Samsung': {
+          icon: '🪐',
+          title: 'Samsung Galaxy',
+          desc: 'Uncompromising innovation in foldable engineering, S Pen productivity, 200MP sensor photography, and Galaxy AI translation.'
+        },
+        'Google': {
+          icon: '🔍',
+          title: 'Google Pixel',
+          desc: 'The purest Android experience powered by Google Tensor G4 silicon, Gemini on-device intelligence, and benchmark computational photography.'
+        },
+        'Xiaomi': {
+          icon: '🟠',
+          title: 'Xiaomi & Leica',
+          desc: 'Co-engineered with Leica for optical perfection. Boasting 1-inch quad sensors, 120W HyperCharge, and high-frequency PWM AMOLEDs.'
+        },
+        'OnePlus': {
+          icon: '🔴',
+          title: 'OnePlus',
+          desc: 'Never Settle. Ultra-fast SUPERVOOC charging, fluid 4,500 nit ProXDR displays, and Hasselblad tuned optics.'
+        },
+        'Sony': {
+          icon: '🎵',
+          title: 'Sony Xperia',
+          desc: 'True optical telephoto zoom 85-170mm, 3.5mm audiophile jack, Alpha camera manual controls, and BRAVIA OLED tuning.'
+        },
+        'Asus': {
+          icon: '🎮',
+          title: 'Asus ROG',
+          desc: 'Engineered for competitive mobile esport champions: 165Hz refresh rate, ultrasonic AirTriggers, and advanced GameCool thermal matrix.'
+        }
+      };
+
+      const tabs = document.querySelectorAll('.brand-tab-btn');
+      const grid = document.getElementById('brand-products-grid');
+      const bTitle = document.getElementById('brand-title');
+      const bDesc = document.getElementById('brand-desc');
+      const bIcon = document.getElementById('brand-icon');
+      const bSecHeader = document.getElementById('brand-section-header');
+      const bCount = document.getElementById('brand-count-sub');
+
+      function selectBrand(brand) {
+        selectedBrand = brand;
+
+        // Update tabs
+        tabs.forEach(t => {
+          if (t.getAttribute('data-brand').toLowerCase() === brand.toLowerCase()) {
+            t.classList.add('btn-primary');
+            t.classList.remove('btn-secondary');
+          } else {
+            t.classList.remove('btn-primary');
+            t.classList.add('btn-secondary');
+          }
+        });
+
+        // Update info card
+        const info = brandDetails[brand] || brandDetails['all'];
+        bTitle.textContent = info.title;
+        bDesc.textContent = info.desc;
+        bIcon.textContent = info.icon;
+        bSecHeader.textContent = brand === 'all' ? 'All Smartphones' : `${brand} Collection`;
+
+        // Filter products
+        const filtered = PhoneShop.getProductsByBrand(brand);
+        bCount.textContent = `Showing ${filtered.length} official ${brand === 'all' ? 'devices' : brand + ' phones'}`;
+        grid.innerHTML = filtered.map(p => createProductCardHTML(p)).join('');
+      }
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const brand = tab.getAttribute('data-brand');
+          selectBrand(brand);
+          window.history.replaceState(null, '', `brands.html?brand=${encodeURIComponent(brand)}`);
+        });
+      });
+
+      selectBrand(selectedBrand);
+    });
+  </script>
+</body>
+</html>

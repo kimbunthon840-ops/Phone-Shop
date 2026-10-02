@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Orders & Buyer Reports | PhoneShop</title>
+  <meta name="description" content="Comprehensive customer order reports, sales analytics, delivery status tracking, and exportable buyer records for PhoneShop.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="logo-wrapper" id="site-logo">
+          <img src="img/logo.png" alt="PhoneShop Logo" class="logo-img">
+          <div class="logo-text-wrap">
+            <span class="logo-text">Phone<span>Shop</span></span>
+            <span class="logo-tagline">ORIGINAL STORE</span>
+          </div>
+        </a>
+
+        <!-- Glass Divider between Logo and Links to prevent crowding -->
+        <div class="nav-divider"></div>
+
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="products.html" class="nav-link">All Phones</a>
+          <a href="brands.html" class="nav-link">Brands</a>
+          <a href="deals.html" class="nav-link">Deals <span class="nav-deal-badge">🔥 Hot</span></a>
+          <a href="reports.html" class="nav-link active">Reports <span class="nav-report-badge">📊 Data</span></a>
+          <a href="about.html" class="nav-link">About</a>
+        </nav>
+      </div>
+
+      <div class="nav-actions">
+        <div class="search-box-toggle">
+          <span class="search-icon-header">🔍</span>
+          <input type="text" class="search-input-header" id="global-search-input" placeholder="Search phones..." aria-label="Search smartphones">
+        </div>
+        <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" class="nav-telegram-btn" title="សួរព័ត៌មានតាម Telegram @kimbunthonICT">
+          <span class="tg-status-dot"></span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
+          </svg>
+          <span>Telegram</span>
+        </a>
+        <a href="cart.html" class="cart-btn" id="nav-cart-btn" aria-label="Shopping Cart">
+          <span>🛒</span> <span>Cart</span> <span class="cart-badge">0</span>
+        </a>
+        <button class="hamburger-btn" id="nav-toggle" aria-label="Open mobile menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="drawer-close" aria-label="Close menu">&times;</button>
+    <div class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">All Phones</a>
+      <a href="brands.html">Brands</a>
+      <a href="deals.html">Flash Deals</a>
+      <a href="reports.html" class="active">Buyer Reports 📊</a>
+      <a href="cart.html">My Cart (<span class="cart-badge">0</span>)</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Support</a>
+      <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" style="color: #38bdf8; font-weight: 700; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 12px; margin-top: 8px;">
+        ✈️ Telegram: @kimbunthonICT
+      </a>
+      <a href="faq.html">Warranty & FAQ</a>
+    </div>
+  </div>
+  <div class="overlay" id="drawer-overlay"></div>
+
+  <!-- Page Header Banner -->
+  <section style="background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.22) 0%, rgba(6, 182, 212, 0.08) 50%, transparent 75%); border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding: 46px 0 32px;">
+    <div class="container">
+      <div style="display: flex; gap: 8px; font-size: 0.85rem; color: #64748b; margin-bottom: 12px; font-weight: 500;">
+        <a href="index.html" style="color: #94a3b8;">Home</a> &gt; <span style="color: #38bdf8;">Customer &amp; Order Reports</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 22px;">
+        <div>
+          <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); padding: 4px 12px; border-radius: 999px; font-size: 0.76rem; font-weight: 700; color: #38bdf8; margin-bottom: 10px;">
+            <span class="tg-status-dot" style="width: 6px; height: 6px;"></span>
+            <span>LIVE ANALYTICS &amp; BUYER DATABASE</span>
+          </div>
+          <h1 style="font-size: 2.75rem; font-weight: 800; letter-spacing: -0.8px; margin-bottom: 8px; background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            Customer Orders &amp; Buyer Reports
+          </h1>
+          <p style="color: #94a3b8; font-size: 0.98rem; max-width: 660px; line-height: 1.55;">
+            ផ្ទាំងគ្រប់គ្រងទិន្នន័យអតិថិជន និងរបាយការណ៍បញ្ជាទិញទូរស័ព្ទផ្លូវការ (Comprehensive database tracking customer profiles, purchased smartphone specifications, payment gateways, and delivery statuses).
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+          <button class="btn btn-secondary btn-sm" id="btn-export-csv" onclick="exportOrdersToCSV()" style="backdrop-filter: blur(12px); border-radius: 10px;">
+            📥 Export CSV (Excel)
+          </button>
+          <button class="btn btn-secondary btn-sm" onclick="window.print()" style="backdrop-filter: blur(12px); border-radius: 10px;">
+            🖨️ Print Report
+          </button>
+          <button class="btn btn-primary btn-sm" onclick="openNewOrderModal()" style="border-radius: 10px; box-shadow: 0 4px 18px rgba(59, 130, 246, 0.45);">
+            ➕ Add Buyer Order
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="section" style="padding-top: 35px; padding-bottom: 80px;">
+    <div class="container">
+
+      <!-- Metrics KPI Cards -->
+      <div class="report-metrics-grid">
+        <div class="report-metric-card success">
+          <div class="metric-header">
+            <span class="metric-title">Total Gross Revenue</span>
+            <div class="metric-icon-wrap" style="color: #34d399;">💰</div>
+          </div>
+          <div class="metric-value" id="kpi-revenue">$0</div>
+          <div class="metric-sub">
+            <span class="metric-trend-pill positive">↑ 18.4%</span>
+            <span>vs last month</span>
+          </div>
+          <div class="metric-progress-track">
+            <div class="metric-progress-bar" style="width: 84%;"></div>
+          </div>
+        </div>
+
+        <div class="report-metric-card primary">
+          <div class="metric-header">
+            <span class="metric-title">Total Orders</span>
+            <div class="metric-icon-wrap" style="color: #60a5fa;">📦</div>
+          </div>
+          <div class="metric-value" id="kpi-orders">0</div>
+          <div class="metric-sub">
+            <span id="kpi-processing-count" class="metric-trend-pill neutral">0 processing</span>
+            <span>all verified</span>
+          </div>
+          <div class="metric-progress-track">
+            <div class="metric-progress-bar" style="width: 75%;"></div>
+          </div>
+        </div>
+
+        <div class="report-metric-card info">
+          <div class="metric-header">
+            <span class="metric-title">Active Customers</span>
+            <div class="metric-icon-wrap" style="color: #c084fc;">👥</div>
+          </div>
+          <div class="metric-value" id="kpi-customers">0</div>
+          <div class="metric-sub">
+            <span class="metric-trend-pill neutral">Verified</span>
+            <span>buyer profiles</span>
+          </div>
+          <div class="metric-progress-track">
+            <div class="metric-progress-bar" style="width: 65%;"></div>
+          </div>
+        </div>
+
+        <div class="report-metric-card warning">
+          <div class="metric-header">
+            <span class="metric-title">Avg Order Value (AOV)</span>
+            <div class="metric-icon-wrap" style="color: #fbbf24;">⚡</div>
+          </div>
+          <div class="metric-value" id="kpi-aov">$0</div>
+          <div class="metric-sub">
+            <span class="metric-trend-pill positive">Flagship tier</span>
+            <span>per transaction</span>
+          </div>
+          <div class="metric-progress-track">
+            <div class="metric-progress-bar" style="width: 90%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Status Filter Chips -->
+      <div class="report-quick-filters" id="quick-status-chips">
+        <button class="quick-filter-chip active" onclick="setQuickStatusFilter('all')" data-status="all">
+          <span>✦ All Orders</span> <span class="chip-count" id="chip-count-all">0</span>
+        </button>
+        <button class="quick-filter-chip" onclick="setQuickStatusFilter('aba')" data-status="aba">
+          <span>🇰🇭 Awaiting ABA Pay</span> <span class="chip-count" id="chip-count-aba">0</span>
+        </button>
+        <button class="quick-filter-chip" onclick="setQuickStatusFilter('processing')" data-status="processing">
+          <span>🟡 Processing</span> <span class="chip-count" id="chip-count-processing">0</span>
+        </button>
+        <button class="quick-filter-chip" onclick="setQuickStatusFilter('shipped')" data-status="shipped">
+          <span>🔵 Shipped</span> <span class="chip-count" id="chip-count-shipped">0</span>
+        </button>
+        <button class="quick-filter-chip" onclick="setQuickStatusFilter('delivered')" data-status="delivered">
+          <span>🟢 Delivered</span> <span class="chip-count" id="chip-count-delivered">0</span>
+        </button>
+        <button class="quick-filter-chip" onclick="setQuickStatusFilter('cancelled')" data-status="cancelled">
+          <span>🔴 Cancelled</span> <span class="chip-count" id="chip-count-cancelled">0</span>
+        </button>
+      </div>
+
+      <!-- Action & Filter Bar -->
+      <div class="report-action-bar">
+        <div class="report-search-box">
+          <span style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-dim); pointer-events: none;">🔍</span>
+          <input type="text" id="report-search-input" class="report-search-input" placeholder="Search by customer name, order ID, phone, city..." aria-label="Search customer orders">
+          <span class="report-search-clear" id="report-search-clear" onclick="clearSearchInput()" title="Clear search">✕</span>
+        </div>
+
+        <div class="report-filters-group">
+          <!-- Status Filter -->
+          <select id="filter-status" class="report-select" aria-label="Filter by order status" onchange="syncChipFromDropdown()">
+            <option value="all">All Statuses</option>
+            <option value="aba">Awaiting ABA Pay 🇰🇭</option>
+            <option value="delivered">Delivered 🟢</option>
+            <option value="shipped">Shipped 🔵</option>
+            <option value="processing">Processing 🟡</option>
+            <option value="cancelled">Cancelled 🔴</option>
+          </select>
+
+          <!-- Payment Filter -->
+          <select id="filter-payment" class="report-select" aria-label="Filter by payment method">
+            <option value="all">All Payments</option>
+            <option value="aba">ABA PAY (KHQR) 🇰🇭</option>
+            <option value="card">Credit Card 💳</option>
+            <option value="apple">Apple Pay 🍏</option>
+            <option value="paypal">PayPal 🅿️</option>
+            <option value="cod">Cash on Delivery 💵</option>
+          </select>
+
+          <!-- Sort Filter -->
+          <select id="filter-sort" class="report-select" aria-label="Sort orders">
+            <option value="date-desc">Newest First</option>
+            <option value="date-asc">Oldest First</option>
+            <option value="total-desc">Total: High to Low</option>
+            <option value="total-asc">Total: Low to High</option>
+            <option value="name-asc">Customer Name (A-Z)</option>
+          </select>
+
+          <!-- Reset Filter Button -->
+          <button class="btn btn-secondary btn-sm" onclick="resetReportFilters()" title="Reset all filters">
+            ↺ Reset
+          </button>
+        </div>
+      </div>
+
+      <!-- Data Table Card -->
+      <div class="report-table-card">
+        <div class="report-table-scroll">
+          <table class="report-table" id="orders-report-table">
+            <thead>
+              <tr>
+                <th style="min-width: 155px;">Order ID &amp; Date</th>
+                <th style="min-width: 240px;">Customer Profile</th>
+                <th style="min-width: 280px;">Purchased Smartphone</th>
+                <th style="min-width: 155px;">Payment &amp; Total</th>
+                <th style="min-width: 165px; text-align: center;">Status</th>
+                <th class="col-actions" style="min-width: 140px; text-align: right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="orders-table-body">
+              <!-- Dynamically populated rows -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Empty State -->
+        <div id="report-empty-state" style="display: none; text-align: center; padding: 60px 20px;">
+          <div style="font-size: 3rem; margin-bottom: 12px;">🔍</div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 6px;">No customer orders found</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">Try adjusting your keyword search or changing the filter selections.</p>
+          <button class="btn btn-secondary btn-sm" onclick="resetReportFilters()">Clear Filters</button>
+        </div>
+
+        <!-- Table Footer / Count Bar -->
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.85rem; color: var(--text-dim); background: rgba(255,255,255,0.01); flex-wrap: wrap; gap: 12px;">
+          <div id="table-showing-text">Showing 0 of 0 customer orders</div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button class="btn btn-secondary btn-sm" style="padding: 5px 12px; font-size: 0.8rem;" onclick="clearAllOrdersData()">⚠️ Clear All Data</button>
+            <button class="btn btn-secondary btn-sm" style="padding: 5px 12px; font-size: 0.8rem;" onclick="reloadSampleOrders()">🔄 Restore Demo Records</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modal: View Detailed Invoice -->
+  <div class="modal-overlay" id="invoice-modal">
+    <div class="modal-card" style="max-width: 680px; padding: 36px;">
+      <button class="modal-close-btn" onclick="closeInvoiceModal()">&times;</button>
+      
+      <div id="invoice-modal-content">
+        <!-- Rendered via JS -->
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border-color);">
+        <button class="btn btn-secondary" onclick="closeInvoiceModal()">Close</button>
+        <button class="btn btn-primary" onclick="printInvoice()">🖨️ Print Invoice</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Add New Buyer Order Manually -->
+  <div class="modal-overlay" id="add-order-modal">
+    <div class="modal-card" style="max-width: 640px;">
+      <button class="modal-close-btn" onclick="closeNewOrderModal()">&times;</button>
+      
+      <h2 style="font-size: 1.6rem; margin-bottom: 6px;">Add Customer Order Record</h2>
+      <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 24px;">Enter customer details and smartphone purchase specifications.</p>
+
+      <form id="new-order-form" onsubmit="event.preventDefault(); handleAddNewOrder();" class="form-grid">
+        <div class="form-group">
+          <label class="form-label" for="manual-first-name">First Name *</label>
+          <input type="text" id="manual-first-name" class="form-control" required placeholder="Sokha">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="manual-last-name">Last Name *</label>
+          <input type="text" id="manual-last-name" class="form-control" required placeholder="Chan">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="manual-email">Email Address *</label>
+          <input type="email" id="manual-email" class="form-control" required placeholder="sokha.chan@example.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="manual-phone">Phone Number *</label>
+          <input type="tel" id="manual-phone" class="form-control" required placeholder="+855 12 345 678">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="manual-city">City / Region *</label>
+          <input type="text" id="manual-city" class="form-control" required placeholder="Phnom Penh">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="manual-country">Country *</label>
+          <input type="text" id="manual-country" class="form-control" required placeholder="Cambodia">
+        </div>
+
+        <div class="form-group full">
+          <label class="form-label" for="manual-phone-model">Smartphone Purchased *</label>
+          <select id="manual-phone-model" class="form-control" required>
+            <!-- Populated from PRODUCTS_DATA -->
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="manual-storage">Storage Option</label>
+          <select id="manual-storage" class="form-control">
+            <option value="128GB">128GB</option>
+            <option value="256GB" selected>256GB</option>
+            <option value="512GB">512GB</option>
+            <option value="1TB">1TB</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="manual-qty">Quantity</label>
+          <input type="number" id="manual-qty" class="form-control" min="1" max="10" value="1" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="manual-payment">Payment Method</label>
+          <select id="manual-payment" class="form-control">
+            <option value="aba" selected>ABA PAY (KHQR) 🇰🇭</option>
+            <option value="card">Credit Card 💳</option>
+            <option value="apple">Apple Pay 🍏</option>
+            <option value="paypal">PayPal 🅿️</option>
+            <option value="cod">Cash on Delivery 💵</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="manual-status">Order Status</label>
+          <select id="manual-status" class="form-control">
+            <option value="Processing">Processing 🟡</option>
+            <option value="Shipped">Shipped 🔵</option>
+            <option value="Delivered" selected>Delivered 🟢</option>
+            <option value="Cancelled">Cancelled 🔴</option>
+          </select>
+        </div>
+
+        <div class="form-group full" style="margin-top: 14px;">
+          <button type="submit" class="btn btn-primary btn-block btn-lg">
+            Save Buyer Record 💾
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-wrapper">
+            <img src="img/logo.png" alt="PhoneShop" class="logo-img">
+            <span class="logo-text">Phone<span>Shop</span></span>
+          </a>
+          <p>
+            Your premier destination for official flagship smartphones, cutting-edge technology, and authentic customer care.
+          </p>
+          <div style="color: var(--text-muted); font-size: 0.85rem;">
+            📞 Support: 1-800-555-PHONE (24/7)
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Shop Brands</h4>
+          <div class="footer-links">
+            <a href="brands.html?brand=Apple">Apple iPhones</a>
+            <a href="brands.html?brand=Samsung">Samsung Galaxy</a>
+            <a href="brands.html?brand=Google">Google Pixel</a>
+            <a href="brands.html?brand=Xiaomi">Xiaomi Flagships</a>
+            <a href="brands.html?brand=OnePlus">OnePlus Devices</a>
+            <a href="brands.html?brand=Sony">Sony Xperia</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Customer Care</h4>
+          <div class="footer-links">
+            <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" style="color: #38bdf8; font-weight: 700;">✈️ Telegram Support</a>
+            <a href="reports.html">Order Reports 📊</a>
+            <a href="faq.html">Warranty Policy</a>
+            <a href="faq.html">Shipping & Delivery</a>
+            <a href="faq.html">Returns & Exchanges</a>
+            <a href="deals.html">Exclusive Deals</a>
+            <a href="cart.html">View Cart</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Company</h4>
+          <div class="footer-links">
+            <a href="about.html">About PhoneShop</a>
+            <a href="about.html#locations">Store Locations</a>
+            <a href="contact.html">Corporate Inquiries</a>
+            <a href="faq.html">Trade-In Program</a>
+            <a href="404.html">System Status</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 PhoneShop Inc. All rights reserved. 100% Genuine Guaranteed.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="faq.html">Privacy Policy</a>
+          <a href="faq.html">Terms of Service</a>
+          <a href="faq.html">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="lib/icons.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const ORDERS_STORAGE_KEY = 'phoneshop_orders_v1';
+
+    // Sample initial demo buyer orders if storage is empty
+    const SAMPLE_BUYER_ORDERS = [
+      {
+        id: 'PS-2026-56322',
+        customer: {
+          firstName: 'Kim',
+          lastName: 'Bunthon',
+          email: 'kimbunthon840@gmail.com',
+          phone: '+855 70 551 299',
+          address: 'Street 08, Sangkat Svay Dangkum',
+          city: 'Siem Reap',
+          country: 'Cambodia'
+        },
+        items: [
+          {
+            id: 'iphone-16-pro-max',
+            name: 'Apple iPhone 16 Pro Max',
+            storage: '256GB',
+            color: 'Desert Titanium',
+            price: 1294.92,
+            qty: 1,
+            image: 'img/phones/iphone-16-pro-max.png'
+          }
+        ],
+        subtotal: 1294.92,
+        discount: 0,
+        shipping: 0,
+        tax: 0,
+        total: 1294.92,
+        paymentMethod: 'aba',
+        status: 'Awaiting ABA Confirmation',
+        createdAt: '2026-10-01T20:56:00.000Z'
+      },
+      {
+        id: 'PS-2026-98124',
+        customer: {
+          firstName: 'Sokha',
+          lastName: 'Chan',
+          email: 'sokha.chan@gmail.com',
+          phone: '+855 12 884 921',
+          address: 'Preah Monivong Blvd #142',
+          city: 'Phnom Penh',
+          country: 'Cambodia'
+        },
+        items: [
+          {
+            id: 'iphone-16-pro-max',
+            name: 'Apple iPhone 16 Pro Max',
+            storage: '512GB',
+            color: 'Desert Titanium',
+            price: 1349,
+            qty: 1,
+            image: 'img/phones/iphone-16-pro-max.png'
+          }
+        ],
+        subtotal: 1349,
+        discount: 134.9,
+        shipping: 0,
+        tax: 97.12,
+        total: 1311.22,
+        paymentMethod: 'card',
+        status: 'Delivered',
+        createdAt: '2026-09-28T14:32:00.000Z'
+      },
+      {
+        id: 'PS-2026-97843',
+        customer: {
+          firstName: 'Bunthon',
+          lastName: 'Seng',
+          email: 'bunthon.smartboy@hotmail.com',
+          phone: '+855 70 551 299',
+          address: 'St 271, Sangkat Boeng Tumpun',
+          city: 'Phnom Penh',
+          country: 'Cambodia'
+        },
+        items: [
+          {
+            id: 'galaxy-s24-ultra',
+            name: 'Samsung Galaxy S24 Ultra',
+            storage: '256GB',
+            color: 'Titanium Gray',
+            price: 1299,
+            qty: 1,
+            image: 'img/phones/galaxy-s24-ultra.png'
+          }
+        ],
+        subtotal: 1299,
+        discount: 100,
+        shipping: 0,
+        tax: 95.92,
+        total: 1294.92,
+        paymentMethod: 'aba',
+        status: 'Delivered',
+        createdAt: '2026-09-29T09:15:00.000Z'
+      },
+      {
+        id: 'PS-2026-96510',
+        customer: {
+          firstName: 'David',
+          lastName: 'Kim',
+          email: 'david.kim99@techcorp.io',
+          phone: '+1 (415) 890-4412',
+          address: '350 Mission St',
+          city: 'San Francisco',
+          country: 'United States'
+        },
+        items: [
+          {
+            id: 'pixel-9-pro-xl',
+            name: 'Google Pixel 9 Pro XL',
+            storage: '256GB',
+            color: 'Obsidian',
+            price: 1099,
+            qty: 1,
+            image: 'img/phones/pixel-9-pro-xl.png'
+          }
+        ],
+        subtotal: 1099,
+        discount: 0,
+        shipping: 0,
+        tax: 87.92,
+        total: 1186.92,
+        paymentMethod: 'card',
+        status: 'Shipped',
+        createdAt: '2026-09-30T11:20:00.000Z'
+      },
+      {
+        id: 'PS-2026-95402',
+        customer: {
+          firstName: 'Sophia',
+          lastName: 'Laurent',
+          email: 'sophia.laurent@paris.fr',
+          phone: '+33 6 12 34 56 78',
+          address: '14 Rue de Rivoli',
+          city: 'Paris',
+          country: 'France'
+        },
+        items: [
+          {
+            id: 'xiaomi-14-ultra',
+            name: 'Xiaomi 14 Ultra',
+            storage: '512GB',
+            color: 'Black Vegan Leather',
+            price: 1249,
+            qty: 1,
+            image: 'img/phones/xiaomi-14-ultra.png'
+          }
+        ],
+        subtotal: 1249,
+        discount: 124.9,
+        shipping: 25,
+        tax: 89.92,
+        total: 1239.02,
+        paymentMethod: 'paypal',
+        status: 'Processing',
+        createdAt: '2026-10-01T08:45:00.000Z'
+      },
+      {
+        id: 'PS-2026-94881',
+        customer: {
+          firstName: 'Marcus',
+          lastName: 'Reynolds',
+          email: 'marcus.rey@outlook.com',
+          phone: '+44 7911 123456',
+          address: '42 Oxford Street',
+          city: 'London',
+          country: 'United Kingdom'
+        },
+        items: [
+          {
+            id: 'rog-phone-8-pro',
+            name: 'Asus ROG Phone 8 Pro',
+            storage: '512GB',
+            color: 'Phantom Black',
+            price: 1199,
+            qty: 1,
+            image: 'img/phones/rog-phone-8-pro.png'
+          }
+        ],
+        subtotal: 1199,
+        discount: 100,
+        shipping: 0,
+        tax: 87.92,
+        total: 1186.92,
+        paymentMethod: 'card',
+        status: 'Processing',
+        createdAt: '2026-10-01T15:10:00.000Z'
+      },
+      {
+        id: 'PS-2026-93219',
+        customer: {
+          firstName: 'Vannak',
+          lastName: 'Meas',
+          email: 'vannak.meas@khmertelecom.com',
+          phone: '+855 92 110 339',
+          address: 'Russian Federation Blvd',
+          city: 'Phnom Penh',
+          country: 'Cambodia'
+        },
+        items: [
+          {
+            id: 'galaxy-z-fold-6',
+            name: 'Samsung Galaxy Z Fold 6',
+            storage: '512GB',
+            color: 'Silver Shadow',
+            price: 1899,
+            qty: 1,
+            image: 'img/phones/galaxy-z-fold-6.png'
+          }
+        ],
+        subtotal: 1899,
+        discount: 0,
+        shipping: 0,
+        tax: 151.92,
+        total: 2050.92,
+        paymentMethod: 'cod',
+        status: 'Delivered',
+        createdAt: '2026-09-25T16:00:00.000Z'
+      }
+    ];
+
+    function getOrders() {
+      try {
+        const raw = localStorage.getItem(ORDERS_STORAGE_KEY);
+        if (!raw) {
+          localStorage.setItem(ORDERS_STORAGE_KEY, JSON.stringify(SAMPLE_BUYER_ORDERS));
+          return SAMPLE_BUYER_ORDERS;
+        }
+        return JSON.parse(raw);
+      } catch (e) {
+        return SAMPLE_BUYER_ORDERS;
+      }
+    }
+
+    function saveOrders(orders) {
+      localStorage.setItem(ORDERS_STORAGE_KEY, JSON.stringify(orders));
+      renderOrdersDashboard();
+    }
+
+    // Format Helpers
+    function formatTitleCase(str) {
+      if (!str) return '';
+      return str.toString().replace(/\b([a-zA-Z])([a-zA-Z]*)\b/g, (match, first, rest) => {
+        return first.toUpperCase() + rest.toLowerCase();
+      });
+    }
+
+    function getColorDot(colorName) {
+      const c = (colorName || '').toLowerCase();
+      if (c.includes('desert')) return '#d4c5b3';
+      if (c.includes('natural')) return '#9f9b94';
+      if (c.includes('black') || c.includes('dark') || c.includes('shadow') || c.includes('phantom')) return '#333336';
+      if (c.includes('white') || c.includes('silver')) return '#e2e8f0';
+      if (c.includes('blue') || c.includes('bay')) return '#38bdf8';
+      if (c.includes('gray') || c.includes('grey')) return '#64748b';
+      if (c.includes('gold') || c.includes('amber')) return '#fbbf24';
+      if (c.includes('green') || c.includes('emerald') || c.includes('olive')) return '#10b981';
+      if (c.includes('purple') || c.includes('violet') || c.includes('lavender')) return '#a855f7';
+      if (c.includes('pink') || c.includes('rose')) return '#f472b6';
+      return '#94a3b8';
+    }
+
+    function formatDate(isoStr) {
+      if (!isoStr) return 'Recent';
+      const d = new Date(isoStr);
+      return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) +
+             ' • ' + d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function getPaymentBadge(method) {
+      const m = (method || '').toLowerCase();
+      if (m.includes('aba') || m.includes('khqr')) {
+        return '<span class="payment-badge-tag" style="background: rgba(0, 178, 227, 0.16); border-color: rgba(0, 178, 227, 0.5); color: #00b2e3; font-weight: 700;"><span class="pay-icon">🇰🇭</span> ABA PAY (KHQR)</span>';
+      }
+      switch (m) {
+        case 'apple': return '<span class="payment-badge-tag"><span class="pay-icon">🍏</span> Apple Pay</span>';
+        case 'paypal': return '<span class="payment-badge-tag"><span class="pay-icon">🅿️</span> PayPal</span>';
+        case 'cod': return '<span class="payment-badge-tag"><span class="pay-icon">💵</span> COD</span>';
+        default: return '<span class="payment-badge-tag"><span class="pay-icon">💳</span> Card</span>';
+      }
+    }
+
+    function getStatusBadge(status, orderId) {
+      const s = (status || 'Processing').toLowerCase();
+      if (s.includes('aba') || s.includes('awaiting')) {
+        return `
+          <div class="status-cell-wrap">
+            <button class="status-pill status-aba" onclick="cycleOrderStatus('${orderId}')" title="ABA KHQR Pending - Click to cycle status">
+              <span class="status-dot aba-dot"></span>
+              <span>Awaiting ABA Confirmation</span>
+            </button>
+          </div>
+        `;
+      }
+
+      let cls = 'status-processing';
+      if (s === 'delivered') cls = 'status-delivered';
+      else if (s === 'shipped') cls = 'status-shipped';
+      else if (s === 'cancelled') cls = 'status-cancelled';
+
+      return `
+        <div class="status-cell-wrap">
+          <button class="status-pill ${cls}" onclick="cycleOrderStatus('${orderId}')" title="Click to cycle status: Processing → Shipped → Delivered → Cancelled">
+            <span class="status-dot"></span>
+            <span>${status || 'Processing'}</span>
+          </button>
+        </div>
+      `;
+    }
+
+    function cycleOrderStatus(orderId) {
+      const orders = getOrders();
+      const order = orders.find(o => o.id === orderId);
+      if (!order) return;
+
+      const statuses = ['Awaiting ABA Confirmation', 'Processing', 'Shipped', 'Delivered', 'Cancelled'];
+      const currentIndex = statuses.indexOf(order.status);
+      const nextIndex = (currentIndex + 1) % statuses.length;
+      order.status = statuses[nextIndex];
+
+      saveOrders(orders);
+      PhoneShop.showToast(`Updated status of ${orderId} to "${order.status}"`, 'success');
+    }
+
+    function setQuickStatusFilter(status) {
+      const select = document.getElementById('filter-status');
+      if (select) select.value = status;
+      document.querySelectorAll('.quick-filter-chip').forEach(chip => {
+        chip.classList.toggle('active', chip.dataset.status === status);
+      });
+      renderOrdersDashboard();
+    }
+
+    function syncChipFromDropdown() {
+      const status = document.getElementById('filter-status').value;
+      document.querySelectorAll('.quick-filter-chip').forEach(chip => {
+        chip.classList.toggle('active', chip.dataset.status === status);
+      });
+      renderOrdersDashboard();
+    }
+
+    function clearSearchInput() {
+      const input = document.getElementById('report-search-input');
+      input.value = '';
+      const clearBtn = document.getElementById('report-search-clear');
+      if (clearBtn) clearBtn.style.display = 'none';
+      renderOrdersDashboard();
+    }
+
+    function renderOrdersDashboard() {
+      const orders = getOrders();
+      const query = document.getElementById('report-search-input').value.toLowerCase().trim();
+      const statusFilter = document.getElementById('filter-status').value.toLowerCase();
+      const paymentFilter = document.getElementById('filter-payment').value.toLowerCase();
+      const sortFilter = document.getElementById('filter-sort').value;
+
+      // Handle search clear button visibility
+      const clearBtn = document.getElementById('report-search-clear');
+      if (clearBtn) clearBtn.style.display = query ? 'flex' : 'none';
+
+      // Update Quick Status Chip Counts
+      const countAll = orders.length;
+      const countAba = orders.filter(o => (o.status || '').toLowerCase().includes('aba') || (o.status || '').toLowerCase().includes('awaiting')).length;
+      const countProcessing = orders.filter(o => (o.status || '').toLowerCase() === 'processing').length;
+      const countShipped = orders.filter(o => (o.status || '').toLowerCase() === 'shipped').length;
+      const countDelivered = orders.filter(o => (o.status || '').toLowerCase() === 'delivered').length;
+      const countCancelled = orders.filter(o => (o.status || '').toLowerCase() === 'cancelled').length;
+
+      if (document.getElementById('chip-count-all')) document.getElementById('chip-count-all').textContent = countAll;
+      if (document.getElementById('chip-count-aba')) document.getElementById('chip-count-aba').textContent = countAba;
+      if (document.getElementById('chip-count-processing')) document.getElementById('chip-count-processing').textContent = countProcessing;
+      if (document.getElementById('chip-count-shipped')) document.getElementById('chip-count-shipped').textContent = countShipped;
+      if (document.getElementById('chip-count-delivered')) document.getElementById('chip-count-delivered').textContent = countDelivered;
+      if (document.getElementById('chip-count-cancelled')) document.getElementById('chip-count-cancelled').textContent = countCancelled;
+
+      // Filter
+      let filtered = orders.filter(o => {
+        // Search query
+        if (query) {
+          const custName = `${o.customer.firstName} ${o.customer.lastName}`.toLowerCase();
+          const email = (o.customer.email || '').toLowerCase();
+          const phone = (o.customer.phone || '').toLowerCase();
+          const city = (o.customer.city || '').toLowerCase();
+          const orderId = (o.id || '').toLowerCase();
+          const itemNames = (o.items || []).map(i => i.name.toLowerCase()).join(' ');
+
+          const matched = custName.includes(query) || email.includes(query) ||
+                          phone.includes(query) || city.includes(query) ||
+                          orderId.includes(query) || itemNames.includes(query);
+          if (!matched) return false;
+        }
+
+        // Status
+        if (statusFilter !== 'all') {
+          const s = (o.status || '').toLowerCase();
+          if (statusFilter === 'aba' && !(s.includes('aba') || s.includes('awaiting'))) return false;
+          if (statusFilter !== 'aba' && s !== statusFilter) return false;
+        }
+
+        // Payment
+        if (paymentFilter !== 'all') {
+          const m = (o.paymentMethod || '').toLowerCase();
+          if (paymentFilter === 'aba' && !(m.includes('aba') || m.includes('khqr'))) return false;
+          if (paymentFilter === 'card' && !m.includes('card')) return false;
+          if (paymentFilter === 'apple' && !m.includes('apple')) return false;
+          if (paymentFilter === 'paypal' && !m.includes('paypal')) return false;
+          if (paymentFilter === 'cod' && !m.includes('cod')) return false;
+        }
+
+        return true;
+      });
+
+      // Sort
+      if (sortFilter === 'date-asc') {
+        filtered.sort((a, b) => new Date(a.createdAt || 0) - new Date(b.createdAt || 0));
+      } else if (sortFilter === 'total-desc') {
+        filtered.sort((a, b) => (b.total || 0) - (a.total || 0));
+      } else if (sortFilter === 'total-asc') {
+        filtered.sort((a, b) => (a.total || 0) - (b.total || 0));
+      } else if (sortFilter === 'name-asc') {
+        filtered.sort((a, b) => (a.customer.firstName || '').localeCompare(b.customer.firstName || ''));
+      } else {
+        // date-desc default
+        filtered.sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0));
+      }
+
+      // Update KPI Metrics based on full dataset
+      const totalRev = orders.reduce((sum, o) => sum + (o.total || 0), 0);
+      const processingCount = orders.filter(o => (o.status || '').toLowerCase() === 'processing' || (o.status || '').toLowerCase().includes('awaiting')).length;
+      const uniqueBuyers = new Set(orders.map(o => (o.customer.email || o.customer.phone || '').toLowerCase())).size;
+      const aov = orders.length > 0 ? (totalRev / orders.length) : 0;
+
+      document.getElementById('kpi-revenue').textContent = formatPrice(Math.round(totalRev));
+      document.getElementById('kpi-orders').textContent = orders.length;
+      document.getElementById('kpi-processing-count').textContent = `${processingCount} active`;
+      document.getElementById('kpi-customers').textContent = uniqueBuyers;
+      document.getElementById('kpi-aov').textContent = formatPrice(Math.round(aov));
+
+      // Render Table
+      const tbody = document.getElementById('orders-table-body');
+      const emptyState = document.getElementById('report-empty-state');
+      const showingText = document.getElementById('table-showing-text');
+
+      showingText.textContent = `Showing ${filtered.length} of ${orders.length} customer records`;
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = '';
+        emptyState.style.display = 'block';
+        return;
+      }
+
+      emptyState.style.display = 'none';
+
+      tbody.innerHTML = filtered.map(order => {
+        const firstItem = (order.items && order.items[0]) || { name: 'Smartphone', storage: '256GB', color: 'Standard', qty: 1, image: 'img/logo.png' };
+        const otherItemsCount = (order.items && order.items.length > 1) ? ` +${order.items.length - 1} more` : '';
+
+        // Extract Brand and Model cleanly
+        let brand = 'FLAGSHIP';
+        let modelName = (firstItem.name || 'Smartphone').trim();
+        const knownBrands = ['Apple', 'Samsung', 'Google', 'Xiaomi', 'OnePlus', 'Asus', 'Sony'];
+        for (const b of knownBrands) {
+          if (modelName.toLowerCase().startsWith(b.toLowerCase())) {
+            brand = b;
+            modelName = modelName.substring(b.length).trim();
+            break;
+          }
+        }
+
+        // Customer details formatting
+        const formattedFirst = formatTitleCase(order.customer.firstName || '');
+        const formattedLast = formatTitleCase(order.customer.lastName || '');
+        const customerFullName = `${formattedFirst} ${formattedLast}`.trim() || 'Valued Buyer';
+        const initials = `${(formattedFirst[0] || 'U')}${(formattedLast[0] || formattedFirst[1] || 'B')}`.toUpperCase();
+        const formattedCity = formatTitleCase(order.customer.city || '');
+
+        const rawPhone = (order.customer.phone || '').trim();
+        const rawEmail = (order.customer.email || '').trim();
+        const isDuplicatePhone = !rawPhone || rawPhone.includes('@') || (rawPhone.toLowerCase() === rawEmail.toLowerCase());
+
+        const totalUSD = formatPrice(order.total);
+        const totalKHR = Math.round(order.total * 4100).toLocaleString();
+
+        return `
+          <tr>
+            <td>
+              <div class="col-order-id">
+                <span class="order-id-badge" onclick="openInvoiceModal('${order.id}')" title="Click to view official invoice receipt">
+                  ${order.id}
+                </span>
+                <span class="order-date-text">
+                  <span>🕒</span> ${formatDate(order.createdAt)}
+                </span>
+              </div>
+            </td>
+
+            <td>
+              <div class="customer-card-cell">
+                <div class="customer-avatar-box">${initials}</div>
+                <div class="customer-details">
+                  <div class="customer-name-line">
+                    <span class="customer-name">${customerFullName}</span>
+                    ${formattedCity ? `<span class="customer-location-badge">📍 ${formattedCity}</span>` : ''}
+                  </div>
+                  <div class="customer-contacts">
+                    ${rawEmail ? `<span class="customer-contact-tag" title="Customer Email">✉️ ${rawEmail}</span>` : ''}
+                    ${(!isDuplicatePhone && rawPhone) ? `<span class="customer-contact-tag" title="Customer Phone">📞 ${rawPhone}</span>` : ''}
+                  </div>
+                </div>
+              </div>
+            </td>
+
+            <td>
+              <div class="phone-item-cell">
+                <div class="phone-img-frame" title="${firstItem.name}">
+                  <img src="${firstItem.image}" alt="${firstItem.name}" loading="lazy">
+                </div>
+                <div class="phone-details">
+                  <div class="phone-model-line">
+                    <span class="brand-micro-pill brand-${brand.toLowerCase()}">${brand}</span>
+                    <span class="phone-model-title" title="${firstItem.name}">
+                      ${modelName}${otherItemsCount}
+                    </span>
+                  </div>
+                  <div class="phone-variant-badges">
+                    <span class="phone-spec-pill spec-storage">💾 ${firstItem.storage || '256GB'}</span>
+                    <span class="phone-spec-pill spec-color">
+                      <span class="color-dot" style="background: ${getColorDot(firstItem.color)};"></span>
+                      ${firstItem.color || 'Standard'}
+                    </span>
+                    <span class="phone-qty-pill">x${firstItem.qty || 1}</span>
+                  </div>
+                </div>
+              </div>
+            </td>
+
+            <td>
+              <div class="payment-total-cell">
+                <div class="total-amount">${totalUSD}</div>
+                <div class="total-khr">~៛${totalKHR} KHR</div>
+                <div class="payment-badge-wrap">${getPaymentBadge(order.paymentMethod)}</div>
+              </div>
+            </td>
+
+            <td>
+              ${getStatusBadge(order.status, order.id)}
+            </td>
+
+            <td style="text-align: right;">
+              <div class="action-buttons-wrap">
+                <button class="action-btn action-view-btn" onclick="openInvoiceModal('${order.id}')" title="View Full Invoice Receipt">
+                  <span>📄</span> <span>Receipt</span>
+                </button>
+                <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" class="action-btn action-tg-btn" title="Chat on Telegram @kimbunthonICT regarding order ${order.id}">
+                  ✈️
+                </a>
+                <button class="action-btn action-delete-btn" onclick="deleteOrder('${order.id}')" title="Delete record">
+                  🗑️
+                </button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function deleteOrder(orderId) {
+      if (confirm(`Are you sure you want to delete order ${orderId}?`)) {
+        let orders = getOrders();
+        orders = orders.filter(o => o.id !== orderId);
+        saveOrders(orders);
+        PhoneShop.showToast(`Deleted order record ${orderId}`, 'info');
+      }
+    }
+
+    function clearAllOrdersData() {
+      if (confirm('Clear all customer order records? This cannot be undone.')) {
+        localStorage.removeItem(ORDERS_STORAGE_KEY);
+        saveOrders([]);
+        PhoneShop.showToast('All order records have been cleared', 'info');
+      }
+    }
+
+    function reloadSampleOrders() {
+      localStorage.setItem(ORDERS_STORAGE_KEY, JSON.stringify(SAMPLE_BUYER_ORDERS));
+      renderOrdersDashboard();
+      PhoneShop.showToast('Restored demo customer orders data', 'success');
+    }
+
+    function resetReportFilters() {
+      document.getElementById('report-search-input').value = '';
+      document.getElementById('filter-status').value = 'all';
+      document.getElementById('filter-payment').value = 'all';
+      document.getElementById('filter-sort').value = 'date-desc';
+      renderOrdersDashboard();
+    }
+
+    // Export to CSV Function
+    function exportOrdersToCSV() {
+      const orders = getOrders();
+      if (orders.length === 0) {
+        PhoneShop.showToast('No orders to export!', 'error');
+        return;
+      }
+
+      // Headers
+      const headers = ['Order ID', 'Date', 'First Name', 'Last Name', 'Email', 'Phone', 'Address', 'City', 'Country', 'Phone Model', 'Storage', 'Qty', 'Payment Method', 'Total USD', 'Status'];
+      
+      const rows = orders.map(o => {
+        const item = (o.items && o.items[0]) || {};
+        return [
+          `"${o.id}"`,
+          `"${o.createdAt || ''}"`,
+          `"${o.customer.firstName || ''}"`,
+          `"${o.customer.lastName || ''}"`,
+          `"${o.customer.email || ''}"`,
+          `"${o.customer.phone || ''}"`,
+          `"${(o.customer.address || '').replace(/"/g, '""')}"`,
+          `"${o.customer.city || ''}"`,
+          `"${o.customer.country || ''}"`,
+          `"${(item.name || '').replace(/"/g, '""')}"`,
+          `"${item.storage || ''}"`,
+          `"${item.qty || 1}"`,
+          `"${o.paymentMethod || 'card'}"`,
+          `"${o.total || 0}"`,
+          `"${o.status || 'Delivered'}"`
+        ].join(',');
+      });
+
+      const csvContent = '\uFEFF' + headers.join(',') + '\n' + rows.join('\n');
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.setAttribute('href', url);
+      link.setAttribute('download', `PhoneShop_Customer_Orders_Report_${new Date().toISOString().slice(0, 10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      PhoneShop.showToast('Exported orders report to CSV spreadsheet!', 'success');
+    }
+
+    // Invoice Modal
+    function openInvoiceModal(orderId) {
+      const orders = getOrders();
+      const order = orders.find(o => o.id === orderId);
+      if (!order) return;
+
+      const container = document.getElementById('invoice-modal-content');
+      const item = (order.items && order.items[0]) || { name: 'Smartphone', price: 1199, qty: 1, storage: '256GB' };
+
+      container.innerHTML = `
+        <div class="invoice-card" id="printable-invoice">
+          <div class="invoice-header">
+            <div>
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                <img src="img/logo.png" alt="PhoneShop Logo" style="width: 36px; height: 36px; border-radius: 8px;">
+                <span style="font-size: 1.4rem; font-weight: 800; font-family: 'Plus Jakarta Sans', sans-serif;">Phone<span style="color: var(--primary);">Shop</span></span>
+              </div>
+              <div style="font-size: 0.8rem; color: var(--text-dim); line-height: 1.4;">
+                550 Market Street, Suite 1400<br>
+                San Francisco, CA 94104 • support@phoneshop.io
+              </div>
+            </div>
+
+            <div style="text-align: right;">
+              <span class="status-pill status-${(order.status || 'delivered').toLowerCase()}" style="margin-bottom: 8px;">
+                ● ${order.status || 'Delivered'}
+              </span>
+              <div style="font-size: 1.1rem; font-weight: 800; font-family: monospace; color: #67e8f9;">
+                ${order.id}
+              </div>
+              <div style="font-size: 0.78rem; color: var(--text-dim); margin-top: 4px;">
+                ${formatDate(order.createdAt)}
+              </div>
+            </div>
+          </div>
+
+          <!-- Customer details -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border-color); font-size: 0.88rem;">
+            <div>
+              <div style="font-size: 0.78rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700; margin-bottom: 4px;">Billed & Delivered To:</div>
+              <strong style="color: #fff; font-size: 1rem;">${order.customer.firstName} ${order.customer.lastName}</strong>
+              <div style="color: var(--text-muted); margin-top: 4px;">
+                ${order.customer.address || 'Preah Monivong Blvd'}<br>
+                ${order.customer.city || 'Phnom Penh'}, ${order.customer.country || 'Cambodia'}<br>
+                📞 ${order.customer.phone}<br>
+                ✉️ ${order.customer.email}
+              </div>
+            </div>
+
+            <div>
+              <div style="font-size: 0.78rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700; margin-bottom: 4px;">Payment Summary:</div>
+              <div style="color: var(--text-muted);">
+                Method: <strong>${getPaymentBadge(order.paymentMethod)}</strong><br>
+                Transaction: <span style="color: var(--success); font-weight: 600;">Authorized & Cleared</span><br>
+                Warranty: <strong>2-Year Official Manufacturer</strong><br>
+                Dispatch: <strong>Insured Express Carrier</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Items Table -->
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.88rem;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--border-color); color: var(--text-dim); font-size: 0.78rem; text-transform: uppercase;">
+                <th style="text-align: left; padding: 8px 0;">Item Description</th>
+                <th style="text-align: center; padding: 8px 0;">Qty</th>
+                <th style="text-align: right; padding: 8px 0;">Unit Price</th>
+                <th style="text-align: right; padding: 8px 0;">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${(order.items || [item]).map(it => `
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 12px 0;">
+                    <strong style="color: #fff;">${it.name}</strong>
+                    <div style="font-size: 0.78rem; color: var(--text-dim);">${it.storage || '256GB'} • ${it.color || 'Standard'} • Sealed</div>
+                  </td>
+                  <td style="text-align: center; padding: 12px 0;">${it.qty || 1}</td>
+                  <td style="text-align: right; padding: 12px 0;">${formatPrice(it.price)}</td>
+                  <td style="text-align: right; padding: 12px 0; font-weight: 700; color: #fff;">${formatPrice((it.price || 0) * (it.qty || 1))}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+
+          <!-- Totals -->
+          <div style="margin-left: auto; max-width: 280px; font-size: 0.88rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px; color: var(--text-muted);">
+              <span>Subtotal:</span>
+              <span>${formatPrice(order.subtotal || order.total)}</span>
+            </div>
+            ${order.discount > 0 ? `
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px; color: var(--success);">
+                <span>Discount:</span>
+                <span>-${formatPrice(order.discount)}</span>
+              </div>
+            ` : ''}
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px; color: var(--text-muted);">
+              <span>Shipping Carrier:</span>
+              <span>${(order.shipping === 0 || !order.shipping) ? 'FREE' : formatPrice(order.shipping)}</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px; color: var(--text-muted);">
+              <span>Sales Tax (8%):</span>
+              <span>${formatPrice(order.tax || 0)}</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding-top: 10px; border-top: 1px solid var(--border-color); font-size: 1.25rem; font-weight: 800; color: var(--primary);">
+              <span>Total:</span>
+              <div style="text-align: right;">
+                <div>${formatPrice(order.total)}</div>
+                <div style="font-size: 0.82rem; color: #38bdf8; font-weight: 600; margin-top: 2px;">~៛${Math.round(order.total * 4100).toLocaleString()} KHR</div>
+              </div>
+            </div>
+          </div>
+
+          ${(order.paymentMethod === 'aba' || (order.status || '').toLowerCase().includes('aba')) ? `
+            <div style="margin-top: 24px; padding: 18px; background: rgba(0, 178, 227, 0.08); border: 1px solid rgba(0, 178, 227, 0.35); border-radius: 12px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+              <div style="display: flex; align-items: center; gap: 14px;">
+                <div style="background: linear-gradient(135deg, #00b2e3 0%, #006688 100%); color: #fff; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem; box-shadow: 0 4px 12px rgba(0, 178, 227, 0.35);">
+                  ABA
+                </div>
+                <div>
+                  <div style="font-weight: 700; color: #38bdf8; font-size: 0.95rem;">ABA PAY / KHQR Account: KIM BUNTHON</div>
+                  <div style="color: #94a3b8; font-size: 0.8rem; margin-top: 2px;">
+                    Pending transfer: <strong style="color: #fff;">$${order.total}</strong> (~៛${Math.round(order.total * 4100).toLocaleString()} KHR)
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex; gap: 8px;">
+                <a href="https://pay.ababank.com/oRF8/5a5v9i4k" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="background: linear-gradient(135deg, #00b2e3 0%, #007799 100%); border: none; font-size: 0.8rem;">
+                  📲 Open ABA Pay
+                </a>
+                <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.4); font-size: 0.8rem;">
+                  ✈️ Telegram Confirm
+                </a>
+              </div>
+            </div>
+          ` : ''}
+        </div>
+      `;
+
+      document.getElementById('invoice-modal').classList.add('active');
+    }
+
+    function closeInvoiceModal() {
+      document.getElementById('invoice-modal').classList.remove('active');
+    }
+
+    function printInvoice() {
+      window.print();
+    }
+
+    // Add Order Modal
+    function openNewOrderModal() {
+      const select = document.getElementById('manual-phone-model');
+      if (select && window.PRODUCTS_DATA) {
+        select.innerHTML = PRODUCTS_DATA.map(p => `
+          <option value="${p.id}" data-price="${p.price}" data-img="${p.image}">${p.name} ($${p.price.toLocaleString()})</option>
+        `).join('');
+      }
+      document.getElementById('add-order-modal').classList.add('active');
+    }
+
+    function closeNewOrderModal() {
+      document.getElementById('add-order-modal').classList.remove('active');
+    }
+
+    function handleAddNewOrder() {
+      const select = document.getElementById('manual-phone-model');
+      const selectedOption = select.options[select.selectedIndex];
+      const phoneId = select.value;
+      const product = PhoneShop.getProductById(phoneId);
+      const qty = parseInt(document.getElementById('manual-qty').value, 10) || 1;
+      const storage = document.getElementById('manual-storage').value;
+      const paymentMethod = document.getElementById('manual-payment').value;
+      const status = document.getElementById('manual-status').value;
+
+      const basePrice = product.price || 1199;
+      const subtotal = basePrice * qty;
+      const tax = subtotal * 0.08;
+      const total = subtotal + tax;
+
+      const newOrder = {
+        id: 'PS-2026-' + Math.floor(10000 + Math.random() * 90000),
+        customer: {
+          firstName: document.getElementById('manual-first-name').value,
+          lastName: document.getElementById('manual-last-name').value,
+          email: document.getElementById('manual-email').value,
+          phone: document.getElementById('manual-phone').value,
+          address: 'Main St',
+          city: document.getElementById('manual-city').value,
+          country: document.getElementById('manual-country').value
+        },
+        items: [
+          {
+            id: product.id,
+            name: product.name,
+            storage: storage,
+            color: 'Default Finish',
+            price: basePrice,
+            qty: qty,
+            image: product.image
+          }
+        ],
+        subtotal: subtotal,
+        discount: 0,
+        shipping: 0,
+        tax: tax,
+        total: total,
+        paymentMethod: paymentMethod,
+        status: status,
+        createdAt: new Date().toISOString()
+      };
+
+      const orders = getOrders();
+      orders.unshift(newOrder);
+      saveOrders(orders);
+
+      closeNewOrderModal();
+      document.getElementById('new-order-form').reset();
+      PhoneShop.showToast(`Saved customer record for ${newOrder.customer.firstName} ${newOrder.customer.lastName}!`, 'success');
+    }
+
+    // Attach listeners
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('report-search-input').addEventListener('input', renderOrdersDashboard);
+      document.getElementById('filter-status').addEventListener('change', renderOrdersDashboard);
+      document.getElementById('filter-payment').addEventListener('change', renderOrdersDashboard);
+      document.getElementById('filter-sort').addEventListener('change', renderOrdersDashboard);
+
+      renderOrdersDashboard();
+    });
+  </script>
+</body>
+</html>

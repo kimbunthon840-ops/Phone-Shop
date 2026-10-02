@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Details & Tech Specs | PhoneShop</title>
+  <meta name="description" content="View full technical specifications, high-res photos, color options, storage capacities, and pricing for this official smartphone.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper" id="site-logo">
+        <img src="img/logo.png" alt="PhoneShop Logo" class="logo-img">
+        <span class="logo-text">Phone<span>Shop</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link active">All Phones</a>
+        <a href="brands.html" class="nav-link">Brands</a>
+        <a href="deals.html" class="nav-link">Deals <span class="nav-deal-badge">Hot</span></a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-box-toggle">
+          <span class="search-icon-header">🔍</span>
+          <input type="text" class="search-input-header" id="global-search-input" placeholder="Search iPhone, Galaxy..." aria-label="Search smartphones">
+        </div>
+        <a href="cart.html" class="cart-btn" id="nav-cart-btn" aria-label="Shopping Cart">
+          🛒 Cart <span class="cart-badge">0</span>
+        </a>
+        <button class="hamburger-btn" id="nav-toggle" aria-label="Open mobile menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="drawer-close" aria-label="Close menu">&times;</button>
+    <div class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">All Phones</a>
+      <a href="brands.html">Brands</a>
+      <a href="deals.html">Flash Deals</a>
+      <a href="cart.html">My Cart (<span class="cart-badge">0</span>)</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Support</a>
+      <a href="faq.html">Warranty & FAQ</a>
+    </div>
+  </div>
+  <div class="overlay" id="drawer-overlay"></div>
+
+  <!-- Breadcrumbs -->
+  <div class="container" style="padding-top: 24px;">
+    <div style="display: flex; gap: 8px; font-size: 0.85rem; color: var(--text-dim);">
+      <a href="index.html">Home</a> &gt;
+      <a href="products.html">Smartphones</a> &gt;
+      <span id="detail-crumb-name" style="color: var(--text-muted);">Product Details</span>
+    </div>
+  </div>
+
+  <!-- Product Detail Core Section -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container product-detail-layout">
+      <!-- Gallery Column -->
+      <div class="detail-gallery">
+        <div class="main-image-frame" id="main-image-wrapper">
+          <img id="detail-main-img" src="img/phones/iphone-16-pro-max.png" alt="Phone Front View">
+        </div>
+        <div class="gallery-thumbs" id="detail-gallery-thumbs">
+          <!-- Gallery thumbs generated via JS -->
+        </div>
+        <div style="margin-top: 20px; display: flex; gap: 16px; justify-content: center; font-size: 0.85rem; color: var(--text-dim);">
+          <span>🔍 Click to inspect</span>
+          <span>•</span>
+          <span>🛡️ Factory Sealed</span>
+          <span>•</span>
+          <span>📦 In Stock</span>
+        </div>
+      </div>
+
+      <!-- Info Column -->
+      <div class="detail-info">
+        <div class="detail-brand" id="detail-brand-badge">Brand</div>
+        <h1 class="detail-title" id="detail-title-text">Phone Name</h1>
+        
+        <div class="detail-rating">
+          <span id="detail-stars" class="stars">★★★★★</span>
+          <span id="detail-rating-val" style="font-weight: 700; color: #fff;">4.9</span>
+          <span id="detail-reviews-val">(382 verified customer reviews)</span>
+          <span style="color: var(--success); font-weight: 600; margin-left: auto;">● Verified In Stock</span>
+        </div>
+
+        <div class="detail-price-box">
+          <div class="detail-price" id="detail-price-val">$1,199</div>
+          <div id="detail-old-price" style="font-size: 1.1rem; color: var(--text-dim); text-decoration: line-through;">$1,299</div>
+          <div class="detail-discount-tag" id="detail-discount-tag">Save $100</div>
+        </div>
+
+        <p id="detail-desc" style="color: var(--text-muted); font-size: 1rem; margin-bottom: 24px; line-height: 1.6;">
+          Phone description placeholder.
+        </p>
+
+        <!-- Color Selection -->
+        <div class="detail-options-group">
+          <div class="option-label">
+            <span>Color Finish:</span>
+            <strong id="selected-color-name" style="color: #fff;">Natural Titanium</strong>
+          </div>
+          <div class="color-pills" id="detail-colors-list">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Storage Selection -->
+        <div class="detail-options-group">
+          <div class="option-label">
+            <span>Internal Storage Capacity:</span>
+            <strong id="selected-storage-size" style="color: #fff;">256GB</strong>
+          </div>
+          <div class="storage-pills" id="detail-storage-list">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Action / CTA Row -->
+        <div class="detail-cta-row">
+          <div class="qty-counter">
+            <button class="qty-btn" id="qty-minus" aria-label="Decrease quantity">-</button>
+            <input type="text" id="qty-input" class="qty-input" value="1" readonly aria-label="Quantity">
+            <button class="qty-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+          </div>
+
+          <button class="btn btn-primary btn-lg" id="detail-add-cart-btn" style="flex: 1.2;">
+            🛒 Add to Cart
+          </button>
+          <button class="btn btn-accent btn-lg" id="detail-buy-now-btn" style="flex: 1;">
+            ⚡ Buy Now
+          </button>
+        </div>
+
+        <!-- Telegram Direct Inquiry Action -->
+        <div style="margin-bottom: 24px;">
+          <a id="detail-telegram-inquire-btn" href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" class="detail-telegram-action-btn">
+            <div class="tg-icon-circle">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
+              </svg>
+            </div>
+            <div style="text-align: left; flex: 1;">
+              <div style="font-weight: 700; font-size: 0.95rem; color: #fff; display: flex; align-items: center; gap: 8px;">
+                <span>សួរព័ត៌មានទូរស័ព្ទនេះតាម Telegram</span>
+                <span class="tg-live-tag">Online 🟢</span>
+              </div>
+              <div style="font-size: 0.8rem; color: #94a3b8;">
+                ជជែកផ្ទាល់អំពីស្តុក និងការបញ្ចុះតម្លៃពិសេស: <strong style="color: #38bdf8;">@kimbunthonICT</strong>
+              </div>
+            </div>
+            <span class="tg-arrow">→</span>
+          </a>
+        </div>
+
+        <!-- Value Badges -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 20px; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem;">
+            <span>🚚</span>
+            <span><strong>Free Express Shipping</strong> on orders over $500</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem;">
+            <span>🛡️</span>
+            <span><strong>2-Year Official</strong> manufacturer warranty</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem;">
+            <span>🔄</span>
+            <span><strong>30-Day Returns</strong> with 100% money-back</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem;">
+            <span>🔒</span>
+            <span><strong>Secure Checkout</strong> 256-bit SSL encrypted</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Specs Full Section -->
+    <div class="container">
+      <div class="specs-table-wrap">
+        <h2 style="font-size: 1.8rem; margin-bottom: 8px;">Comprehensive Technical Specifications</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+          Full hardware configuration, display matrix, camera sensors, and wireless connectivity standards.
+        </p>
+
+        <div class="specs-grid" id="detail-specs-table">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Smartphones Section -->
+  <section class="section" style="border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Similar Flagship Alternatives</h2>
+          <p class="section-subtitle">Explore other top-tier options in the same performance tier.</p>
+        </div>
+        <a href="products.html" class="view-all-link">Browse Catalog →</a>
+      </div>
+
+      <div class="products-grid" id="related-products-grid">
+        <!-- Rendered by script -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-wrapper">
+            <img src="img/logo.png" alt="PhoneShop" class="logo-img">
+            <span class="logo-text">Phone<span>Shop</span></span>
+          </a>
+          <p>
+            Your premier destination for official flagship smartphones, cutting-edge technology, and authentic customer care.
+          </p>
+          <div style="color: var(--text-muted); font-size: 0.85rem;">
+            📞 Support: 1-800-555-PHONE (24/7)
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Shop Brands</h4>
+          <div class="footer-links">
+            <a href="brands.html?brand=Apple">Apple iPhones</a>
+            <a href="brands.html?brand=Samsung">Samsung Galaxy</a>
+            <a href="brands.html?brand=Google">Google Pixel</a>
+            <a href="brands.html?brand=Xiaomi">Xiaomi Flagships</a>
+            <a href="brands.html?brand=OnePlus">OnePlus Devices</a>
+            <a href="brands.html?brand=Sony">Sony Xperia</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Customer Care</h4>
+          <div class="footer-links">
+            <a href="faq.html">Warranty Policy</a>
+            <a href="faq.html">Shipping & Delivery</a>
+            <a href="faq.html">Returns & Exchanges</a>
+            <a href="deals.html">Exclusive Deals</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="cart.html">View Cart</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Company</h4>
+          <div class="footer-links">
+            <a href="about.html">About PhoneShop</a>
+            <a href="about.html#locations">Store Locations</a>
+            <a href="contact.html">Corporate Inquiries</a>
+            <a href="faq.html">Trade-In Program</a>
+            <a href="404.html">System Status</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 PhoneShop Inc. All rights reserved. 100% Genuine Guaranteed.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="faq.html">Privacy Policy</a>
+          <a href="faq.html">Terms of Service</a>
+          <a href="faq.html">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="lib/icons.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const phoneId = urlParams.get('id') || 'iphone-16-pro-max';
+      const product = PhoneShop.getProductById(phoneId);
+
+      // Set Document Title
+      document.title = `${product.name} | Specs, Photos & Pricing - PhoneShop`;
+
+      // Crumb & Header
+      document.getElementById('detail-crumb-name').textContent = product.name;
+      document.getElementById('detail-brand-badge').textContent = product.brand;
+      document.getElementById('detail-title-text').textContent = product.name;
+      document.getElementById('detail-desc').textContent = product.description;
+
+      // Pricing
+      let basePrice = product.price;
+      let selectedStorageAddon = 0;
+      let selectedStorage = product.storage ? product.storage[0] : '256GB';
+      let selectedColor = product.colors ? product.colors[0].name : 'Default';
+
+      function updatePriceDisplay() {
+        const finalPrice = basePrice + selectedStorageAddon;
+        document.getElementById('detail-price-val').textContent = formatPrice(finalPrice);
+        if (product.oldPrice) {
+          const oldFinal = product.oldPrice + selectedStorageAddon;
+          document.getElementById('detail-old-price').textContent = formatPrice(oldFinal);
+          document.getElementById('detail-discount-tag').textContent = `Save ${formatPrice(oldFinal - finalPrice)}`;
+          document.getElementById('detail-old-price').style.display = 'inline';
+          document.getElementById('detail-discount-tag').style.display = 'inline-block';
+        } else {
+          document.getElementById('detail-old-price').style.display = 'none';
+          document.getElementById('detail-discount-tag').style.display = 'none';
+        }
+      }
+
+      updatePriceDisplay();
+
+      // Rating & Reviews
+      document.getElementById('detail-rating-val').textContent = product.rating;
+      document.getElementById('detail-reviews-val').textContent = `(${product.reviewsCount} verified reviews)`;
+
+      // Image Gallery
+      const mainImg = document.getElementById('detail-main-img');
+      mainImg.src = product.image;
+      mainImg.alt = product.name;
+
+      const thumbsWrap = document.getElementById('detail-gallery-thumbs');
+      // Render 3 angles using the product image with active states
+      thumbsWrap.innerHTML = `
+        <div class="thumb-item active" data-img="${product.image}">
+          <img src="${product.image}" alt="Front View" />
+        </div>
+        <div class="thumb-item" data-img="${product.image}">
+          <img src="${product.image}" alt="Angled View" style="transform: rotate(5deg) scale(0.9);" />
+        </div>
+        <div class="thumb-item" data-img="${product.image}">
+          <img src="${product.image}" alt="Camera Detail" style="transform: scale(1.1);" />
+        </div>
+      `;
+
+      thumbsWrap.querySelectorAll('.thumb-item').forEach(th => {
+        th.addEventListener('click', () => {
+          thumbsWrap.querySelectorAll('.thumb-item').forEach(t => t.classList.remove('active'));
+          th.classList.add('active');
+        });
+      });
+
+      // Colors
+      const colorsList = document.getElementById('detail-colors-list');
+      const colorLabel = document.getElementById('selected-color-name');
+      if (product.colors && product.colors.length > 0) {
+        colorLabel.textContent = product.colors[0].name;
+        colorsList.innerHTML = product.colors.map((c, i) => `
+          <button type="button" class="color-pill ${i === 0 ? 'active' : ''}" data-color="${c.name}">
+            <span class="color-dot" style="background-color: ${c.hex};"></span>
+            <span>${c.name}</span>
+          </button>
+        `).join('');
+
+        colorsList.querySelectorAll('.color-pill').forEach(btn => {
+          btn.addEventListener('click', () => {
+            colorsList.querySelectorAll('.color-pill').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            selectedColor = btn.getAttribute('data-color');
+            colorLabel.textContent = selectedColor;
+            updateTelegramLink();
+          });
+        });
+      }
+
+      // Storage
+      const storageList = document.getElementById('detail-storage-list');
+      const storageLabel = document.getElementById('selected-storage-size');
+      if (product.storage && product.storage.length > 0) {
+        storageLabel.textContent = product.storage[0];
+        storageList.innerHTML = product.storage.map((s, i) => {
+          const addon = i === 0 ? 0 : (i === 1 ? 150 : 350);
+          return `
+            <button type="button" class="storage-pill ${i === 0 ? 'active' : ''}" data-storage="${s}" data-addon="${addon}">
+              ${s} ${addon > 0 ? `(+$${addon})` : ''}
+            </button>
+          `;
+        }).join('');
+
+        storageList.querySelectorAll('.storage-pill').forEach(btn => {
+          btn.addEventListener('click', () => {
+            storageList.querySelectorAll('.storage-pill').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            selectedStorage = btn.getAttribute('data-storage');
+            selectedStorageAddon = parseInt(btn.getAttribute('data-addon'), 10) || 0;
+            storageLabel.textContent = selectedStorage;
+            updatePriceDisplay();
+            updateTelegramLink();
+          });
+        });
+      }
+
+      function updateTelegramLink() {
+        const tgBtn = document.getElementById('detail-telegram-inquire-btn');
+        if (tgBtn && product) {
+          const text = encodeURIComponent(`សួស្តី PhoneShop! ខ្ញុំចង់សួរព័ត៌មានអំពី ${product.name} (ពណ៌: ${selectedColor || 'Standard'}, អង្គផ្ទុក: ${selectedStorage || '256GB'}) តើមានក្នុងស្តុក និងតម្លៃពិសេសដែរឬទេ?`);
+          tgBtn.href = `https://t.me/kimbunthonICT?text=${text}`;
+        }
+      }
+      updateTelegramLink();
+
+      // Quantity Counter
+      const qtyInput = document.getElementById('qty-input');
+      document.getElementById('qty-minus').addEventListener('click', () => {
+        let val = parseInt(qtyInput.value, 10);
+        if (val > 1) qtyInput.value = val - 1;
+      });
+      document.getElementById('qty-plus').addEventListener('click', () => {
+        let val = parseInt(qtyInput.value, 10);
+        if (val < 10) qtyInput.value = val + 1;
+      });
+
+      // Add to Cart
+      document.getElementById('detail-add-cart-btn').addEventListener('click', () => {
+        const qty = parseInt(qtyInput.value, 10) || 1;
+        const adjustedProduct = {
+          ...product,
+          price: basePrice + selectedStorageAddon
+        };
+        CartManager.addItem(adjustedProduct, qty, selectedColor, selectedStorage);
+      });
+
+      // Buy Now
+      document.getElementById('detail-buy-now-btn').addEventListener('click', () => {
+        const qty = parseInt(qtyInput.value, 10) || 1;
+        const adjustedProduct = {
+          ...product,
+          price: basePrice + selectedStorageAddon
+        };
+        CartManager.addItem(adjustedProduct, qty, selectedColor, selectedStorage);
+        window.location.href = 'checkout.html';
+      });
+
+      // Specifications Table
+      const specsTable = document.getElementById('detail-specs-table');
+      if (product.fullSpecs) {
+        specsTable.innerHTML = Object.entries(product.fullSpecs).map(([k, v]) => `
+          <div class="spec-row">
+            <span class="spec-key">${k}</span>
+            <span class="spec-val">${v}</span>
+          </div>
+        `).join('');
+      }
+
+      // Related products
+      const relatedGrid = document.getElementById('related-products-grid');
+      const related = PRODUCTS_DATA.filter(p => p.id !== product.id).slice(0, 4);
+      relatedGrid.innerHTML = related.map(p => createProductCardHTML(p)).join('');
+    });
+  </script>
+</body>
+</html>

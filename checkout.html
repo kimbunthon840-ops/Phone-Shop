@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Checkout | PhoneShop</title>
+  <meta name="description" content="Complete your smartphone purchase securely with 256-bit encryption. Fast delivery options and multiple payment gateways.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+  <!-- Simplified Checkout Header -->
+  <header class="navbar" style="border-bottom: 1px solid var(--border-color);">
+    <div class="container nav-container" style="justify-content: space-between;">
+      <a href="index.html" class="logo-wrapper">
+        <img src="img/logo.png" alt="PhoneShop" class="logo-img">
+        <span class="logo-text">Phone<span>Shop</span></span>
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 16px; font-size: 0.88rem; color: var(--text-muted);">
+        <span>🔒 256-bit SSL Secure Checkout</span>
+        <a href="cart.html" style="color: var(--primary);">Return to Cart</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Checkout Main Content -->
+  <section class="section" style="padding: 40px 0 80px;">
+    <div class="container">
+      <div class="cart-layout" style="grid-template-columns: 1.6fr 1fr;">
+        <!-- Checkout Steps & Forms -->
+        <div class="checkout-steps">
+          <form id="checkout-form" onsubmit="event.preventDefault(); handleOrderSubmit();">
+            <!-- Step 1: Customer & Shipping Details -->
+            <div class="checkout-card" style="margin-bottom: 24px;">
+              <div class="checkout-card-header">
+                <div class="step-num">1</div>
+                <div>
+                  <h2 style="font-size: 1.25rem;">Shipping & Delivery Address</h2>
+                  <p style="font-size: 0.85rem; color: var(--text-muted);">Where should we deliver your sealed smartphone?</p>
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="first-name">First Name *</label>
+                  <input type="text" id="first-name" class="form-control" required placeholder="Alex">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="last-name">Last Name *</label>
+                  <input type="text" id="last-name" class="form-control" required placeholder="Mercer">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="email">Email Address (for order tracking) *</label>
+                  <input type="email" id="email" class="form-control" required placeholder="alex@example.com">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="phone">Phone Number (for courier SMS) *</label>
+                  <input type="tel" id="phone" class="form-control" required placeholder="+1 (555) 019-2834">
+                </div>
+
+                <div class="form-group full">
+                  <label class="form-label" for="address">Street Address *</label>
+                  <input type="text" id="address" class="form-control" required placeholder="742 Evergreen Terrace">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="city">City *</label>
+                  <input type="text" id="city" class="form-control" required placeholder="San Francisco">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="state">State / Province *</label>
+                  <input type="text" id="state" class="form-control" required placeholder="California">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="zip">ZIP / Postal Code *</label>
+                  <input type="text" id="zip" class="form-control" required placeholder="94103">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="country">Country *</label>
+                  <select id="country" class="form-control" required>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="AU">Australia</option>
+                    <option value="DE">Germany</option>
+                    <option value="SG">Singapore</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Delivery Speed -->
+            <div class="checkout-card" style="margin-bottom: 24px;">
+              <div class="checkout-card-header">
+                <div class="step-num">2</div>
+                <div>
+                  <h2 style="font-size: 1.25rem;">Delivery Method</h2>
+                  <p style="font-size: 0.85rem; color: var(--text-muted);">Select your preferred shipping carrier tier</p>
+                </div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 12px;">
+                <label style="display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: var(--radius-md); cursor: pointer;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <input type="radio" name="shipping_tier" value="standard" checked style="accent-color: var(--primary);">
+                    <div>
+                      <div style="font-weight: 600;">Express Courier (1-2 business days)</div>
+                      <div style="font-size: 0.82rem; color: var(--text-dim);">Insured delivery with live signature requirement</div>
+                    </div>
+                  </div>
+                  <strong style="color: var(--success);" id="shipping-tier-price">Included</strong>
+                </label>
+
+                <label style="display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: var(--radius-md); cursor: pointer;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <input type="radio" name="shipping_tier" value="sameday" style="accent-color: var(--primary);">
+                    <div>
+                      <div style="font-weight: 600;">Priority Same-Day Air</div>
+                      <div style="font-size: 0.82rem; color: var(--text-dim);">Dispatched via direct courier flight today</div>
+                    </div>
+                  </div>
+                  <strong>+$25.00</strong>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 3: Payment Method -->
+            <div class="checkout-card">
+              <div class="checkout-card-header">
+                <div class="step-num">3</div>
+                <div>
+                  <h2 style="font-size: 1.25rem;">Payment Method</h2>
+                  <p style="font-size: 0.85rem; color: var(--text-muted);">Encrypted transactions processed via PCI-DSS Certified Gateway</p>
+                </div>
+              </div>
+
+              <div class="payment-methods-grid">
+                <div class="payment-method-card pm-aba-card active" data-method="aba" id="pm-aba">
+                  <span class="badge-aba-rec">⭐ RECOMMENDED</span>
+                  <div style="font-size: 1.6rem; height: 32px; display: flex; align-items: center; justify-content: center;">🇰🇭</div>
+                  <div style="font-size: 0.9rem; font-weight: 800; color: #00b2e3; margin-top: 4px;">ABA PAY (KHQR)</div>
+                  <div style="font-size: 0.7rem; color: #94a3b8;">Scan QR / ABA Mobile</div>
+                </div>
+
+                <div class="payment-method-card" data-method="card" id="pm-card">
+                  <div style="font-size: 1.4rem;">💳</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; margin-top: 4px;">Credit Card</div>
+                  <div style="font-size: 0.7rem; color: #94a3b8;">Visa / Master</div>
+                </div>
+
+                <div class="payment-method-card" data-method="apple" id="pm-apple">
+                  <div style="font-size: 1.4rem;">🍏</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; margin-top: 4px;">Apple Pay</div>
+                  <div style="font-size: 0.7rem; color: #94a3b8;">Apple Wallet</div>
+                </div>
+
+                <div class="payment-method-card" data-method="cod" id="pm-cod">
+                  <div style="font-size: 1.4rem;">💵</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; margin-top: 4px;">Cash on Delivery</div>
+                  <div style="font-size: 0.7rem; color: #94a3b8;">Pay upon arrival</div>
+                </div>
+              </div>
+
+              <!-- ABA Pay / KHQR Showcase Details -->
+              <div id="aba-fields" class="aba-pay-showcase">
+                <div class="aba-header-strip">
+                  <div class="aba-brand-logo">
+                    <div class="aba-logo-badge">ABA'</div>
+                    <div>
+                      <strong style="color: #ffffff; font-size: 0.95rem;">ABA PAY · KHQR</strong>
+                      <div style="font-size: 0.7rem; color: #94a3b8;">National Bank of Cambodia Standard</div>
+                    </div>
+                  </div>
+                  <span class="khqr-badge">KHQR</span>
+                </div>
+
+                <div class="aba-qr-container">
+                  <div class="aba-qr-frame">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https%3A%2F%2Fpay.ababank.com%2FoRF8%2F5a5v9i4k&color=003853" alt="ABA PAY KHQR Code" id="aba-qr-img" loading="eager">
+                    <div class="aba-qr-subtext">
+                      <span>⚡</span> <span>SCAN TO PAY WITH ANY BANK APP</span>
+                    </div>
+                  </div>
+
+                  <div class="aba-info-col">
+                    <div class="aba-amount-card">
+                      <div class="aba-amount-label">ទឹកប្រាក់ត្រូវទូទាត់ (Amount Due)</div>
+                      <div class="aba-amount-usd" id="aba-display-usd">$0.00</div>
+                      <div class="aba-amount-khr" id="aba-display-khr">≈ 0 ៛ (Rate: 1$ = 4,100៛)</div>
+                      <div style="font-size: 0.75rem; color: #38bdf8; margin-top: 4px; font-weight: 600;">
+                        គណនីទទួល: <strong>KIM BUNTHON (PhoneShop Store)</strong>
+                      </div>
+                    </div>
+
+                    <!-- Direct Pay Action Button -->
+                    <a href="https://pay.ababank.com/oRF8/5a5v9i4k" target="_blank" rel="noopener" class="aba-direct-link-btn" id="aba-pay-link-btn">
+                      <span>📲</span>
+                      <span>បើកកម្មវិធី ABA Mobile ដើម្បីបង់ប្រាក់ផ្ទាល់</span>
+                    </a>
+
+                    <ul class="aba-steps-list">
+                      <li>បើកកម្មវិធី <strong>ABA Mobile</strong> ឬ App ធនាគារណាក៏បាន (Bakong, ACLEDA, Wing, Canadia...)</li>
+                      <li>ស្កេនរូប <strong>QR Code</strong> ខាងឆ្វេង ឬចុចប៊ូតុងពណ៌ខៀវខាងលើ</li>
+                      <li>ពិនិត្យឈ្មោះ <strong>KIM BUNTHON</strong> និងទឹកប្រាក់ រួចបញ្ជាក់ការផ្ទេរប្រាក់</li>
+                      <li>ចុចប៊ូតុង <strong>Place Order Now 🔒</strong> ខាងក្រោម ដើម្បីបញ្ចប់ការបញ្ជាទិញ</li>
+                    </ul>
+
+                    <div>
+                      <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" class="aba-telegram-inquire">
+                        ✈️ មានចម្ងល់ ឬចង់ផ្ញើវិក្កយបត្រមក Telegram: <strong>@kimbunthonICT</strong> →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card Input Details -->
+              <div id="card-fields" class="form-grid" style="display: none;">
+                <div class="form-group full">
+                  <label class="form-label" for="card-num">Card Number</label>
+                  <input type="text" id="card-num" class="form-control" placeholder="4532 •••• •••• 8892" maxlength="19">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="card-exp">Expiration Date</label>
+                  <input type="text" id="card-exp" class="form-control" placeholder="MM/YY" maxlength="5">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="card-cvv">Security Code (CVV)</label>
+                  <input type="password" id="card-cvv" class="form-control" placeholder="•••" maxlength="4">
+                </div>
+              </div>
+
+              <!-- Digital Wallet notice -->
+              <div id="digital-wallet-note" style="display: none; padding: 20px; background: rgba(59, 130, 246, 0.1); border: 1px solid var(--border-hover); border-radius: var(--radius-md); text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+                🍏 Authenticate seamlessly with Apple Pay Face ID / Touch ID when placing your order.
+              </div>
+
+              <!-- Cash on Delivery notice -->
+              <div id="cod-note" style="display: none; padding: 20px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); text-align: center; color: #cbd5e1; font-size: 0.9rem;">
+                💵 Pay cash in USD or KHR directly to the verified PhoneShop courier upon receiving and inspecting your sealed smartphone.
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 25px;" id="submit-order-btn">
+                Place Order Now 🔒
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Order Summary Sidebar -->
+        <div>
+          <div class="cart-summary-card" style="position: sticky; top: 90px;">
+            <h2 style="font-size: 1.25rem; margin-bottom: 20px;">Review Order (<span id="checkout-item-count">0</span> items)</h2>
+
+            <div id="checkout-mini-list" style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px; max-height: 320px; overflow-y: auto; padding-right: 6px;">
+              <!-- Mini items rendered by JS -->
+            </div>
+
+            <div class="summary-row">
+              <span>Items Subtotal</span>
+              <span id="chk-subtotal">$0</span>
+            </div>
+
+            <div class="summary-row" id="chk-discount-row" style="display: none; color: var(--success);">
+              <span>Voucher Savings</span>
+              <span id="chk-discount">-$0</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Shipping Carrier</span>
+              <span id="chk-shipping">Free</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Estimated Sales Tax (8%)</span>
+              <span id="chk-tax">$0</span>
+            </div>
+
+            <div class="summary-row total">
+              <span>Grand Total</span>
+              <span id="chk-total" style="color: var(--primary);">$0</span>
+            </div>
+
+            <div style="margin-top: 24px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: var(--radius-md); border: 1px solid var(--border-color); font-size: 0.8rem; color: var(--text-dim); text-align: center;">
+              🔒 Guaranteed Authentic & Insured. You will receive an email confirmation with tracking details immediately upon dispatch.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Success Modal -->
+  <div class="modal-overlay" id="order-success-modal">
+    <div class="modal-card" style="max-width: 540px; text-align: center; padding: 45px 30px;">
+      <div style="width: 80px; height: 80px; border-radius: 50%; background: rgba(16, 185, 129, 0.15); border: 2px solid var(--success); color: var(--success); font-size: 2.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+        ✓
+      </div>
+      <h2 style="font-size: 2rem; margin-bottom: 10px;">Order Confirmed!</h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+        Thank you for purchasing with PhoneShop. Your smartphone is being prepared in our climate-controlled cleanroom for immediate dispatch.
+      </p>
+
+      <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px; margin-bottom: 24px; text-align: left; font-size: 0.9rem;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+          <span style="color: var(--text-dim);">Order Tracking ID:</span>
+          <strong id="modal-order-id" style="color: #67e8f9; font-family: monospace;">PS-2026-98124</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+          <span style="color: var(--text-dim);">Estimated Arrival:</span>
+          <strong id="modal-delivery-date" style="color: #fff;">Within 48 Hours</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+          <span style="color: var(--text-dim);">Payment Method:</span>
+          <strong id="modal-payment-name" style="color: #00b2e3;">ABA PAY (KHQR)</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <span style="color: var(--text-dim);">Payment Status:</span>
+          <strong style="color: var(--success);" id="modal-payment-status">Authorized & Cleared</strong>
+        </div>
+      </div>
+
+      <!-- ABA Pay Direct Confirmation Box -->
+      <div id="modal-aba-notice" style="background: rgba(0, 91, 130, 0.25); border: 1px solid rgba(0, 178, 227, 0.45); border-radius: var(--radius-md); padding: 16px; margin-bottom: 22px; font-size: 0.88rem; color: #cbd5e1; text-align: left;">
+        <div style="font-weight: 800; color: #00b2e3; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; font-size: 0.95rem;">
+          <span>🇰🇭</span> <span>ABA PAY (KHQR) ត្រូវបានជ្រើសរើស</span>
+        </div>
+        <div style="margin-bottom: 8px;">
+          ប្រសិនបើលោកអ្នកមិនទាន់បានបង់ប្រាក់ សូមចុចប៊ូតុងខាងក្រោម:
+        </div>
+        <a href="https://pay.ababank.com/oRF8/5a5v9i4k" target="_blank" rel="noopener" class="aba-direct-link-btn" style="margin-bottom: 10px; font-size: 0.88rem; padding: 10px 14px;">
+          <span>📲</span> <span>បើកកម្មវិធី ABA Mobile ដើម្បីបង់ប្រាក់ (<span id="modal-aba-total">$0.00</span>)</span>
+        </a>
+        <div style="font-size: 0.8rem; color: #94a3b8; line-height: 1.4;">
+          ✈️ បន្ទាប់ពីបង់ប្រាក់រួច សូមផ្ញើវិក្កយបត្រ (Receipt) មកកាន់ Telegram: 
+          <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" style="color: #38bdf8; font-weight: 700;">@kimbunthonICT</a> ដើម្បីឱ្យក្រុមការងារវេចខ្ចប់ផ្ញើជូនភ្លាមៗ!
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="reports.html" class="btn btn-primary" onclick="CartManager.clearCart();">📊 View In Buyer Orders Report</a>
+        <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" class="btn btn-secondary" style="border-color: #38bdf8; color: #38bdf8;">✈️ Confirm via Telegram</a>
+        <a href="index.html" class="btn btn-secondary" onclick="CartManager.clearCart();">Store Home</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container" style="text-align: center; color: var(--text-dim); font-size: 0.88rem;">
+      &copy; 2026 PhoneShop Inc. All rights reserved. 256-bit Bank Grade Security.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="lib/icons.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let extraShipping = 0;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const cart = CartManager.getCart();
+      if (cart.length === 0) {
+        // Default flagship if empty for preview
+        const defaultProduct = PRODUCTS_DATA[0];
+        CartManager.addItem(defaultProduct, 1);
+      }
+
+      renderCheckoutSummary();
+
+      // Shipping option radios
+      document.querySelectorAll('input[name="shipping_tier"]').forEach(radio => {
+        radio.addEventListener('change', (e) => {
+          if (e.target.value === 'sameday') {
+            extraShipping = 25;
+          } else {
+            extraShipping = 0;
+          }
+          renderCheckoutSummary();
+        });
+      });
+
+      // Payment method switcher
+      const methodCards = document.querySelectorAll('.payment-method-card');
+      const abaFields = document.getElementById('aba-fields');
+      const cardFields = document.getElementById('card-fields');
+      const digitalNote = document.getElementById('digital-wallet-note');
+      const codNote = document.getElementById('cod-note');
+
+      methodCards.forEach(card => {
+        card.addEventListener('click', () => {
+          methodCards.forEach(c => c.classList.remove('active'));
+          card.classList.add('active');
+          const m = card.getAttribute('data-method');
+
+          if (abaFields) abaFields.style.display = (m === 'aba') ? 'block' : 'none';
+          if (cardFields) cardFields.style.display = (m === 'card') ? 'grid' : 'none';
+          if (digitalNote) digitalNote.style.display = (m === 'apple') ? 'block' : 'none';
+          if (codNote) codNote.style.display = (m === 'cod') ? 'block' : 'none';
+        });
+      });
+    });
+
+    function renderCheckoutSummary() {
+      const cart = CartManager.getCart();
+      const miniList = document.getElementById('checkout-mini-list');
+      const countEl = document.getElementById('checkout-item-count');
+      const subtotalEl = document.getElementById('chk-subtotal');
+      const discountRow = document.getElementById('chk-discount-row');
+      const discountEl = document.getElementById('chk-discount');
+      const shippingEl = document.getElementById('chk-shipping');
+      const taxEl = document.getElementById('chk-tax');
+      const totalEl = document.getElementById('chk-total');
+
+      countEl.textContent = CartManager.getCount();
+
+      miniList.innerHTML = cart.map(item => `
+        <div style="display: flex; gap: 12px; align-items: center; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+          <img src="${item.image}" alt="${item.name}" style="width: 44px; height: 44px; object-fit: contain; background: rgba(255,255,255,0.03); border-radius: 6px; padding: 4px;">
+          <div style="flex: 1; font-size: 0.85rem;">
+            <div style="font-weight: 600; color: #fff;">${item.name}</div>
+            <div style="color: var(--text-dim);">${item.storage || '256GB'} • ${item.color || 'Standard'} (x${item.qty})</div>
+          </div>
+          <div style="font-weight: 700; font-size: 0.9rem;">${formatPrice(item.price * item.qty)}</div>
+        </div>
+      `).join('');
+
+      const subtotal = CartManager.getSubtotal();
+      const discount = CartManager.getDiscount();
+      const baseShipping = CartManager.getShipping();
+      const finalShipping = baseShipping + extraShipping;
+      const tax = (subtotal - discount) * 0.08;
+      const grandTotal = Math.max(0, subtotal - discount + finalShipping + tax);
+
+      subtotalEl.textContent = formatPrice(subtotal);
+      if (discount > 0) {
+        discountRow.style.display = 'flex';
+        discountEl.textContent = `-${formatPrice(discount)}`;
+      } else {
+        discountRow.style.display = 'none';
+      }
+
+      shippingEl.textContent = finalShipping === 0 ? 'FREE' : formatPrice(finalShipping);
+      taxEl.textContent = formatPrice(tax);
+      totalEl.textContent = formatPrice(grandTotal);
+
+      // Update ABA Pay calculations live
+      const khrAmount = Math.round(grandTotal * 4100).toLocaleString();
+      const abaUsd = document.getElementById('aba-display-usd');
+      const abaKhr = document.getElementById('aba-display-khr');
+      if (abaUsd) abaUsd.textContent = formatPrice(grandTotal);
+      if (abaKhr) abaKhr.textContent = `≈ ${khrAmount} ៛ (Rate: $1 = 4,100៛)`;
+    }
+
+    function handleOrderSubmit() {
+      const btn = document.getElementById('submit-order-btn');
+      btn.textContent = 'Processing Payment... ⏳';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btn.textContent = 'Place Order Now 🔒';
+        btn.disabled = false;
+
+        // Generate random Order ID
+        const randomId = 'PS-2026-' + Math.floor(10000 + Math.random() * 90000);
+        document.getElementById('modal-order-id').textContent = randomId;
+
+        // Collect Customer Order Details
+        const cart = CartManager.getCart();
+        const subtotal = CartManager.getSubtotal();
+        const discount = CartManager.getDiscount();
+        const baseShipping = CartManager.getShipping();
+        const finalShipping = baseShipping + extraShipping;
+        const tax = (subtotal - discount) * 0.08;
+        const grandTotal = Math.max(0, subtotal - discount + finalShipping + tax);
+        const paymentMethod = document.querySelector('.payment-method-card.active')?.getAttribute('data-method') || 'aba';
+
+        // Payment Name
+        const methodNames = {
+          'aba': 'ABA PAY (KHQR)',
+          'card': 'Credit Card (Visa/Master)',
+          'apple': 'Apple Pay',
+          'cod': 'Cash on Delivery'
+        };
+        const paymentName = methodNames[paymentMethod] || 'ABA PAY (KHQR)';
+        const modalPaymentEl = document.getElementById('modal-payment-name');
+        if (modalPaymentEl) modalPaymentEl.textContent = paymentName;
+
+        const modalAbaNotice = document.getElementById('modal-aba-notice');
+        const modalAbaTotal = document.getElementById('modal-aba-total');
+        if (modalAbaNotice) {
+          modalAbaNotice.style.display = (paymentMethod === 'aba') ? 'block' : 'none';
+        }
+        if (modalAbaTotal) {
+          modalAbaTotal.textContent = formatPrice(grandTotal);
+        }
+
+        const customerOrder = {
+          id: randomId,
+          customer: {
+            firstName: document.getElementById('first-name').value || 'Customer',
+            lastName: document.getElementById('last-name').value || 'Buyer',
+            email: document.getElementById('email').value || 'client@example.com',
+            phone: document.getElementById('phone').value || '+855 12 345 678',
+            address: document.getElementById('address').value || 'Downtown',
+            city: document.getElementById('city').value || 'Phnom Penh',
+            state: document.getElementById('state').value || 'Phnom Penh',
+            zip: document.getElementById('zip').value || '12000',
+            country: document.getElementById('country').value || 'Cambodia'
+          },
+          items: cart.length > 0 ? cart : [{
+            id: 'iphone-16-pro-max',
+            name: 'Apple iPhone 16 Pro Max',
+            storage: '256GB',
+            color: 'Desert Titanium',
+            price: 1199,
+            qty: 1,
+            image: 'img/phones/iphone-16-pro-max.png'
+          }],
+          subtotal: subtotal || 1199,
+          discount: discount || 0,
+          shipping: finalShipping,
+          tax: tax,
+          total: grandTotal || 1199,
+          paymentMethod: paymentName,
+          status: paymentMethod === 'aba' ? 'Awaiting ABA Confirmation' : 'Processing',
+          createdAt: new Date().toISOString()
+        };
+
+        // Save into phoneshop_orders_v1 for reports
+        try {
+          const raw = localStorage.getItem('phoneshop_orders_v1');
+          const existing = raw ? JSON.parse(raw) : [];
+          existing.unshift(customerOrder);
+          localStorage.setItem('phoneshop_orders_v1', JSON.stringify(existing));
+        } catch (e) {
+          console.error('Failed to save order to reports:', e);
+        }
+
+        const modal = document.getElementById('order-success-modal');
+        modal.classList.add('active');
+        CartManager.clearCart();
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
