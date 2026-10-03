@@ -1,3 +1,21 @@
+
+/* ===================================================================
+   GLOBAL IMAGE FALLBACK HANDLER
+   Ensures seamless asset loading for both flat root & subfolder structures
+   =================================================================== */
+document.addEventListener('error', function (e) {
+  if (e.target && e.target.tagName === 'IMG') {
+    var src = e.target.getAttribute('src');
+    if (!src || e.target.dataset.fallbackTried) return;
+    e.target.dataset.fallbackTried = 'true';
+    if (src.indexOf('/') !== -1) {
+      e.target.src = src.split('/').pop();
+    } else {
+      e.target.src = 'img/phones/' + src;
+    }
+  }
+}, true);
+
 /* ===================================================================
    PHONESHOP - MAIN SCRIPT & PRODUCT CATALOG
    Shared product catalog, navigation, modals, search & UI helpers
@@ -13,7 +31,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 382,
     badge: 'Hot',
-    image: 'img/phones/iphone-16-pro-max.png',
+    image: 'iphone-16-pro-max.png',
     storage: ['256GB', '512GB', '1TB'],
     colors: [
       { name: 'Desert Titanium', hex: '#d4af37' },
@@ -51,7 +69,7 @@ const PRODUCTS_DATA = [
     rating: 4.8,
     reviewsCount: 420,
     badge: 'Sale',
-    image: 'img/phones/galaxy-s24-ultra.png',
+    image: 'galaxy-s24-ultra.png',
     storage: ['256GB', '512GB', '1TB'],
     colors: [
       { name: 'Titanium Gray', hex: '#64748b' },
@@ -89,7 +107,7 @@ const PRODUCTS_DATA = [
     rating: 4.8,
     reviewsCount: 295,
     badge: 'New',
-    image: 'img/phones/pixel-9-pro-xl.png',
+    image: 'pixel-9-pro-xl.png',
     storage: ['128GB', '256GB', '512GB'],
     colors: [
       { name: 'Obsidian', hex: '#1e293b' },
@@ -126,7 +144,7 @@ const PRODUCTS_DATA = [
     rating: 4.7,
     reviewsCount: 180,
     badge: 'Sale',
-    image: 'img/phones/xiaomi-14-ultra.png',
+    image: 'xiaomi-14-ultra.png',
     storage: ['256GB', '512GB'],
     colors: [
       { name: 'Black Vegan Leather', hex: '#18181b' },
@@ -160,7 +178,7 @@ const PRODUCTS_DATA = [
     rating: 4.7,
     reviewsCount: 310,
     badge: 'New',
-    image: 'img/phones/iphone-16.png',
+    image: 'iphone-16.png',
     storage: ['128GB', '256GB', '512GB'],
     colors: [
       { name: 'Ultramarine', hex: '#2563eb' },
@@ -197,7 +215,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 142,
     badge: 'Hot',
-    image: 'img/phones/galaxy-z-fold-6.png',
+    image: 'galaxy-z-fold-6.png',
     storage: ['256GB', '512GB', '1TB'],
     colors: [
       { name: 'Silver Shadow', hex: '#64748b' },
@@ -231,7 +249,7 @@ const PRODUCTS_DATA = [
     rating: 4.8,
     reviewsCount: 224,
     badge: 'Sale',
-    image: 'img/phones/oneplus-12.png',
+    image: 'oneplus-12.png',
     storage: ['256GB', '512GB'],
     colors: [
       { name: 'Flowy Emerald', hex: '#065f46' },
@@ -263,7 +281,7 @@ const PRODUCTS_DATA = [
     rating: 4.7,
     reviewsCount: 198,
     badge: 'New',
-    image: 'img/phones/pixel-9.png',
+    image: 'pixel-9.png',
     storage: ['128GB', '256GB'],
     colors: [
       { name: 'Peony', hex: '#f472b6' },
@@ -297,7 +315,7 @@ const PRODUCTS_DATA = [
     rating: 4.6,
     reviewsCount: 112,
     badge: 'Sale',
-    image: 'img/phones/xiaomi-14t-pro.png',
+    image: 'xiaomi-14t-pro.png',
     storage: ['256GB', '512GB', '1TB'],
     colors: [
       { name: 'Titan Gray', hex: '#64748b' },
@@ -330,7 +348,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 175,
     badge: 'Sale',
-    image: 'img/phones/oneplus-open.png',
+    image: 'oneplus-open.png',
     storage: ['512GB'],
     colors: [
       { name: 'Voyager Black', hex: '#1c1917' },
@@ -362,7 +380,7 @@ const PRODUCTS_DATA = [
     rating: 4.7,
     reviewsCount: 88,
     badge: 'New',
-    image: 'img/phones/sony-xperia-1-vi.png',
+    image: 'sony-xperia-1-vi.png',
     storage: ['256GB', '512GB'],
     colors: [
       { name: 'Platinum Silver', hex: '#cbd5e1' },
@@ -395,7 +413,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 160,
     badge: 'Hot',
-    image: 'img/phones/rog-phone-8-pro.png',
+    image: 'rog-phone-8-pro.png',
     storage: ['512GB', '1TB'],
     colors: [
       { name: 'Phantom Black', hex: '#09090b' }

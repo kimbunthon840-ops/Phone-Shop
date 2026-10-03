@@ -1,1138 +1,1804 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PhoneShop | Premium Flagship Smartphones & Official Deals</title>
-  <meta name="description" content="Discover the latest flagship smartphones from Apple, Samsung, Google, Xiaomi, OnePlus, and Sony. Enjoy official warranties, fast shipping, and exclusive tech discounts.">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="img/logo.png">
-</head>
-<body>
-
-  <!-- Top Running Announcement Marquee (អក្សររត់ប្រកាសដំណឹង & ប្រូម៉ូសិន) -->
-  <div class="top-ticker-bar" id="top-announcement-ticker">
-    <div class="ticker-badge-wrap">
-      <span class="ticker-fire">🔥</span>
-      <span class="ticker-badge-text">HOT PROMO</span>
-    </div>
-    <div class="ticker-track-wrap">
-      <div class="ticker-track">
-        <div class="ticker-segment">
-          <span class="ticker-item">⚡ <strong>ប្រូម៉ូសិនពិសេស 2026:</strong> បញ្ចុះតម្លៃរហូតដល់ <span class="ticker-highlight">$100</span> លើ iPhone 16 Pro Max &amp; Galaxy S24 Ultra!</span>
-          <span class="ticker-sep">✦</span>
-          <span class="ticker-item">✈️ <strong>សួរព័ត៌មាន &amp; កុម្ម៉ង់ទិញផ្ទាល់:</strong> Telegram <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" class="ticker-link">@kimbunthonICT</a> (ឆ្លើយតបរហ័ស ២៤/៧)</span>
-          <span class="ticker-sep">✦</span>
-          <span class="ticker-item">🚚 <strong>សេវាដឹកជញ្ជូនរហ័ស:</strong> ឥតគិតថ្លៃ (Free Express Delivery) ទូទាំង ២៥ ខេត្ត-ក្រុង</span>
-          <span class="ticker-sep">✦</span>
-          <span class="ticker-item">🛡️ <strong>ការធានាផ្លូវការ:</strong> រយៈពេល ២ ឆ្នាំពេញពីក្រុមហ៊ុន (100% Genuine Guaranteed)</span>
-          <span class="ticker-sep">✦</span>
-          <span class="ticker-item">🎁 <strong>កាដូថែមជូនពិសេស:</strong> Free 45W Fast Charger + Case ការពារ + ស្រ្គីនកញ្ចក់ការពារ!</span>
-          <span class="ticker-sep">✦</span>
-          <span class="ticker-item">💳 <strong>វិធីសាស្រ្តទូទាត់:</strong> ទទួល ABA PAY (KHQR) 🇰🇭, កាតធនាគារ, Apple Pay, PayPal &amp; ផ្ញើដល់ដៃទើបគិតលុយ (COD)</span>
-          <span class="ticker-sep">✦</span>
-          <span class="ticker-item">🔄 <strong>ធានាប្តូរថ្មី 30 ថ្ងៃ:</strong> បើមានបញ្ហាបច្ចេកទេសពីរោងចក្រ</span>
-          <span class="ticker-sep">✦</span>
-        </div>
-        <div class="ticker-segment" aria-hidden="true">
-          <span class="ticker-item">⚡ <strong>ប្រូម៉ូសិនពិសេស 2026:</strong> បញ្ចុះតម្លៃរហូតដល់ <span class="ticker-highlight">$100</span> លើ iPhone 16 Pro Max &amp; Galaxy S24 Ultra!</span>
-          <span class="ticker-sep">✦</span>
-          <span class="ticker-item">✈️ <strong>សួរព័ត៌មាន &amp; កុម្ម៉ង់ទិញផ្ទាល់:</strong> Telegram <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" class="ticker-link">@kimbunthonICT</a> (ឆ្លើយតបរហ័ស ២៤/៧)</span>
-          <span class="ticker-sep">✦</span>
-          <span class="ticker-item">🚚 <strong>សេវាដឹកជញ្ជូនរហ័ស:</strong> ឥតគិតថ្លៃ (Free Express Delivery) ទូទាំង ២៥ ខេត្ត-ក្រុង</span>
-          <span class="ticker-sep">✦</span>
-          <span class="ticker-item">🛡️ <strong>ការធានាផ្លូវការ:</strong> រយៈពេល ២ ឆ្នាំពេញពីក្រុមហ៊ុន (100% Genuine Guaranteed)</span>
-          <span class="ticker-sep">✦</span>
-          <span class="ticker-item">🎁 <strong>កាដូថែមជូនពិសេស:</strong> Free 45W Fast Charger + Case ការពារ + ស្រ្គីនកញ្ចក់ការពារ!</span>
-          <span class="ticker-sep">✦</span>
-          <span class="ticker-item">💳 <strong>វិធីសាស្រ្តទូទាត់:</strong> ទទួល ABA PAY (KHQR) 🇰🇭, កាតធនាគារ, Apple Pay, PayPal &amp; ផ្ញើដល់ដៃទើបគិតលុយ (COD)</span>
-          <span class="ticker-sep">✦</span>
-          <span class="ticker-item">🔄 <strong>ធានាប្តូរថ្មី 30 ថ្ងៃ:</strong> បើមានបញ្ហាបច្ចេកទេសពីរោងចក្រ</span>
-          <span class="ticker-sep">✦</span>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhoneShop | Premium Flagship Smartphones & Official Deals</title>
+    <meta
+      name="description"
+      content="Discover the latest flagship smartphones from Apple, Samsung, Google, Xiaomi, OnePlus, and Sony. Enjoy official warranties, fast shipping, and exclusive tech discounts."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="logo.png" />
+  </head>
+  <body>
+    <!-- Top Running Announcement Marquee (អក្សររត់ប្រកាសដំណឹង & ប្រូម៉ូសិន) -->
+    <div class="top-ticker-bar" id="top-announcement-ticker">
+      <div class="ticker-badge-wrap">
+        <span class="ticker-fire">🔥</span>
+        <span class="ticker-badge-text">HOT PROMO</span>
       </div>
-    </div>
-  </div>
-
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <div class="nav-left">
-        <a href="index.html" class="logo-wrapper" id="site-logo">
-          <img src="img/logo.png" alt="PhoneShop Logo" class="logo-img">
-          <div class="logo-text-wrap">
-            <span class="logo-text">Phone<span>Shop</span></span>
-            <span class="logo-tagline">ORIGINAL STORE</span>
+      <div class="ticker-track-wrap">
+        <div class="ticker-track">
+          <div class="ticker-segment">
+            <span class="ticker-item"
+              >⚡ <strong>ប្រូម៉ូសិនពិសេស 2026:</strong> បញ្ចុះតម្លៃរហូតដល់
+              <span class="ticker-highlight">$100</span> លើ iPhone 16 Pro Max
+              &amp; Galaxy S24 Ultra!</span
+            >
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-item"
+              >✈️ <strong>សួរព័ត៌មាន &amp; កុម្ម៉ង់ទិញផ្ទាល់:</strong> Telegram
+              <a
+                href="https://t.me/kimbunthonICT"
+                target="_blank"
+                rel="noopener"
+                class="ticker-link"
+                >@kimbunthonICT</a
+              >
+              (ឆ្លើយតបរហ័ស ២៤/៧)</span
+            >
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-item"
+              >🚚 <strong>សេវាដឹកជញ្ជូនរហ័ស:</strong> ឥតគិតថ្លៃ (Free Express
+              Delivery) ទូទាំង ២៥ ខេត្ត-ក្រុង</span
+            >
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-item"
+              >🛡️ <strong>ការធានាផ្លូវការ:</strong> រយៈពេល ២ ឆ្នាំពេញពីក្រុមហ៊ុន
+              (100% Genuine Guaranteed)</span
+            >
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-item"
+              >🎁 <strong>កាដូថែមជូនពិសេស:</strong> Free 45W Fast Charger + Case
+              ការពារ + ស្រ្គីនកញ្ចក់ការពារ!</span
+            >
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-item"
+              >💳 <strong>វិធីសាស្រ្តទូទាត់:</strong> ទទួល ABA PAY (KHQR) 🇰🇭,
+              កាតធនាគារ, Apple Pay, PayPal &amp; ផ្ញើដល់ដៃទើបគិតលុយ (COD)</span
+            >
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-item"
+              >🔄
+              <strong>ធានាប្តូរថ្មី 30 ថ្ងៃ:</strong>
+              បើមានបញ្ហាបច្ចេកទេសពីរោងចក្រ</span
+            >
+            <span class="ticker-sep">✦</span>
           </div>
-        </a>
-
-        <!-- Glass Divider between Logo and Links to prevent any crowding -->
-        <div class="nav-divider"></div>
-
-        <nav class="nav-links">
-          <a href="index.html" class="nav-link active">Home</a>
-          <a href="products.html" class="nav-link">All Phones</a>
-          <a href="brands.html" class="nav-link">Brands</a>
-          <a href="deals.html" class="nav-link">Deals <span class="nav-deal-badge">🔥 Hot</span></a>
-          <a href="reports.html" class="nav-link">Reports <span class="nav-report-badge">📊 Data</span></a>
-          <a href="about.html" class="nav-link">About</a>
-        </nav>
-      </div>
-
-      <div class="nav-actions">
-        <div class="search-box-toggle">
-          <span class="search-icon-header">🔍</span>
-          <input type="text" class="search-input-header" id="global-search-input" placeholder="Search iPhone, Galaxy..." aria-label="Search smartphones">
-        </div>
-        <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" class="nav-telegram-btn" title="សួរព័ត៌មានតាម Telegram @kimbunthonICT">
-          <span class="tg-status-dot"></span>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
-          </svg>
-          <span>Telegram</span>
-        </a>
-        <a href="cart.html" class="cart-btn" id="nav-cart-btn" aria-label="Shopping Cart">
-          <span>🛒</span> <span>Cart</span> <span class="cart-badge">0</span>
-        </a>
-        <button class="hamburger-btn" id="nav-toggle" aria-label="Open mobile menu">☰</button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Drawer -->
-  <div class="mobile-nav-drawer" id="mobile-drawer">
-    <button class="drawer-close" aria-label="Close menu">&times;</button>
-    <div class="drawer-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="products.html">All Phones</a>
-      <a href="brands.html">Brands</a>
-      <a href="deals.html">Flash Deals</a>
-      <a href="reports.html">Buyer Reports 📊</a>
-      <a href="cart.html">My Cart (<span class="cart-badge">0</span>)</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Support</a>
-      <a href="faq.html">Warranty & FAQ</a>
-      <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" style="color: #38bdf8; font-weight: 700; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 12px; margin-top: 8px;">
-        ✈️ Telegram: @kimbunthonICT
-      </a>
-    </div>
-  </div>
-  <div class="overlay" id="drawer-overlay"></div>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <div class="hero-tag">
-          ✨ Flagship Season 2026 • Official Distributor
-        </div>
-        <h1 class="hero-title">
-          Next-Gen <span>Smartphones</span>. Engineered For Tomorrow.
-        </h1>
-        <p class="hero-desc">
-          Experience breathtaking displays, generative AI powerhouses, and pro studio cameras. Guaranteed authentic flagships with 2-year warranty and same-day priority dispatch.
-        </p>
-        <div class="hero-cta">
-          <a href="products.html" class="btn btn-primary btn-lg" id="hero-cta-explore">
-            Explore All Phones →
-          </a>
-          <a href="deals.html" class="btn btn-secondary btn-lg" id="hero-cta-deals">
-            View Flash Deals 🔥
-          </a>
-          <a href="#commercial-video-section" class="btn btn-video-glow" id="hero-watch-video-btn" title="ទស្សនាវីដេអូពាណិជ្ជកម្ម 4K">
-            <span class="play-triangle">▶</span>
-            <span>ទស្សនាវីដេអូ 4K</span>
-          </a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat-item">
-            <h3>50K+</h3>
-            <p>Phones Delivered</p>
-          </div>
-          <div class="stat-item">
-            <h3>100%</h3>
-            <p>Genuine & Sealed</p>
-          </div>
-          <div class="stat-item">
-            <h3>2-Year</h3>
-            <p>Official Warranty</p>
+          <div class="ticker-segment" aria-hidden="true">
+            <span class="ticker-item"
+              >⚡ <strong>ប្រូម៉ូសិនពិសេស 2026:</strong> បញ្ចុះតម្លៃរហូតដល់
+              <span class="ticker-highlight">$100</span> លើ iPhone 16 Pro Max
+              &amp; Galaxy S24 Ultra!</span
+            >
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-item"
+              >✈️ <strong>សួរព័ត៌មាន &amp; កុម្ម៉ង់ទិញផ្ទាល់:</strong> Telegram
+              <a
+                href="https://t.me/kimbunthonICT"
+                target="_blank"
+                rel="noopener"
+                class="ticker-link"
+                >@kimbunthonICT</a
+              >
+              (ឆ្លើយតបរហ័ស ២៤/៧)</span
+            >
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-item"
+              >🚚 <strong>សេវាដឹកជញ្ជូនរហ័ស:</strong> ឥតគិតថ្លៃ (Free Express
+              Delivery) ទូទាំង ២៥ ខេត្ត-ក្រុង</span
+            >
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-item"
+              >🛡️ <strong>ការធានាផ្លូវការ:</strong> រយៈពេល ២ ឆ្នាំពេញពីក្រុមហ៊ុន
+              (100% Genuine Guaranteed)</span
+            >
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-item"
+              >🎁 <strong>កាដូថែមជូនពិសេស:</strong> Free 45W Fast Charger + Case
+              ការពារ + ស្រ្គីនកញ្ចក់ការពារ!</span
+            >
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-item"
+              >💳 <strong>វិធីសាស្រ្តទូទាត់:</strong> ទទួល ABA PAY (KHQR) 🇰🇭,
+              កាតធនាគារ, Apple Pay, PayPal &amp; ផ្ញើដល់ដៃទើបគិតលុយ (COD)</span
+            >
+            <span class="ticker-sep">✦</span>
+            <span class="ticker-item"
+              >🔄
+              <strong>ធានាប្តូរថ្មី 30 ថ្ងៃ:</strong>
+              បើមានបញ្ហាបច្ចេកទេសពីរោងចក្រ</span
+            >
+            <span class="ticker-sep">✦</span>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="hero-image-wrap" id="hero-interactive-stage">
-        <div class="hero-glow" id="hero-aura-glow"></div>
-        <div class="hero-holo-ring"></div>
-        
-        <!-- 3D Smartphone Device Mockup with OLED Display -->
-        <div class="hero-phone-device" id="hero-phone-device">
-          <!-- Hardware Buttons -->
-          <div class="phone-btn phone-btn-action"></div>
-          <div class="phone-btn phone-btn-vol-up"></div>
-          <div class="phone-btn phone-btn-vol-down"></div>
-          <div class="phone-btn phone-btn-power"></div>
-
-          <!-- Glass OLED Screen -->
-          <div class="phone-screen" id="hero-phone-screen" style="background-image: url('img/wallpapers/wp-iphone16.jpg');">
-            <div class="screen-glare"></div>
-
-            <!-- Integrated iOS Status Bar with Dynamic Island Centered -->
-            <div class="screen-status-bar" id="hero-status-bar">
-              <span class="status-time" id="screen-status-time">20:32</span>
-
-              <!-- Dynamic Island Pill -->
-              <div class="dynamic-island-pill" id="hero-island">
-                <span class="island-dot"></span>
-                <span class="island-title" id="island-text">Music</span>
-                <div class="island-wave">
-                  <span></span><span></span><span></span>
-                </div>
-              </div>
-
-              <div class="status-icons">
-                <span>5G</span>
-                <span>📶</span>
-                <span>100%🔋</span>
-              </div>
+    <!-- Navigation -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <div class="nav-left">
+          <a href="index.html" class="logo-wrapper" id="site-logo">
+            <img src="logo.png" alt="PhoneShop Logo" class="logo-img" />
+            <div class="logo-text-wrap">
+              <span class="logo-text">Phone<span>Shop</span></span>
+              <span class="logo-tagline">ORIGINAL STORE</span>
             </div>
+          </a>
 
-            <!-- Lockscreen Header -->
-            <div class="screen-lock-header">
-              <div class="lock-date" id="screen-lock-date">ព្រហស្បតិ៍, ០១ តុលា</div>
-              <div class="lock-clock" id="screen-lock-clock">20:32</div>
-              <div class="screen-widgets-row">
-                <div class="lock-widget">
-                  <span>☀️</span>
-                  <div class="widget-info">
-                    <strong>31°C</strong>
-                    <small>Phnom Penh</small>
+          <!-- Glass Divider between Logo and Links to prevent any crowding -->
+          <div class="nav-divider"></div>
+
+          <nav class="nav-links">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="products.html" class="nav-link">All Phones</a>
+            <a href="brands.html" class="nav-link">Brands</a>
+            <a href="deals.html" class="nav-link"
+              >Deals <span class="nav-deal-badge">🔥 Hot</span></a
+            >
+            <a href="reports.html" class="nav-link"
+              >Reports <span class="nav-report-badge">📊 Data</span></a
+            >
+            <a href="about.html" class="nav-link">About</a>
+          </nav>
+        </div>
+
+        <div class="nav-actions">
+          <div class="search-box-toggle">
+            <span class="search-icon-header">🔍</span>
+            <input
+              type="text"
+              class="search-input-header"
+              id="global-search-input"
+              placeholder="Search iPhone, Galaxy..."
+              aria-label="Search smartphones"
+            />
+          </div>
+          <a
+            href="https://t.me/kimbunthonICT"
+            target="_blank"
+            rel="noopener"
+            class="nav-telegram-btn"
+            title="សួរព័ត៌មានតាម Telegram @kimbunthonICT"
+          >
+            <span class="tg-status-dot"></span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"
+              />
+            </svg>
+            <span>Telegram</span>
+          </a>
+          <a
+            href="cart.html"
+            class="cart-btn"
+            id="nav-cart-btn"
+            aria-label="Shopping Cart"
+          >
+            <span>🛒</span> <span>Cart</span> <span class="cart-badge">0</span>
+          </a>
+          <button
+            class="hamburger-btn"
+            id="nav-toggle"
+            aria-label="Open mobile menu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+      <button class="drawer-close" aria-label="Close menu">&times;</button>
+      <div class="drawer-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">All Phones</a>
+        <a href="brands.html">Brands</a>
+        <a href="deals.html">Flash Deals</a>
+        <a href="reports.html">Buyer Reports 📊</a>
+        <a href="cart.html">My Cart (<span class="cart-badge">0</span>)</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Support</a>
+        <a href="faq.html">Warranty & FAQ</a>
+        <a
+          href="https://t.me/kimbunthonICT"
+          target="_blank"
+          rel="noopener"
+          style="
+            color: #38bdf8;
+            font-weight: 700;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 12px;
+            margin-top: 8px;
+          "
+        >
+          ✈️ Telegram: @kimbunthonICT
+        </a>
+      </div>
+    </div>
+    <div class="overlay" id="drawer-overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            ✨ Flagship Season 2026 • Official Distributor
+          </div>
+          <h1 class="hero-title">
+            Next-Gen <span>Smartphones</span>. Engineered For Tomorrow.
+          </h1>
+          <p class="hero-desc">
+            Experience breathtaking displays, generative AI powerhouses, and pro
+            studio cameras. Guaranteed authentic flagships with 2-year warranty
+            and same-day priority dispatch.
+          </p>
+          <div class="hero-cta">
+            <a
+              href="products.html"
+              class="btn btn-primary btn-lg"
+              id="hero-cta-explore"
+            >
+              Explore All Phones →
+            </a>
+            <a
+              href="deals.html"
+              class="btn btn-secondary btn-lg"
+              id="hero-cta-deals"
+            >
+              View Flash Deals 🔥
+            </a>
+            <a
+              href="#commercial-video-section"
+              class="btn btn-video-glow"
+              id="hero-watch-video-btn"
+              title="ទស្សនាវីដេអូពាណិជ្ជកម្ម 4K"
+            >
+              <span class="play-triangle">▶</span>
+              <span>ទស្សនាវីដេអូ 4K</span>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3>50K+</h3>
+              <p>Phones Delivered</p>
+            </div>
+            <div class="stat-item">
+              <h3>100%</h3>
+              <p>Genuine & Sealed</p>
+            </div>
+            <div class="stat-item">
+              <h3>2-Year</h3>
+              <p>Official Warranty</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap" id="hero-interactive-stage">
+          <div class="hero-glow" id="hero-aura-glow"></div>
+          <div class="hero-holo-ring"></div>
+
+          <!-- 3D Smartphone Device Mockup with OLED Display -->
+          <div class="hero-phone-device" id="hero-phone-device">
+            <!-- Hardware Buttons -->
+            <div class="phone-btn phone-btn-action"></div>
+            <div class="phone-btn phone-btn-vol-up"></div>
+            <div class="phone-btn phone-btn-vol-down"></div>
+            <div class="phone-btn phone-btn-power"></div>
+
+            <!-- Glass OLED Screen -->
+            <div
+              class="phone-screen"
+              id="hero-phone-screen"
+              style="background-image: url('wp-iphone16.jpg');"
+            >
+              <div class="screen-glare"></div>
+
+              <!-- Integrated iOS Status Bar with Dynamic Island Centered -->
+              <div class="screen-status-bar" id="hero-status-bar">
+                <span class="status-time" id="screen-status-time">20:32</span>
+
+                <!-- Dynamic Island Pill -->
+                <div class="dynamic-island-pill" id="hero-island">
+                  <span class="island-dot"></span>
+                  <span class="island-title" id="island-text">Music</span>
+                  <div class="island-wave">
+                    <span></span><span></span><span></span>
                   </div>
                 </div>
-                <div class="lock-widget">
-                  <span>🎧</span>
-                  <div class="widget-info">
-                    <strong>98%</strong>
-                    <small>AirPods Pro</small>
+
+                <div class="status-icons">
+                  <span>5G</span>
+                  <span>📶</span>
+                  <span>100%🔋</span>
+                </div>
+              </div>
+
+              <!-- Lockscreen Header -->
+              <div class="screen-lock-header">
+                <div class="lock-date" id="screen-lock-date">
+                  ព្រហស្បតិ៍, ០១ តុលា
+                </div>
+                <div class="lock-clock" id="screen-lock-clock">20:32</div>
+                <div class="screen-widgets-row">
+                  <div class="lock-widget">
+                    <span>☀️</span>
+                    <div class="widget-info">
+                      <strong>31°C</strong>
+                      <small>Phnom Penh</small>
+                    </div>
+                  </div>
+                  <div class="lock-widget">
+                    <span>🎧</span>
+                    <div class="widget-info">
+                      <strong>98%</strong>
+                      <small>AirPods Pro</small>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Telegram / PhoneShop Live Notification -->
-            <div class="screen-notification" id="hero-screen-noti">
-              <div class="noti-header">
-                <span>✈️</span>
-                <strong>PhoneShop · Telegram Support</strong>
-                <span class="noti-time">ឥឡូវនេះ</span>
+              <!-- Telegram / PhoneShop Live Notification -->
+              <div class="screen-notification" id="hero-screen-noti">
+                <div class="noti-header">
+                  <span>✈️</span>
+                  <strong>PhoneShop · Telegram Support</strong>
+                  <span class="noti-time">ឥឡូវនេះ</span>
+                </div>
+                <div class="noti-body" id="hero-noti-body">
+                  ⚡ ស្តុកថ្មី iPhone 16 Pro Max Desert Titanium មកដល់ហើយ!
+                  បញ្ចុះតម្លៃ 10% ភ្លាមៗ
+                </div>
               </div>
-              <div class="noti-body" id="hero-noti-body">
-                ⚡ ស្តុកថ្មី iPhone 16 Pro Max Desert Titanium មកដល់ហើយ! បញ្ចុះតម្លៃ 10% ភ្លាមៗ
+
+              <!-- Bottom Shortcuts & Home Bar -->
+              <div class="screen-bottom-bar">
+                <div class="bottom-circle-btn" title="ពិលបំភ្លឺ / Flashlight">
+                  🔦
+                </div>
+                <div class="screen-home-indicator"></div>
+                <div class="bottom-circle-btn" title="ម៉ាស៊ីនថត / Camera">
+                  📸
+                </div>
               </div>
             </div>
+          </div>
 
-            <!-- Bottom Shortcuts & Home Bar -->
-            <div class="screen-bottom-bar">
-              <div class="bottom-circle-btn" title="ពិលបំភ្លឺ / Flashlight">🔦</div>
-              <div class="screen-home-indicator"></div>
-              <div class="bottom-circle-btn" title="ម៉ាស៊ីនថត / Camera">📸</div>
+          <!-- 3D Parallax Floating Spec Cards - Flanking the Phone Gracefully -->
+          <div class="hero-floating-card card-top-left" id="card-chipset">
+            <div class="card-icon-glow" style="color: #f59e0b">⚡</div>
+            <div>
+              <div class="card-label">CHIPSET & PERFORMANCE</div>
+              <div class="card-value" id="spec-chipset">Apple A18 Pro 3nm</div>
+              <div class="card-sub" id="spec-chipset-sub">
+                2x Perf Cores · 6-Core GPU
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- 3D Parallax Floating Spec Cards - Flanking the Phone Gracefully -->
-        <div class="hero-floating-card card-top-left" id="card-chipset">
-          <div class="card-icon-glow" style="color: #f59e0b;">⚡</div>
-          <div>
-            <div class="card-label">CHIPSET & PERFORMANCE</div>
-            <div class="card-value" id="spec-chipset">Apple A18 Pro 3nm</div>
-            <div class="card-sub" id="spec-chipset-sub">2x Perf Cores · 6-Core GPU</div>
+          <div class="hero-floating-card card-mid-right" id="card-display">
+            <div class="card-icon-glow" style="color: #38bdf8">✨</div>
+            <div>
+              <div class="card-label">SUPER RETINA DISPLAY</div>
+              <div class="card-value" id="spec-display">
+                6.9" ProMotion 120Hz
+              </div>
+              <div class="card-sub" id="spec-display-sub">
+                2000 Nits · Ceramic Shield
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="hero-floating-card card-mid-right" id="card-display">
-          <div class="card-icon-glow" style="color: #38bdf8;">✨</div>
-          <div>
-            <div class="card-label">SUPER RETINA DISPLAY</div>
-            <div class="card-value" id="spec-display">6.9" ProMotion 120Hz</div>
-            <div class="card-sub" id="spec-display-sub">2000 Nits · Ceramic Shield</div>
+          <div class="hero-floating-card card-bottom-left" id="card-camera">
+            <div class="card-icon-glow" style="color: #ec4899">📷</div>
+            <div>
+              <div class="card-label">PRO CAMERA SYSTEM</div>
+              <div class="card-value" id="spec-camera">
+                48MP Fusion · 5x Telephoto
+              </div>
+              <div class="card-sub" id="spec-camera-sub">
+                4K 120fps Dolby Vision HDR
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="hero-floating-card card-bottom-left" id="card-camera">
-          <div class="card-icon-glow" style="color: #ec4899;">📷</div>
-          <div>
-            <div class="card-label">PRO CAMERA SYSTEM</div>
-            <div class="card-value" id="spec-camera">48MP Fusion · 5x Telephoto</div>
-            <div class="card-sub" id="spec-camera-sub">4K 120fps Dolby Vision HDR</div>
-          </div>
-        </div>
-
-        <!-- Segmented Glass Model Switcher -->
-        <div class="hero-model-switcher" id="hero-switcher">
-          <button class="model-pill active" onclick="switchHeroPhone(0)">
-            <span>🍏</span> iPhone 16 Pro
-          </button>
-          <button class="model-pill" onclick="switchHeroPhone(1)">
-            <span>🪐</span> Galaxy S24
-          </button>
-          <button class="model-pill" onclick="switchHeroPhone(2)">
-            <span>⚡</span> Pixel 9 Pro
-          </button>
-          <button class="model-pill" onclick="switchHeroPhone(3)">
-            <span>📷</span> Xiaomi 14
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Brand Marquee Strip (អក្សររត់ម៉ាកយីហោល្បីៗ) -->
-  <section class="brand-strip">
-    <div class="container" style="margin-bottom: 12px; text-align: center;">
-      <span style="font-size: 0.76rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-dim); font-weight: 700;">
-        ⭐ Official Authorized Brand Partners 2026
-      </span>
-    </div>
-    <div class="brand-marquee-wrap">
-      <div class="brand-marquee-track">
-        <div class="brand-marquee-segment">
-          <a href="brands.html?brand=Apple" class="brand-chip"><span>🍏</span> Apple iPhone</a>
-          <a href="brands.html?brand=Samsung" class="brand-chip"><span>🪐</span> Samsung Galaxy</a>
-          <a href="brands.html?brand=Google" class="brand-chip"><span>🔍</span> Google Pixel</a>
-          <a href="brands.html?brand=Xiaomi" class="brand-chip"><span>🟠</span> Xiaomi Flagships</a>
-          <a href="brands.html?brand=OnePlus" class="brand-chip"><span>🔴</span> OnePlus Devices</a>
-          <a href="brands.html?brand=Sony" class="brand-chip"><span>🎵</span> Sony Xperia</a>
-          <a href="brands.html?brand=Asus" class="brand-chip"><span>🎮</span> Asus ROG Phone</a>
-        </div>
-        <div class="brand-marquee-segment" aria-hidden="true">
-          <a href="brands.html?brand=Apple" class="brand-chip"><span>🍏</span> Apple iPhone</a>
-          <a href="brands.html?brand=Samsung" class="brand-chip"><span>🪐</span> Samsung Galaxy</a>
-          <a href="brands.html?brand=Google" class="brand-chip"><span>🔍</span> Google Pixel</a>
-          <a href="brands.html?brand=Xiaomi" class="brand-chip"><span>🟠</span> Xiaomi Flagships</a>
-          <a href="brands.html?brand=OnePlus" class="brand-chip"><span>🔴</span> OnePlus Devices</a>
-          <a href="brands.html?brand=Sony" class="brand-chip"><span>🎵</span> Sony Xperia</a>
-          <a href="brands.html?brand=Asus" class="brand-chip"><span>🎮</span> Asus ROG Phone</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Flash Deals Banner -->
-  <section class="container">
-    <div class="deals-banner">
-      <div>
-        <span class="badge badge-sale">Limited Time Mega Sale</span>
-        <h2 style="font-size: 2rem; margin: 12px 0 6px;">Super Flash Sale Ends In:</h2>
-        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">
-          Save up to $200 instantly + take an extra 10% off with coupon code <strong style="color: #67e8f9; background: rgba(0,0,0,0.3); padding: 2px 8px; border-radius: 4px;">SAVE10</strong>
-        </p>
-        <div class="countdown-wrap" id="home-countdown">
-          <div class="countdown-box">
-            <div class="countdown-num hours-val">47</div>
-            <div class="countdown-label">Hours</div>
-          </div>
-          <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">:</div>
-          <div class="countdown-box">
-            <div class="countdown-num mins-val">59</div>
-            <div class="countdown-label">Mins</div>
-          </div>
-          <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">:</div>
-          <div class="countdown-box">
-            <div class="countdown-num secs-val">30</div>
-            <div class="countdown-label">Secs</div>
+          <!-- Segmented Glass Model Switcher -->
+          <div class="hero-model-switcher" id="hero-switcher">
+            <button class="model-pill active" onclick="switchHeroPhone(0)">
+              <span>🍏</span> iPhone 16 Pro
+            </button>
+            <button class="model-pill" onclick="switchHeroPhone(1)">
+              <span>🪐</span> Galaxy S24
+            </button>
+            <button class="model-pill" onclick="switchHeroPhone(2)">
+              <span>⚡</span> Pixel 9 Pro
+            </button>
+            <button class="model-pill" onclick="switchHeroPhone(3)">
+              <span>📷</span> Xiaomi 14
+            </button>
           </div>
         </div>
       </div>
-      <div>
-        <a href="deals.html" class="btn btn-accent btn-lg" id="banner-claim-deal-btn">
-          Claim Flash Discount ⚡
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Featured Smartphones -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
+    <!-- Brand Marquee Strip (អក្សររត់ម៉ាកយីហោល្បីៗ) -->
+    <section class="brand-strip">
+      <div class="container" style="margin-bottom: 12px; text-align: center">
+        <span
+          style="
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-dim);
+            font-weight: 700;
+          "
+        >
+          ⭐ Official Authorized Brand Partners 2026
+        </span>
+      </div>
+      <div class="brand-marquee-wrap">
+        <div class="brand-marquee-track">
+          <div class="brand-marquee-segment">
+            <a href="brands.html?brand=Apple" class="brand-chip"
+              ><span>🍏</span> Apple iPhone</a
+            >
+            <a href="brands.html?brand=Samsung" class="brand-chip"
+              ><span>🪐</span> Samsung Galaxy</a
+            >
+            <a href="brands.html?brand=Google" class="brand-chip"
+              ><span>🔍</span> Google Pixel</a
+            >
+            <a href="brands.html?brand=Xiaomi" class="brand-chip"
+              ><span>🟠</span> Xiaomi Flagships</a
+            >
+            <a href="brands.html?brand=OnePlus" class="brand-chip"
+              ><span>🔴</span> OnePlus Devices</a
+            >
+            <a href="brands.html?brand=Sony" class="brand-chip"
+              ><span>🎵</span> Sony Xperia</a
+            >
+            <a href="brands.html?brand=Asus" class="brand-chip"
+              ><span>🎮</span> Asus ROG Phone</a
+            >
+          </div>
+          <div class="brand-marquee-segment" aria-hidden="true">
+            <a href="brands.html?brand=Apple" class="brand-chip"
+              ><span>🍏</span> Apple iPhone</a
+            >
+            <a href="brands.html?brand=Samsung" class="brand-chip"
+              ><span>🪐</span> Samsung Galaxy</a
+            >
+            <a href="brands.html?brand=Google" class="brand-chip"
+              ><span>🔍</span> Google Pixel</a
+            >
+            <a href="brands.html?brand=Xiaomi" class="brand-chip"
+              ><span>🟠</span> Xiaomi Flagships</a
+            >
+            <a href="brands.html?brand=OnePlus" class="brand-chip"
+              ><span>🔴</span> OnePlus Devices</a
+            >
+            <a href="brands.html?brand=Sony" class="brand-chip"
+              ><span>🎵</span> Sony Xperia</a
+            >
+            <a href="brands.html?brand=Asus" class="brand-chip"
+              ><span>🎮</span> Asus ROG Phone</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flash Deals Banner -->
+    <section class="container">
+      <div class="deals-banner">
         <div>
-          <h2 class="section-title">Featured Flagships</h2>
-          <p class="section-subtitle">Handpicked smartphones with top tier performance, cameras, and design.</p>
+          <span class="badge badge-sale">Limited Time Mega Sale</span>
+          <h2 style="font-size: 2rem; margin: 12px 0 6px">
+            Super Flash Sale Ends In:
+          </h2>
+          <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.95rem">
+            Save up to $200 instantly + take an extra 10% off with coupon code
+            <strong
+              style="
+                color: #67e8f9;
+                background: rgba(0, 0, 0, 0.3);
+                padding: 2px 8px;
+                border-radius: 4px;
+              "
+              >SAVE10</strong
+            >
+          </p>
+          <div class="countdown-wrap" id="home-countdown">
+            <div class="countdown-box">
+              <div class="countdown-num hours-val">47</div>
+              <div class="countdown-label">Hours</div>
+            </div>
+            <div
+              style="font-size: 1.5rem; font-weight: 700; color: var(--primary)"
+            >
+              :
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-num mins-val">59</div>
+              <div class="countdown-label">Mins</div>
+            </div>
+            <div
+              style="font-size: 1.5rem; font-weight: 700; color: var(--primary)"
+            >
+              :
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-num secs-val">30</div>
+              <div class="countdown-label">Secs</div>
+            </div>
+          </div>
         </div>
-        <a href="products.html" class="view-all-link">View All 12 Phones →</a>
+        <div>
+          <a
+            href="deals.html"
+            class="btn btn-accent btn-lg"
+            id="banner-claim-deal-btn"
+          >
+            Claim Flash Discount ⚡
+          </a>
+        </div>
       </div>
+    </section>
 
-      <div class="products-grid" id="featured-products-container">
-        <!-- Rendered dynamically by script -->
+    <!-- Featured Smartphones -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Featured Flagships</h2>
+            <p class="section-subtitle">
+              Handpicked smartphones with top tier performance, cameras, and
+              design.
+            </p>
+          </div>
+          <a href="products.html" class="view-all-link">View All 12 Phones →</a>
+        </div>
+
+        <div class="products-grid" id="featured-products-container">
+          <!-- Rendered dynamically by script -->
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===================================================================
+    <!-- ===================================================================
        COMMERCIAL VIDEO SHOWCASE THEATER (វីដេអូពាណិជ្ជកម្ម & បច្ចេកវិទ្យាកំពូល)
        =================================================================== -->
-  <section class="section commercial-video-section" id="commercial-video-section">
-    <div class="container">
-      
-      <!-- Section Header -->
-      <div class="video-section-header">
-        <div class="video-badge-pill">
-          <span class="video-pulse-dot"></span>
-          <span>🎬 4K OFFICIAL COMMERCIAL PREMIERE 2026</span>
+    <section
+      class="section commercial-video-section"
+      id="commercial-video-section"
+    >
+      <div class="container">
+        <!-- Section Header -->
+        <div class="video-section-header">
+          <div class="video-badge-pill">
+            <span class="video-pulse-dot"></span>
+            <span>🎬 4K OFFICIAL COMMERCIAL PREMIERE 2026</span>
+          </div>
+          <h2 class="video-section-title">
+            វីដេអូពាណិជ្ជកម្ម &amp; បច្ចេកវិទ្យាកំពូល
+            <span>Cinematic Commercial Theater &amp; Exclusive Deals</span>
+          </h2>
+          <p class="video-section-desc">
+            ទស្សនាវីដេអូពាណិជ្ជកម្មផ្លូវការនៃកំពូលស្មាតហ្វូន Flagship
+            ជំនាន់ចុងក្រោយ 2026 ជាមួយរូបភាពកម្រិត 4K Dolby Vision
+            ព្រមទាំងទទួលបានការបញ្ចុះតម្លៃពិសេស
+            <strong class="highlight-discount">$100</strong>
+            ភ្លាមៗសម្រាប់អ្នកទស្សនា!
+          </p>
         </div>
-        <h2 class="video-section-title">
-          វីដេអូពាណិជ្ជកម្ម &amp; បច្ចេកវិទ្យាកំពូល
-          <span>Cinematic Commercial Theater &amp; Exclusive Deals</span>
-        </h2>
-        <p class="video-section-desc">
-          ទស្សនាវីដេអូពាណិជ្ជកម្មផ្លូវការនៃកំពូលស្មាតហ្វូន Flagship ជំនាន់ចុងក្រោយ 2026 ជាមួយរូបភាពកម្រិត 4K Dolby Vision ព្រមទាំងទទួលបានការបញ្ចុះតម្លៃពិសេស <strong class="highlight-discount">$100</strong> ភ្លាមៗសម្រាប់អ្នកទស្សនា!
-        </p>
-      </div>
 
-      <!-- Commercial Switcher Tabs -->
-      <div class="video-tabs-bar">
-        <button class="video-tab-btn active" onclick="switchCommercialVideo(0)" data-index="0" id="vtab-0">
-          <span class="tab-brand-icon">🍏</span>
-          <div class="tab-text-wrap">
-            <span class="tab-title">iPhone 16 Pro Max</span>
-            <span class="tab-sub">Apple Intelligence · Titanium</span>
-          </div>
-        </button>
-
-        <button class="video-tab-btn" onclick="switchCommercialVideo(1)" data-index="1" id="vtab-1">
-          <span class="tab-brand-icon">🪐</span>
-          <div class="tab-text-wrap">
-            <span class="tab-title">Galaxy S24 Ultra</span>
-            <span class="tab-sub">Galaxy AI · 200MP Zoom</span>
-          </div>
-        </button>
-
-        <button class="video-tab-btn" onclick="switchCommercialVideo(2)" data-index="2" id="vtab-2">
-          <span class="tab-brand-icon">⚡</span>
-          <div class="tab-text-wrap">
-            <span class="tab-title">Pixel 9 Pro XL</span>
-            <span class="tab-sub">Google Gemini AI · Pro Cam</span>
-          </div>
-        </button>
-
-        <button class="video-tab-btn" onclick="switchCommercialVideo(3)" data-index="3" id="vtab-3">
-          <span class="tab-brand-icon">📷</span>
-          <div class="tab-text-wrap">
-            <span class="tab-title">Xiaomi 14 Ultra</span>
-            <span class="tab-sub">Leica Optics · 1-Inch Sensor</span>
-          </div>
-        </button>
-      </div>
-
-      <!-- Video Theater Grid -->
-      <div class="video-theater-grid">
-        
-        <!-- Left: Cinema Player Screen -->
-        <div class="video-player-container">
-          <!-- Dynamic Ambient Backlight Glow -->
-          <div class="video-ambient-glow" id="video-ambient-glow"></div>
-
-          <div class="video-player-frame">
-            <!-- Player Top Chrome Bar -->
-            <div class="video-player-topbar">
-              <div class="player-status-group">
-                <span class="player-live-dot"></span>
-                <span class="player-status-tag" id="video-brand-tag">APPLE OFFICIAL</span>
-                <span class="player-res-tag">4K UHD · 60FPS</span>
-                <span class="player-dolby-tag">DOLBY VISION</span>
-              </div>
-              <div class="player-actions-group">
-                <div class="player-viewers-count">
-                  <span class="fire-icon">🔥</span> <span id="video-viewers-count">1,842</span> នាក់កំពុងទស្សនា
-                </div>
-                <a href="https://www.youtube.com/watch?v=wWwGSavIBl4" target="_blank" rel="noopener" class="youtube-direct-link" id="youtube-direct-link" title="បើកមើលលើ YouTube">
-                  <span>▶ YouTube ↗</span>
-                </a>
-                <button class="cinema-mode-btn" id="cinema-mode-btn" onclick="toggleCinemaMode()" title="បើក/បិទ មុខងាររោងកុន (Cinema Mode)">
-                  <span>🌙</span> <span class="cinema-btn-text">Cinema Mode</span>
-                </button>
-              </div>
+        <!-- Commercial Switcher Tabs -->
+        <div class="video-tabs-bar">
+          <button
+            class="video-tab-btn active"
+            onclick="switchCommercialVideo(0)"
+            data-index="0"
+            id="vtab-0"
+          >
+            <span class="tab-brand-icon">🍏</span>
+            <div class="tab-text-wrap">
+              <span class="tab-title">iPhone 16 Pro Max</span>
+              <span class="tab-sub">Apple Intelligence · Titanium</span>
             </div>
+          </button>
 
-            <!-- Video Screen Viewport -->
-            <div class="video-screen-viewport" id="video-viewport">
-              <!-- Poster Thumbnail Overlay with Play Button -->
-              <div class="video-poster-overlay" id="video-poster-overlay" onclick="startCommercialPlay()">
-                <img src="https://i.ytimg.com/vi/wWwGSavIBl4/maxresdefault.jpg" onerror="this.onerror=null; this.src='img/wallpapers/wp-iphone16.jpg';" alt="Commercial Poster" class="video-poster-img" id="video-poster-img">
-                <div class="poster-gradient-scrim"></div>
-                
-                <div class="poster-top-badge">
-                  <span>OFFICIAL COMMERCIAL PREMIERE</span>
+          <button
+            class="video-tab-btn"
+            onclick="switchCommercialVideo(1)"
+            data-index="1"
+            id="vtab-1"
+          >
+            <span class="tab-brand-icon">🪐</span>
+            <div class="tab-text-wrap">
+              <span class="tab-title">Galaxy S24 Ultra</span>
+              <span class="tab-sub">Galaxy AI · 200MP Zoom</span>
+            </div>
+          </button>
+
+          <button
+            class="video-tab-btn"
+            onclick="switchCommercialVideo(2)"
+            data-index="2"
+            id="vtab-2"
+          >
+            <span class="tab-brand-icon">⚡</span>
+            <div class="tab-text-wrap">
+              <span class="tab-title">Pixel 9 Pro XL</span>
+              <span class="tab-sub">Google Gemini AI · Pro Cam</span>
+            </div>
+          </button>
+
+          <button
+            class="video-tab-btn"
+            onclick="switchCommercialVideo(3)"
+            data-index="3"
+            id="vtab-3"
+          >
+            <span class="tab-brand-icon">📷</span>
+            <div class="tab-text-wrap">
+              <span class="tab-title">Xiaomi 14 Ultra</span>
+              <span class="tab-sub">Leica Optics · 1-Inch Sensor</span>
+            </div>
+          </button>
+        </div>
+
+        <!-- Video Theater Grid -->
+        <div class="video-theater-grid">
+          <!-- Left: Cinema Player Screen -->
+          <div class="video-player-container">
+            <!-- Dynamic Ambient Backlight Glow -->
+            <div class="video-ambient-glow" id="video-ambient-glow"></div>
+
+            <div class="video-player-frame">
+              <!-- Player Top Chrome Bar -->
+              <div class="video-player-topbar">
+                <div class="player-status-group">
+                  <span class="player-live-dot"></span>
+                  <span class="player-status-tag" id="video-brand-tag"
+                    >APPLE OFFICIAL</span
+                  >
+                  <span class="player-res-tag">4K UHD · 60FPS</span>
+                  <span class="player-dolby-tag">DOLBY VISION</span>
                 </div>
-
-                <div class="play-button-central">
-                  <div class="play-ripple ripple-1"></div>
-                  <div class="play-ripple ripple-2"></div>
-                  <div class="play-ripple ripple-3"></div>
-                  <div class="play-icon-circle">
-                    <svg viewBox="0 0 24 24" width="28" height="28" fill="#ffffff">
-                      <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                    </svg>
+                <div class="player-actions-group">
+                  <div class="player-viewers-count">
+                    <span class="fire-icon">🔥</span>
+                    <span id="video-viewers-count">1,842</span> នាក់កំពុងទស្សនា
                   </div>
-                  <span class="play-tap-hint">ចុចដើម្បីទស្សនា 4K</span>
-                </div>
-
-                <div class="poster-caption-bar">
-                  <div class="poster-title" id="video-caption-title">Cinematic Slow Motion | iPhone 16 Pro | Apple</div>
-                  <div class="poster-sub" id="video-caption-sub">Official Commercial Premiere · 4K Dolby Vision 120fps</div>
+                  <a
+                    href="https://www.youtube.com/watch?v=wWwGSavIBl4"
+                    target="_blank"
+                    rel="noopener"
+                    class="youtube-direct-link"
+                    id="youtube-direct-link"
+                    title="បើកមើលលើ YouTube"
+                  >
+                    <span>▶ YouTube ↗</span>
+                  </a>
+                  <button
+                    class="cinema-mode-btn"
+                    id="cinema-mode-btn"
+                    onclick="toggleCinemaMode()"
+                    title="បើក/បិទ មុខងាររោងកុន (Cinema Mode)"
+                  >
+                    <span>🌙</span>
+                    <span class="cinema-btn-text">Cinema Mode</span>
+                  </button>
                 </div>
               </div>
 
-              <!-- Iframe Container for Video Stream -->
-              <div class="video-iframe-holder" id="video-iframe-holder">
-                <!-- Injected dynamically on play -->
+              <!-- Video Screen Viewport -->
+              <div class="video-screen-viewport" id="video-viewport">
+                <!-- Poster Thumbnail Overlay with Play Button -->
+                <div
+                  class="video-poster-overlay"
+                  id="video-poster-overlay"
+                  onclick="startCommercialPlay()"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/wWwGSavIBl4/maxresdefault.jpg"
+                    onerror="
+                      this.onerror = null;
+                      this.src = 'wp-iphone16.jpg';
+                    "
+                    alt="Commercial Poster"
+                    class="video-poster-img"
+                    id="video-poster-img"
+                  />
+                  <div class="poster-gradient-scrim"></div>
+
+                  <div class="poster-top-badge">
+                    <span>OFFICIAL COMMERCIAL PREMIERE</span>
+                  </div>
+
+                  <div class="play-button-central">
+                    <div class="play-ripple ripple-1"></div>
+                    <div class="play-ripple ripple-2"></div>
+                    <div class="play-ripple ripple-3"></div>
+                    <div class="play-icon-circle">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="28"
+                        height="28"
+                        fill="#ffffff"
+                      >
+                        <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                      </svg>
+                    </div>
+                    <span class="play-tap-hint">ចុចដើម្បីទស្សនា 4K</span>
+                  </div>
+
+                  <div class="poster-caption-bar">
+                    <div class="poster-title" id="video-caption-title">
+                      Cinematic Slow Motion | iPhone 16 Pro | Apple
+                    </div>
+                    <div class="poster-sub" id="video-caption-sub">
+                      Official Commercial Premiere · 4K Dolby Vision 120fps
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Iframe Container for Video Stream -->
+                <div class="video-iframe-holder" id="video-iframe-holder">
+                  <!-- Injected dynamically on play -->
+                </div>
+              </div>
+
+              <!-- Player Bottom Control Bar -->
+              <div class="video-player-bottombar">
+                <div class="video-timeline-wrap">
+                  <div class="video-timeline-bar" id="video-timeline-bar">
+                    <div class="video-timeline-fill"></div>
+                  </div>
+                </div>
+                <div class="bottom-controls-row">
+                  <div class="ctrl-left">
+                    <span class="ctrl-sound-badge">🔊 High-Fidelity Audio</span>
+                    <span class="ctrl-title" id="video-ctrl-title"
+                      >iPhone 16 Pro Max · Official Reveal</span
+                    >
+                  </div>
+                  <div class="ctrl-right">
+                    <button
+                      class="ctrl-btn"
+                      onclick="replayCommercial()"
+                      title="ចាក់ឡើងវិញ"
+                    >
+                      ↺ Replay
+                    </button>
+                    <button
+                      class="ctrl-btn"
+                      onclick="openFullscreenVideo()"
+                      title="ពង្រីកពេញអេក្រង់"
+                    >
+                      ⛶ Fullscreen
+                    </button>
+                    <button
+                      class="ctrl-btn ctrl-btn-close"
+                      id="ctrl-btn-close"
+                      onclick="closeCommercialVideo()"
+                      title="បិទវីដេអូ"
+                    >
+                      ✕ Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Special Promotion & Deal Card -->
+          <div class="video-promo-card" id="video-promo-card">
+            <div class="promo-card-topbar">
+              <div class="promo-card-badge">
+                <span>🎁 ប្រូម៉ូសិនពិសេសក្នុងវីដេអូ</span>
+              </div>
+              <span class="promo-discount-tag">-$100 OFF</span>
+            </div>
+
+            <div class="promo-device-header">
+              <div class="promo-thumb-wrap">
+                <img
+                  src="iphone-16-pro-max.png"
+                  alt="Featured Device"
+                  id="promo-device-img"
+                />
+              </div>
+              <div class="promo-device-info">
+                <span class="promo-brand-tag" id="promo-brand-tag"
+                  >APPLE OFFICIAL · 100% SEALED</span
+                >
+                <h3 class="promo-device-name" id="promo-device-name">
+                  iPhone 16 Pro Max
+                </h3>
+                <div class="promo-price-line">
+                  <span class="promo-current-price" id="promo-current-price"
+                    >$1,294.92</span
+                  >
+                  <span class="promo-old-price" id="promo-old-price"
+                    >$1,399.00</span
+                  >
+                </div>
+                <div class="promo-riel-price" id="promo-riel-price">
+                  ~៛5,309,000 KHR (ABA Pay KHQR)
+                </div>
               </div>
             </div>
 
-            <!-- Player Bottom Control Bar -->
-            <div class="video-player-bottombar">
-              <div class="video-timeline-wrap">
-                <div class="video-timeline-bar" id="video-timeline-bar">
-                  <div class="video-timeline-fill"></div>
+            <!-- Coupon Code Capsule -->
+            <div
+              class="promo-coupon-capsule"
+              onclick="copyPromoCode('VIDEO100')"
+              title="ចុចដើម្បី Copy Coupon Code"
+            >
+              <div class="coupon-left">
+                <span class="coupon-tag">EXCLUSIVE COUPON CODE</span>
+                <span class="coupon-code">VIDEO100</span>
+              </div>
+              <button class="coupon-copy-btn" id="coupon-copy-btn">
+                <span>📋 Copy Code</span>
+              </button>
+            </div>
+
+            <!-- Compact 2x2 Feature Highlights Grid -->
+            <div class="promo-features-grid" id="promo-features-list">
+              <div class="feature-chip">
+                <span class="feature-chip-icon">⚡</span>
+                <div class="feature-chip-text">
+                  <strong>A18 Pro 3nm</strong>
+                  <span>Apple Intelligence</span>
                 </div>
               </div>
-              <div class="bottom-controls-row">
-                <div class="ctrl-left">
-                  <span class="ctrl-sound-badge">🔊 High-Fidelity Audio</span>
-                  <span class="ctrl-title" id="video-ctrl-title">iPhone 16 Pro Max · Official Reveal</span>
-                </div>
-                <div class="ctrl-right">
-                  <button class="ctrl-btn" onclick="replayCommercial()" title="ចាក់ឡើងវិញ">↺ Replay</button>
-                  <button class="ctrl-btn" onclick="openFullscreenVideo()" title="ពង្រីកពេញអេក្រង់">⛶ Fullscreen</button>
-                  <button class="ctrl-btn ctrl-btn-close" id="ctrl-btn-close" onclick="closeCommercialVideo()" title="បិទវីដេអូ">✕ Close</button>
+              <div class="feature-chip">
+                <span class="feature-chip-icon">📷</span>
+                <div class="feature-chip-text">
+                  <strong>48MP Fusion</strong>
+                  <span>4K 120fps Dolby</span>
                 </div>
               </div>
+              <div class="feature-chip">
+                <span class="feature-chip-icon">🛡️</span>
+                <div class="feature-chip-text">
+                  <strong>Titanium Grade 5</strong>
+                  <span>6.9" ProMotion</span>
+                </div>
+              </div>
+              <div class="feature-chip">
+                <span class="feature-chip-icon">🎁</span>
+                <div class="feature-chip-text">
+                  <strong>Free 45W Charger</strong>
+                  <span>ថែម Case + ស្រ្គីន</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="promo-cta-group">
+              <button
+                class="btn btn-primary btn-block promo-order-btn"
+                id="promo-order-btn"
+                onclick="orderPromoPhone()"
+              >
+                <span>🛒 កុម្ម៉ង់ទិញភ្លាមៗ (បញ្ចុះ $100)</span>
+              </button>
+              <a
+                href="https://t.me/kimbunthonICT"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-secondary btn-block promo-tg-btn"
+              >
+                <span>✈️ សួរព័ត៌មានតាម Telegram @kimbunthonICT</span>
+              </a>
+            </div>
+
+            <div class="promo-guarantee-note">
+              <span>🚚 ដឹកជញ្ជូនឥតគិតថ្លៃ ២៥ ខេត្ត-ក្រុង</span> ·
+              <span>💳 ទទួល ABA PAY (KHQR)</span>
             </div>
           </div>
         </div>
-
-        <!-- Right: Special Promotion & Deal Card -->
-        <div class="video-promo-card" id="video-promo-card">
-          <div class="promo-card-topbar">
-            <div class="promo-card-badge">
-              <span>🎁 ប្រូម៉ូសិនពិសេសក្នុងវីដេអូ</span>
-            </div>
-            <span class="promo-discount-tag">-$100 OFF</span>
-          </div>
-
-          <div class="promo-device-header">
-            <div class="promo-thumb-wrap">
-              <img src="img/phones/iphone-16-pro-max.png" alt="Featured Device" id="promo-device-img">
-            </div>
-            <div class="promo-device-info">
-              <span class="promo-brand-tag" id="promo-brand-tag">APPLE OFFICIAL · 100% SEALED</span>
-              <h3 class="promo-device-name" id="promo-device-name">iPhone 16 Pro Max</h3>
-              <div class="promo-price-line">
-                <span class="promo-current-price" id="promo-current-price">$1,294.92</span>
-                <span class="promo-old-price" id="promo-old-price">$1,399.00</span>
-              </div>
-              <div class="promo-riel-price" id="promo-riel-price">~៛5,309,000 KHR (ABA Pay KHQR)</div>
-            </div>
-          </div>
-
-          <!-- Coupon Code Capsule -->
-          <div class="promo-coupon-capsule" onclick="copyPromoCode('VIDEO100')" title="ចុចដើម្បី Copy Coupon Code">
-            <div class="coupon-left">
-              <span class="coupon-tag">EXCLUSIVE COUPON CODE</span>
-              <span class="coupon-code">VIDEO100</span>
-            </div>
-            <button class="coupon-copy-btn" id="coupon-copy-btn">
-              <span>📋 Copy Code</span>
-            </button>
-          </div>
-
-          <!-- Compact 2x2 Feature Highlights Grid -->
-          <div class="promo-features-grid" id="promo-features-list">
-            <div class="feature-chip">
-              <span class="feature-chip-icon">⚡</span>
-              <div class="feature-chip-text">
-                <strong>A18 Pro 3nm</strong>
-                <span>Apple Intelligence</span>
-              </div>
-            </div>
-            <div class="feature-chip">
-              <span class="feature-chip-icon">📷</span>
-              <div class="feature-chip-text">
-                <strong>48MP Fusion</strong>
-                <span>4K 120fps Dolby</span>
-              </div>
-            </div>
-            <div class="feature-chip">
-              <span class="feature-chip-icon">🛡️</span>
-              <div class="feature-chip-text">
-                <strong>Titanium Grade 5</strong>
-                <span>6.9" ProMotion</span>
-              </div>
-            </div>
-            <div class="feature-chip">
-              <span class="feature-chip-icon">🎁</span>
-              <div class="feature-chip-text">
-                <strong>Free 45W Charger</strong>
-                <span>ថែម Case + ស្រ្គីន</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Action Buttons -->
-          <div class="promo-cta-group">
-            <button class="btn btn-primary btn-block promo-order-btn" id="promo-order-btn" onclick="orderPromoPhone()">
-              <span>🛒 កុម្ម៉ង់ទិញភ្លាមៗ (បញ្ចុះ $100)</span>
-            </button>
-            <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" class="btn btn-secondary btn-block promo-tg-btn">
-              <span>✈️ សួរព័ត៌មានតាម Telegram @kimbunthonICT</span>
-            </a>
-          </div>
-
-          <div class="promo-guarantee-note">
-            <span>🚚 ដឹកជញ្ជូនឥតគិតថ្លៃ ២៥ ខេត្ត-ក្រុង</span> · 
-            <span>💳 ទទួល ABA PAY (KHQR)</span>
-          </div>
-        </div>
-
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- Why Choose PhoneShop Section -->
-  <section class="section" style="background: rgba(18, 25, 39, 0.4); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-    <div class="container">
-      <div style="text-align: center; max-width: 650px; margin: 0 auto 50px;">
-        <h2 class="section-title">Why Tech Enthusiasts Choose PhoneShop</h2>
-        <p class="section-subtitle">We believe in transparent pricing, 100% sealed original devices, and top-tier aftersales support.</p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 30px;">
-          <div style="font-size: 2.2rem; margin-bottom: 16px;">🛡️</div>
-          <h3 style="font-size: 1.2rem; margin-bottom: 10px;">100% Genuine Guaranteed</h3>
-          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">Direct manufacturer authorization. Every phone arrives factory sealed with international IMEI verification.</p>
-        </div>
-
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 30px;">
-          <div style="font-size: 2.2rem; margin-bottom: 16px;">🚀</div>
-          <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Same-Day Express Dispatch</h3>
-          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">Orders placed before 3 PM ship the very same day with real-time GPS tracking and insured courier delivery.</p>
-        </div>
-
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 30px;">
-          <div style="font-size: 2.2rem; margin-bottom: 16px;">🔄</div>
-          <h3 style="font-size: 1.2rem; margin-bottom: 10px;">30-Day Hassle-Free Return</h3>
-          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">Not satisfied? Return or exchange with zero restocking fees. We want you to love your new tech.</p>
-        </div>
-
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 30px;">
-          <div style="font-size: 2.2rem; margin-bottom: 16px;">🎧</div>
-          <h3 style="font-size: 1.2rem; margin-bottom: 10px;">24/7 Human Tech Support</h3>
-          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">Got questions on specs, data transfer, or warranty claims? Our smartphone specialists are always available.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Customer Testimonials -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">Verified Buyer Reviews</h2>
-          <p class="section-subtitle">Real experiences from customers across the country.</p>
-        </div>
-        <div style="font-size: 1rem; color: #fbbf24; font-weight: 700;">★ 4.9/5 Rating (1,400+ reviews)</div>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 24px;">
-          <div style="color: #fbbf24; margin-bottom: 8px;">★★★★★</div>
-          <p style="color: var(--text-muted); font-style: italic; margin-bottom: 16px; font-size: 0.95rem;">
-            "Ordered the iPhone 16 Pro Max on release week. Arrived the next day in pristine sealed condition. The titanium desert finish looks even better in person!"
+    <!-- Why Choose PhoneShop Section -->
+    <section
+      class="section"
+      style="
+        background: rgba(18, 25, 39, 0.4);
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+      "
+    >
+      <div class="container">
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 50px">
+          <h2 class="section-title">Why Tech Enthusiasts Choose PhoneShop</h2>
+          <p class="section-subtitle">
+            We believe in transparent pricing, 100% sealed original devices, and
+            top-tier aftersales support.
           </p>
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 700;">DK</div>
-            <div>
-              <div style="font-weight: 700; color: #fff;">David K.</div>
-              <div style="font-size: 0.8rem; color: var(--text-dim);">Verified iPhone 16 Pro Max Buyer</div>
-            </div>
-          </div>
         </div>
 
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 24px;">
-          <div style="color: #fbbf24; margin-bottom: 8px;">★★★★★</div>
-          <p style="color: var(--text-muted); font-style: italic; margin-bottom: 16px; font-size: 0.95rem;">
-            "Used promo code SAVE10 and got an unbeatable deal on the Galaxy S24 Ultra. The customer support assisted with setting up the warranty instantly."
-          </p>
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <div style="width: 40px; height: 40px; border-radius: 50%; background: #06b6d4; display: flex; align-items: center; justify-content: center; font-weight: 700;">SL</div>
-            <div>
-              <div style="font-weight: 700; color: #fff;">Sophia L.</div>
-              <div style="font-size: 0.8rem; color: var(--text-dim);">Verified Galaxy S24 Ultra Buyer</div>
-            </div>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+          "
+        >
+          <div
+            style="
+              background: var(--bg-card);
+              border: 1px solid var(--border-color);
+              border-radius: var(--radius-lg);
+              padding: 30px;
+            "
+          >
+            <div style="font-size: 2.2rem; margin-bottom: 16px">🛡️</div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 10px">
+              100% Genuine Guaranteed
+            </h3>
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.92rem;
+                line-height: 1.6;
+              "
+            >
+              Direct manufacturer authorization. Every phone arrives factory
+              sealed with international IMEI verification.
+            </p>
           </div>
-        </div>
 
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 24px;">
-          <div style="color: #fbbf24; margin-bottom: 8px;">★★★★★</div>
-          <p style="color: var(--text-muted); font-style: italic; margin-bottom: 16px; font-size: 0.95rem;">
-            "The camera on the Xiaomi 14 Ultra is mind-blowing. Truly studio grade. Thank you PhoneShop for the speedy delivery and secure packaging!"
-          </p>
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <div style="width: 40px; height: 40px; border-radius: 50%; background: #8b5cf6; display: flex; align-items: center; justify-content: center; font-weight: 700;">MR</div>
-            <div>
-              <div style="font-weight: 700; color: #fff;">Marcus R.</div>
-              <div style="font-size: 0.8rem; color: var(--text-dim);">Verified Xiaomi 14 Ultra Buyer</div>
-            </div>
+          <div
+            style="
+              background: var(--bg-card);
+              border: 1px solid var(--border-color);
+              border-radius: var(--radius-lg);
+              padding: 30px;
+            "
+          >
+            <div style="font-size: 2.2rem; margin-bottom: 16px">🚀</div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 10px">
+              Same-Day Express Dispatch
+            </h3>
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.92rem;
+                line-height: 1.6;
+              "
+            >
+              Orders placed before 3 PM ship the very same day with real-time
+              GPS tracking and insured courier delivery.
+            </p>
+          </div>
+
+          <div
+            style="
+              background: var(--bg-card);
+              border: 1px solid var(--border-color);
+              border-radius: var(--radius-lg);
+              padding: 30px;
+            "
+          >
+            <div style="font-size: 2.2rem; margin-bottom: 16px">🔄</div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 10px">
+              30-Day Hassle-Free Return
+            </h3>
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.92rem;
+                line-height: 1.6;
+              "
+            >
+              Not satisfied? Return or exchange with zero restocking fees. We
+              want you to love your new tech.
+            </p>
+          </div>
+
+          <div
+            style="
+              background: var(--bg-card);
+              border: 1px solid var(--border-color);
+              border-radius: var(--radius-lg);
+              padding: 30px;
+            "
+          >
+            <div style="font-size: 2.2rem; margin-bottom: 16px">🎧</div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 10px">
+              24/7 Human Tech Support
+            </h3>
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.92rem;
+                line-height: 1.6;
+              "
+            >
+              Got questions on specs, data transfer, or warranty claims? Our
+              smartphone specialists are always available.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Newsletter Signup -->
-  <section class="container" style="margin-bottom: 80px;">
-    <div style="background: linear-gradient(135deg, #172134 0%, #1e1b4b 100%); border: 1px solid var(--border-hover); border-radius: var(--radius-lg); padding: 50px 40px; text-align: center;">
-      <h2 style="font-size: 2.2rem; margin-bottom: 12px;">Get Secret Smartphone Drops & Deals</h2>
-      <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto 24px; font-size: 0.95rem;">
-        Subscribe to get notified about flash sales, trade-in bonuses, and restock alerts before anyone else.
-      </p>
-      <form id="home-newsletter-form" onsubmit="event.preventDefault(); PhoneShop.showToast('Thank you for subscribing! Check your inbox for a $20 welcome voucher.'); this.reset();" style="display: flex; max-width: 480px; margin: 0 auto; gap: 10px;">
-        <input type="email" required placeholder="Enter your email address" class="promo-input" style="background: rgba(0,0,0,0.4); border-color: rgba(255,255,255,0.15);" aria-label="Email Address">
-        <button type="submit" class="btn btn-primary">Join VIP</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="logo-wrapper">
-            <img src="img/logo.png" alt="PhoneShop" class="logo-img">
-            <span class="logo-text">Phone<span>Shop</span></span>
-          </a>
-          <p>
-            Your premier destination for official flagship smartphones, cutting-edge technology, and authentic customer care.
-          </p>
-          <div style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 8px;">
-            📞 Support: 1-800-555-PHONE (24/7)
-          </div>
+    <!-- Customer Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
           <div>
-            <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" class="footer-telegram-badge" title="Chat on Telegram @kimbunthonICT">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
-              </svg>
-              <span>Telegram: @kimbunthonICT</span>
+            <h2 class="section-title">Verified Buyer Reviews</h2>
+            <p class="section-subtitle">
+              Real experiences from customers across the country.
+            </p>
+          </div>
+          <div style="font-size: 1rem; color: #fbbf24; font-weight: 700">
+            ★ 4.9/5 Rating (1,400+ reviews)
+          </div>
+        </div>
+
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+          "
+        >
+          <div
+            style="
+              background: var(--bg-card);
+              border: 1px solid var(--border-color);
+              border-radius: var(--radius-lg);
+              padding: 24px;
+            "
+          >
+            <div style="color: #fbbf24; margin-bottom: 8px">★★★★★</div>
+            <p
+              style="
+                color: var(--text-muted);
+                font-style: italic;
+                margin-bottom: 16px;
+                font-size: 0.95rem;
+              "
+            >
+              "Ordered the iPhone 16 Pro Max on release week. Arrived the next
+              day in pristine sealed condition. The titanium desert finish looks
+              even better in person!"
+            </p>
+            <div style="display: flex; align-items: center; gap: 12px">
+              <div
+                style="
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  background: var(--primary);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: 700;
+                "
+              >
+                DK
+              </div>
+              <div>
+                <div style="font-weight: 700; color: #fff">David K.</div>
+                <div style="font-size: 0.8rem; color: var(--text-dim)">
+                  Verified iPhone 16 Pro Max Buyer
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style="
+              background: var(--bg-card);
+              border: 1px solid var(--border-color);
+              border-radius: var(--radius-lg);
+              padding: 24px;
+            "
+          >
+            <div style="color: #fbbf24; margin-bottom: 8px">★★★★★</div>
+            <p
+              style="
+                color: var(--text-muted);
+                font-style: italic;
+                margin-bottom: 16px;
+                font-size: 0.95rem;
+              "
+            >
+              "Used promo code SAVE10 and got an unbeatable deal on the Galaxy
+              S24 Ultra. The customer support assisted with setting up the
+              warranty instantly."
+            </p>
+            <div style="display: flex; align-items: center; gap: 12px">
+              <div
+                style="
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  background: #06b6d4;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: 700;
+                "
+              >
+                SL
+              </div>
+              <div>
+                <div style="font-weight: 700; color: #fff">Sophia L.</div>
+                <div style="font-size: 0.8rem; color: var(--text-dim)">
+                  Verified Galaxy S24 Ultra Buyer
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style="
+              background: var(--bg-card);
+              border: 1px solid var(--border-color);
+              border-radius: var(--radius-lg);
+              padding: 24px;
+            "
+          >
+            <div style="color: #fbbf24; margin-bottom: 8px">★★★★★</div>
+            <p
+              style="
+                color: var(--text-muted);
+                font-style: italic;
+                margin-bottom: 16px;
+                font-size: 0.95rem;
+              "
+            >
+              "The camera on the Xiaomi 14 Ultra is mind-blowing. Truly studio
+              grade. Thank you PhoneShop for the speedy delivery and secure
+              packaging!"
+            </p>
+            <div style="display: flex; align-items: center; gap: 12px">
+              <div
+                style="
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  background: #8b5cf6;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: 700;
+                "
+              >
+                MR
+              </div>
+              <div>
+                <div style="font-weight: 700; color: #fff">Marcus R.</div>
+                <div style="font-size: 0.8rem; color: var(--text-dim)">
+                  Verified Xiaomi 14 Ultra Buyer
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="container" style="margin-bottom: 80px">
+      <div
+        style="
+          background: linear-gradient(135deg, #172134 0%, #1e1b4b 100%);
+          border: 1px solid var(--border-hover);
+          border-radius: var(--radius-lg);
+          padding: 50px 40px;
+          text-align: center;
+        "
+      >
+        <h2 style="font-size: 2.2rem; margin-bottom: 12px">
+          Get Secret Smartphone Drops & Deals
+        </h2>
+        <p
+          style="
+            color: var(--text-muted);
+            max-width: 500px;
+            margin: 0 auto 24px;
+            font-size: 0.95rem;
+          "
+        >
+          Subscribe to get notified about flash sales, trade-in bonuses, and
+          restock alerts before anyone else.
+        </p>
+        <form
+          id="home-newsletter-form"
+          onsubmit="
+            event.preventDefault();
+            PhoneShop.showToast(
+              'Thank you for subscribing! Check your inbox for a $20 welcome voucher.',
+            );
+            this.reset();
+          "
+          style="display: flex; max-width: 480px; margin: 0 auto; gap: 10px"
+        >
+          <input
+            type="email"
+            required
+            placeholder="Enter your email address"
+            class="promo-input"
+            style="
+              background: rgba(0, 0, 0, 0.4);
+              border-color: rgba(255, 255, 255, 0.15);
+            "
+            aria-label="Email Address"
+          />
+          <button type="submit" class="btn btn-primary">Join VIP</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo-wrapper">
+              <img src="logo.png" alt="PhoneShop" class="logo-img" />
+              <span class="logo-text">Phone<span>Shop</span></span>
             </a>
+            <p>
+              Your premier destination for official flagship smartphones,
+              cutting-edge technology, and authentic customer care.
+            </p>
+            <div
+              style="
+                color: var(--text-muted);
+                font-size: 0.85rem;
+                margin-bottom: 8px;
+              "
+            >
+              📞 Support: 1-800-555-PHONE (24/7)
+            </div>
+            <div>
+              <a
+                href="https://t.me/kimbunthonICT"
+                target="_blank"
+                rel="noopener"
+                class="footer-telegram-badge"
+                title="Chat on Telegram @kimbunthonICT"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"
+                  />
+                </svg>
+                <span>Telegram: @kimbunthonICT</span>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Shop Brands</h4>
+            <div class="footer-links">
+              <a href="brands.html?brand=Apple">Apple iPhones</a>
+              <a href="brands.html?brand=Samsung">Samsung Galaxy</a>
+              <a href="brands.html?brand=Google">Google Pixel</a>
+              <a href="brands.html?brand=Xiaomi">Xiaomi Flagships</a>
+              <a href="brands.html?brand=OnePlus">OnePlus Devices</a>
+              <a href="brands.html?brand=Sony">Sony Xperia</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Customer Care</h4>
+            <div class="footer-links">
+              <a
+                href="https://t.me/kimbunthonICT"
+                target="_blank"
+                rel="noopener"
+                style="color: #38bdf8; font-weight: 700"
+                >✈️ Telegram Support</a
+              >
+              <a href="faq.html">Warranty Policy</a>
+              <a href="faq.html">Shipping & Delivery</a>
+              <a href="faq.html">Returns & Exchanges</a>
+              <a href="deals.html">Exclusive Deals</a>
+              <a href="contact.html">Contact Us</a>
+              <a href="cart.html">View Cart</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Company</h4>
+            <div class="footer-links">
+              <a href="about.html">About PhoneShop</a>
+              <a href="about.html#locations">Store Locations</a>
+              <a href="contact.html">Corporate Inquiries</a>
+              <a href="faq.html">Trade-In Program</a>
+              <a href="404.html">System Status</a>
+            </div>
           </div>
         </div>
 
-        <div>
-          <h4 class="footer-title">Shop Brands</h4>
-          <div class="footer-links">
-            <a href="brands.html?brand=Apple">Apple iPhones</a>
-            <a href="brands.html?brand=Samsung">Samsung Galaxy</a>
-            <a href="brands.html?brand=Google">Google Pixel</a>
-            <a href="brands.html?brand=Xiaomi">Xiaomi Flagships</a>
-            <a href="brands.html?brand=OnePlus">OnePlus Devices</a>
-            <a href="brands.html?brand=Sony">Sony Xperia</a>
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 PhoneShop Inc. All rights reserved. 100% Genuine
+            Guaranteed.
           </div>
-        </div>
-
-        <div>
-          <h4 class="footer-title">Customer Care</h4>
-          <div class="footer-links">
-            <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener" style="color: #38bdf8; font-weight: 700;">✈️ Telegram Support</a>
-            <a href="faq.html">Warranty Policy</a>
-            <a href="faq.html">Shipping & Delivery</a>
-            <a href="faq.html">Returns & Exchanges</a>
-            <a href="deals.html">Exclusive Deals</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="cart.html">View Cart</a>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="footer-title">Company</h4>
-          <div class="footer-links">
-            <a href="about.html">About PhoneShop</a>
-            <a href="about.html#locations">Store Locations</a>
-            <a href="contact.html">Corporate Inquiries</a>
-            <a href="faq.html">Trade-In Program</a>
-            <a href="404.html">System Status</a>
+          <div style="display: flex; gap: 20px">
+            <a href="faq.html">Privacy Policy</a>
+            <a href="faq.html">Terms of Service</a>
+            <a href="faq.html">Security</a>
           </div>
         </div>
       </div>
+    </footer>
 
-      <div class="footer-bottom">
-        <div>&copy; 2026 PhoneShop Inc. All rights reserved. 100% Genuine Guaranteed.</div>
-        <div style="display: flex; gap: 20px;">
-          <a href="faq.html">Privacy Policy</a>
-          <a href="faq.html">Terms of Service</a>
-          <a href="faq.html">Security</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    <!-- Scripts -->
+    <script src="icons.js"></script>
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+    <script>
+      // =========================================================
+      // 3D HERO INTERACTIVE SMARTPHONE SHOWCASE LOGIC
+      // =========================================================
+      const HERO_MODELS = [
+        {
+          name: "iPhone 16 Pro Max",
+          wallpaper: "wp-iphone16.jpg",
+          glow: "radial-gradient(circle, rgba(212, 175, 55, 0.45) 0%, rgba(245, 158, 11, 0.2) 45%, transparent 70%)",
+          borderColor: "#78716c",
+          isPunchHole: false,
+          islandText: "Music",
+          chipset: "Apple A18 Pro 3nm",
+          chipsetSub: "2x Perf Cores · 6-Core GPU",
+          display: '6.9" ProMotion 120Hz',
+          displaySub: "2000 Nits · Ceramic Shield",
+          camera: "48MP Fusion · 5x Telephoto",
+          cameraSub: "4K 120fps Dolby Vision HDR",
+          noti: "⚡ ស្តុកថ្មី iPhone 16 Pro Max Desert Titanium មកដល់ហើយ! បញ្ចុះតម្លៃ 10% ភ្លាមៗ",
+        },
+        {
+          name: "Galaxy S24 Ultra",
+          wallpaper: "wp-galaxy-s24.jpg",
+          glow: "radial-gradient(circle, rgba(168, 85, 247, 0.45) 0%, rgba(59, 130, 246, 0.25) 45%, transparent 70%)",
+          borderColor: "#475569",
+          isPunchHole: true,
+          islandText: "Galaxy AI",
+          chipset: "Snapdragon 8 Gen 3",
+          chipsetSub: "For Galaxy · Ray Tracing GPU",
+          display: '6.8" Dynamic AMOLED 2X',
+          displaySub: "1-120Hz Adaptive · Gorilla Armor",
+          camera: "200MP Quad Tele System",
+          cameraSub: "100x Space Zoom · Nightography",
+          noti: "🤖 Galaxy AI ពេញលេញ! ថែមជូន Galaxy Watch & Case ឥតគិតថ្លៃ",
+        },
+        {
+          name: "Pixel 9 Pro XL",
+          wallpaper: "wp-pixel9.jpg",
+          glow: "radial-gradient(circle, rgba(56, 189, 248, 0.45) 0%, rgba(16, 185, 129, 0.25) 45%, transparent 70%)",
+          borderColor: "#334155",
+          isPunchHole: true,
+          islandText: "Gemini AI",
+          chipset: "Google Tensor G4",
+          chipsetSub: "Titan M2 Security · 16GB RAM",
+          display: '6.8" Super Actua Display',
+          displaySub: "1-120Hz LTPO · 3000 Nits Peak",
+          camera: "50MP Triple Camera + AI",
+          cameraSub: "Best Take · Magic Editor · Video Boost",
+          noti: "✨ Pixel 9 Pro XL បំពាក់ Gemini AI ឆ្លាតវៃបំផុត! កុម្ម៉ង់ឥឡូវនេះ",
+        },
+        {
+          name: "Xiaomi 14 Ultra",
+          wallpaper: "wp-xiaomi14.jpg",
+          glow: "radial-gradient(circle, rgba(239, 68, 68, 0.45) 0%, rgba(212, 175, 55, 0.25) 45%, transparent 70%)",
+          borderColor: "#52525b",
+          isPunchHole: true,
+          islandText: "Leica",
+          chipset: "Snapdragon 8 Gen 3",
+          chipsetSub: "Dual IceLoop Cooling · 16GB RAM",
+          display: '6.73" WQHD+ AMOLED',
+          displaySub: "12-bit · 68 Billion Colors · 3000 Nits",
+          camera: "Leica 1-inch Quad 50MP",
+          cameraSub: "Stepless Variable Aperture f/1.63",
+          noti: "📷 Xiaomi 14 Ultra ឡេន Leica កំពូលច្បាស់! បញ្ចុះតម្លៃពិសេស $150",
+        },
+      ];
 
-  <!-- Scripts -->
-  <script src="lib/icons.js"></script>
-  <script src="js/cart.js"></script>
-  <script src="js/main.js"></script>
-  <script>
-    // =========================================================
-    // 3D HERO INTERACTIVE SMARTPHONE SHOWCASE LOGIC
-    // =========================================================
-    const HERO_MODELS = [
-      {
-        name: 'iPhone 16 Pro Max',
-        wallpaper: 'img/wallpapers/wp-iphone16.jpg',
-        glow: 'radial-gradient(circle, rgba(212, 175, 55, 0.45) 0%, rgba(245, 158, 11, 0.2) 45%, transparent 70%)',
-        borderColor: '#78716c',
-        isPunchHole: false,
-        islandText: 'Music',
-        chipset: 'Apple A18 Pro 3nm',
-        chipsetSub: '2x Perf Cores · 6-Core GPU',
-        display: '6.9" ProMotion 120Hz',
-        displaySub: '2000 Nits · Ceramic Shield',
-        camera: '48MP Fusion · 5x Telephoto',
-        cameraSub: '4K 120fps Dolby Vision HDR',
-        noti: '⚡ ស្តុកថ្មី iPhone 16 Pro Max Desert Titanium មកដល់ហើយ! បញ្ចុះតម្លៃ 10% ភ្លាមៗ'
-      },
-      {
-        name: 'Galaxy S24 Ultra',
-        wallpaper: 'img/wallpapers/wp-galaxy-s24.jpg',
-        glow: 'radial-gradient(circle, rgba(168, 85, 247, 0.45) 0%, rgba(59, 130, 246, 0.25) 45%, transparent 70%)',
-        borderColor: '#475569',
-        isPunchHole: true,
-        islandText: 'Galaxy AI',
-        chipset: 'Snapdragon 8 Gen 3',
-        chipsetSub: 'For Galaxy · Ray Tracing GPU',
-        display: '6.8" Dynamic AMOLED 2X',
-        displaySub: '1-120Hz Adaptive · Gorilla Armor',
-        camera: '200MP Quad Tele System',
-        cameraSub: '100x Space Zoom · Nightography',
-        noti: '🤖 Galaxy AI ពេញលេញ! ថែមជូន Galaxy Watch & Case ឥតគិតថ្លៃ'
-      },
-      {
-        name: 'Pixel 9 Pro XL',
-        wallpaper: 'img/wallpapers/wp-pixel9.jpg',
-        glow: 'radial-gradient(circle, rgba(56, 189, 248, 0.45) 0%, rgba(16, 185, 129, 0.25) 45%, transparent 70%)',
-        borderColor: '#334155',
-        isPunchHole: true,
-        islandText: 'Gemini AI',
-        chipset: 'Google Tensor G4',
-        chipsetSub: 'Titan M2 Security · 16GB RAM',
-        display: '6.8" Super Actua Display',
-        displaySub: '1-120Hz LTPO · 3000 Nits Peak',
-        camera: '50MP Triple Camera + AI',
-        cameraSub: 'Best Take · Magic Editor · Video Boost',
-        noti: '✨ Pixel 9 Pro XL បំពាក់ Gemini AI ឆ្លាតវៃបំផុត! កុម្ម៉ង់ឥឡូវនេះ'
-      },
-      {
-        name: 'Xiaomi 14 Ultra',
-        wallpaper: 'img/wallpapers/wp-xiaomi14.jpg',
-        glow: 'radial-gradient(circle, rgba(239, 68, 68, 0.45) 0%, rgba(212, 175, 55, 0.25) 45%, transparent 70%)',
-        borderColor: '#52525b',
-        isPunchHole: true,
-        islandText: 'Leica',
-        chipset: 'Snapdragon 8 Gen 3',
-        chipsetSub: 'Dual IceLoop Cooling · 16GB RAM',
-        display: '6.73" WQHD+ AMOLED',
-        displaySub: '12-bit · 68 Billion Colors · 3000 Nits',
-        camera: 'Leica 1-inch Quad 50MP',
-        cameraSub: 'Stepless Variable Aperture f/1.63',
-        noti: '📷 Xiaomi 14 Ultra ឡេន Leica កំពូលច្បាស់! បញ្ចុះតម្លៃពិសេស $150'
-      }
-    ];
+      let currentHeroIndex = 0;
+      let heroAutoCycleTimer = null;
 
-    let currentHeroIndex = 0;
-    let heroAutoCycleTimer = null;
+      window.switchHeroPhone = function (index) {
+        if (index < 0 || index >= HERO_MODELS.length) return;
+        currentHeroIndex = index;
+        const model = HERO_MODELS[index];
 
-    window.switchHeroPhone = function(index) {
-      if (index < 0 || index >= HERO_MODELS.length) return;
-      currentHeroIndex = index;
-      const model = HERO_MODELS[index];
+        // Update Screen Wallpaper
+        const screen = document.getElementById("hero-phone-screen");
+        if (screen) {
+          screen.style.backgroundImage = `url('${model.wallpaper}')`;
+        }
 
-      // Update Screen Wallpaper
-      const screen = document.getElementById('hero-phone-screen');
-      if (screen) {
-        screen.style.backgroundImage = `url('${model.wallpaper}')`;
-      }
+        // Update Device Border and Aura Glow
+        const device = document.getElementById("hero-phone-device");
+        if (device) {
+          device.style.borderColor = model.borderColor;
+        }
+        const glow = document.getElementById("hero-aura-glow");
+        if (glow) {
+          glow.style.background = model.glow;
+        }
 
-      // Update Device Border and Aura Glow
-      const device = document.getElementById('hero-phone-device');
-      if (device) {
-        device.style.borderColor = model.borderColor;
-      }
-      const glow = document.getElementById('hero-aura-glow');
-      if (glow) {
-        glow.style.background = model.glow;
-      }
+        // Update Notch / Punch hole on status bar
+        const statusBar = document.getElementById("hero-status-bar");
+        const islandText = document.getElementById("island-text");
+        if (statusBar) {
+          if (model.isPunchHole) {
+            statusBar.classList.add("notch-punch");
+          } else {
+            statusBar.classList.remove("notch-punch");
+          }
+        }
+        if (islandText) {
+          islandText.textContent = model.islandText;
+        }
 
-      // Update Notch / Punch hole on status bar
-      const statusBar = document.getElementById('hero-status-bar');
-      const islandText = document.getElementById('island-text');
-      if (statusBar) {
-        if (model.isPunchHole) {
-          statusBar.classList.add('notch-punch');
-        } else {
-          statusBar.classList.remove('notch-punch');
+        // Update Spec Cards
+        const specChipset = document.getElementById("spec-chipset");
+        const specChipsetSub = document.getElementById("spec-chipset-sub");
+        const specDisplay = document.getElementById("spec-display");
+        const specDisplaySub = document.getElementById("spec-display-sub");
+        const specCamera = document.getElementById("spec-camera");
+        const specCameraSub = document.getElementById("spec-camera-sub");
+
+        if (specChipset) specChipset.textContent = model.chipset;
+        if (specChipsetSub) specChipsetSub.textContent = model.chipsetSub;
+        if (specDisplay) specDisplay.textContent = model.display;
+        if (specDisplaySub) specDisplaySub.textContent = model.displaySub;
+        if (specCamera) specCamera.textContent = model.camera;
+        if (specCameraSub) specCameraSub.textContent = model.cameraSub;
+
+        // Update Notification
+        const notiBody = document.getElementById("hero-noti-body");
+        if (notiBody) {
+          notiBody.textContent = model.noti;
+        }
+
+        // Update Active Pill
+        const pills = document.querySelectorAll(
+          ".hero-model-switcher .model-pill",
+        );
+        pills.forEach((p, idx) => {
+          p.classList.toggle("active", idx === index);
+        });
+      };
+
+      // Live Clock & Date update
+      function updateHeroPhoneClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, "0");
+        const minutes = String(now.getMinutes()).padStart(2, "0");
+        const timeStr = `${hours}:${minutes}`;
+
+        const clockEl = document.getElementById("screen-lock-clock");
+        const statusTimeEl = document.getElementById("screen-status-time");
+        if (clockEl) clockEl.textContent = timeStr;
+        if (statusTimeEl) statusTimeEl.textContent = timeStr;
+
+        // Authentic Khmer day names & months
+        const khmerDays = [
+          "អាទិត្យ",
+          "ច័ន្ទ",
+          "អង្គារ",
+          "ពុធ",
+          "ព្រហស្បតិ៍",
+          "សុក្រ",
+          "សៅរ៍",
+        ];
+        const khmerMonths = [
+          "មករា",
+          "កុម្ភៈ",
+          "មីនា",
+          "មេសា",
+          "ឧសភា",
+          "មិថុនា",
+          "កក្កដា",
+          "សីហា",
+          "កញ្ញា",
+          "តុលា",
+          "វិច្ឆិកា",
+          "ធ្នូ",
+        ];
+        const khmerNumerals = [
+          "០",
+          "១",
+          "២",
+          "៣",
+          "៤",
+          "៥",
+          "៦",
+          "៧",
+          "៨",
+          "៩",
+        ];
+        const toKhmerDigits = (num) =>
+          String(num)
+            .split("")
+            .map((d) => khmerNumerals[parseInt(d)] || d)
+            .join("");
+        const dayName = khmerDays[now.getDay()];
+        const dayNum = toKhmerDigits(now.getDate());
+        const monthName = khmerMonths[now.getMonth()];
+        const dateEl = document.getElementById("screen-lock-date");
+        if (dateEl) {
+          dateEl.textContent = `${dayName}, ថ្ងៃទី${dayNum} ${monthName}`;
         }
       }
-      if (islandText) {
-        islandText.textContent = model.islandText;
+
+      // 3D Parallax Tilt Effect on Mouse Move
+      function initHeroParallax() {
+        const stage = document.getElementById("hero-interactive-stage");
+        const device = document.getElementById("hero-phone-device");
+        if (!stage || !device) return;
+
+        stage.addEventListener("mousemove", (e) => {
+          const rect = stage.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+
+          const rotateX = (-y / rect.height) * 20;
+          const rotateY = (x / rect.width) * 20;
+
+          device.style.transform = `perspective(1200px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+
+        stage.addEventListener("mouseleave", () => {
+          device.style.transform = "";
+        });
+
+        // Pause auto-rotation on mouse enter, resume on mouse leave
+        stage.addEventListener("mouseenter", () => {
+          if (heroAutoCycleTimer) clearInterval(heroAutoCycleTimer);
+        });
+        stage.addEventListener("mouseleave", () => {
+          startHeroAutoCycle();
+        });
       }
 
-      // Update Spec Cards
-      const specChipset = document.getElementById('spec-chipset');
-      const specChipsetSub = document.getElementById('spec-chipset-sub');
-      const specDisplay = document.getElementById('spec-display');
-      const specDisplaySub = document.getElementById('spec-display-sub');
-      const specCamera = document.getElementById('spec-camera');
-      const specCameraSub = document.getElementById('spec-camera-sub');
-
-      if (specChipset) specChipset.textContent = model.chipset;
-      if (specChipsetSub) specChipsetSub.textContent = model.chipsetSub;
-      if (specDisplay) specDisplay.textContent = model.display;
-      if (specDisplaySub) specDisplaySub.textContent = model.displaySub;
-      if (specCamera) specCamera.textContent = model.camera;
-      if (specCameraSub) specCameraSub.textContent = model.cameraSub;
-
-      // Update Notification
-      const notiBody = document.getElementById('hero-noti-body');
-      if (notiBody) {
-        notiBody.textContent = model.noti;
-      }
-
-      // Update Active Pill
-      const pills = document.querySelectorAll('.hero-model-switcher .model-pill');
-      pills.forEach((p, idx) => {
-        p.classList.toggle('active', idx === index);
-      });
-    };
-
-    // Live Clock & Date update
-    function updateHeroPhoneClock() {
-      const now = new Date();
-      const hours = String(now.getHours()).padStart(2, '0');
-      const minutes = String(now.getMinutes()).padStart(2, '0');
-      const timeStr = `${hours}:${minutes}`;
-
-      const clockEl = document.getElementById('screen-lock-clock');
-      const statusTimeEl = document.getElementById('screen-status-time');
-      if (clockEl) clockEl.textContent = timeStr;
-      if (statusTimeEl) statusTimeEl.textContent = timeStr;
-
-      // Authentic Khmer day names & months
-      const khmerDays = ['អាទិត្យ', 'ច័ន្ទ', 'អង្គារ', 'ពុធ', 'ព្រហស្បតិ៍', 'សុក្រ', 'សៅរ៍'];
-      const khmerMonths = ['មករា', 'កុម្ភៈ', 'មីនា', 'មេសា', 'ឧសភា', 'មិថុនា', 'កក្កដា', 'សីហា', 'កញ្ញា', 'តុលា', 'វិច្ឆិកា', 'ធ្នូ'];
-      const khmerNumerals = ['០', '១', '២', '៣', '៤', '៥', '៦', '៧', '៨', '៩'];
-      const toKhmerDigits = num => String(num).split('').map(d => khmerNumerals[parseInt(d)] || d).join('');
-      const dayName = khmerDays[now.getDay()];
-      const dayNum = toKhmerDigits(now.getDate());
-      const monthName = khmerMonths[now.getMonth()];
-      const dateEl = document.getElementById('screen-lock-date');
-      if (dateEl) {
-        dateEl.textContent = `${dayName}, ថ្ងៃទី${dayNum} ${monthName}`;
-      }
-    }
-
-    // 3D Parallax Tilt Effect on Mouse Move
-    function initHeroParallax() {
-      const stage = document.getElementById('hero-interactive-stage');
-      const device = document.getElementById('hero-phone-device');
-      if (!stage || !device) return;
-
-      stage.addEventListener('mousemove', (e) => {
-        const rect = stage.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-
-        const rotateX = (-y / rect.height) * 20;
-        const rotateY = (x / rect.width) * 20;
-
-        device.style.transform = `perspective(1200px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
-      });
-
-      stage.addEventListener('mouseleave', () => {
-        device.style.transform = '';
-      });
-
-      // Pause auto-rotation on mouse enter, resume on mouse leave
-      stage.addEventListener('mouseenter', () => {
+      function startHeroAutoCycle() {
         if (heroAutoCycleTimer) clearInterval(heroAutoCycleTimer);
-      });
-      stage.addEventListener('mouseleave', () => {
-        startHeroAutoCycle();
-      });
-    }
-
-    function startHeroAutoCycle() {
-      if (heroAutoCycleTimer) clearInterval(heroAutoCycleTimer);
-      heroAutoCycleTimer = setInterval(() => {
-        const next = (currentHeroIndex + 1) % HERO_MODELS.length;
-        window.switchHeroPhone(next);
-      }, 5000);
-    }
-
-    // ===================================================================
-    // COMMERCIAL VIDEO SHOWCASE THEATER LOGIC
-    // ===================================================================
-    const COMMERCIAL_VIDEOS = [
-      {
-        brand: 'APPLE OFFICIAL',
-        model: 'iPhone 16 Pro Max',
-        title: 'Cinematic Slow Motion | iPhone 16 Pro | Apple',
-        subtitle: 'Official Commercial Premiere · 4K Dolby Vision 120fps',
-        youtubeId: 'wWwGSavIBl4',
-        ambientColor: 'rgba(214, 180, 142, 0.55)',
-        posterImg: 'https://i.ytimg.com/vi/wWwGSavIBl4/maxresdefault.jpg',
-        localFallback: 'img/wallpapers/wp-iphone16.jpg',
-        deviceImg: 'img/phones/iphone-16-pro-max.png',
-        currentPrice: '$1,294.92',
-        oldPrice: '$1,399.00',
-        rielPrice: '~៛5,309,000 KHR (ABA Pay KHQR)',
-        viewers: '1,842',
-        productId: 'iphone-16-pro-max',
-        features: [
-          { icon: '⚡', title: 'A18 Pro 3nm', desc: 'Apple Intelligence' },
-          { icon: '📷', title: '48MP Fusion', desc: '4K 120fps Dolby' },
-          { icon: '🛡️', title: 'Titanium Grade 5', desc: '6.9" ProMotion' },
-          { icon: '🎁', title: 'Free 45W Charger', desc: 'ថែម Case + ស្រ្គីន' }
-        ]
-      },
-      {
-        brand: 'SAMSUNG OFFICIAL',
-        model: 'Galaxy S24 Ultra',
-        title: 'Galaxy S24 Ultra Official Film: Interpreter | Samsung',
-        subtitle: 'Official Commercial Premiere · 200MP & Galaxy AI',
-        youtubeId: '-yoCeg3SkUQ',
-        ambientColor: 'rgba(99, 102, 241, 0.55)',
-        posterImg: 'https://i.ytimg.com/vi/-yoCeg3SkUQ/hqdefault.jpg',
-        localFallback: 'img/wallpapers/wp-galaxy-s24.jpg',
-        deviceImg: 'img/phones/galaxy-s24-ultra.png',
-        currentPrice: '$1,299.00',
-        oldPrice: '$1,399.00',
-        rielPrice: '~៛5,325,000 KHR (ABA Pay KHQR)',
-        viewers: '1,620',
-        productId: 'galaxy-s24-ultra',
-        features: [
-          { icon: '🧠', title: 'Galaxy AI Features', desc: 'Live Call Translate' },
-          { icon: '📷', title: '200MP Quad Zoom', desc: 'Nightography 100x' },
-          { icon: '✒️', title: 'Integrated S-Pen', desc: 'សរសេរគូរដូចប៊ិចពិត' },
-          { icon: '🎁', title: 'Free 45W Charger', desc: 'ធានា ២ ឆ្នាំផ្លូវការ' }
-        ]
-      },
-      {
-        brand: 'GOOGLE OFFICIAL',
-        model: 'Pixel 9 Pro XL',
-        title: 'Meet Pixel 9 and Pixel 9 Pro With Gemini | Google AI',
-        subtitle: 'Official Commercial Premiere · Tensor G4 & Gemini AI',
-        youtubeId: 'MsAPm8TCFhU',
-        ambientColor: 'rgba(6, 182, 212, 0.55)',
-        posterImg: 'https://i.ytimg.com/vi/MsAPm8TCFhU/maxresdefault.jpg',
-        localFallback: 'img/wallpapers/wp-pixel9.jpg',
-        deviceImg: 'img/phones/pixel-9-pro-xl.png',
-        currentPrice: '$1,099.00',
-        oldPrice: '$1,199.00',
-        rielPrice: '~៛4,505,000 KHR (ABA Pay KHQR)',
-        viewers: '1,385',
-        productId: 'pixel-9-pro-xl',
-        features: [
-          { icon: '🤖', title: 'Gemini Nano AI', desc: 'Magic Editor & Best Take' },
-          { icon: '📸', title: 'Triple Studio Cam', desc: '50MP + 48MP 5x Zoom' },
-          { icon: '✨', title: 'Super Actua Screen', desc: '3000 Nits 120Hz LTPO' },
-          { icon: '🎁', title: 'Free 30W Charger', desc: 'អាប់ដេត Android 7 ឆ្នាំ' }
-        ]
-      },
-      {
-        brand: 'XIAOMI OFFICIAL',
-        model: 'Xiaomi 14 Ultra',
-        title: 'Xiaomi 14 Ultra | Film by Adam Bernstein',
-        subtitle: 'Official Commercial Premiere · Leica Summilux Optics',
-        youtubeId: 'gjJQLFwoNTc',
-        ambientColor: 'rgba(239, 68, 68, 0.55)',
-        posterImg: 'https://i.ytimg.com/vi/gjJQLFwoNTc/maxresdefault.jpg',
-        localFallback: 'img/wallpapers/wp-xiaomi14.jpg',
-        deviceImg: 'img/phones/xiaomi-14-ultra.png',
-        currentPrice: '$1,249.00',
-        oldPrice: '$1,349.00',
-        rielPrice: '~៛5,120,000 KHR (ABA Pay KHQR)',
-        viewers: '1,510',
-        productId: 'xiaomi-14-ultra',
-        features: [
-          { icon: '🔴', title: 'Leica Quad Camera', desc: '1" LYT-900 Variable F' },
-          { icon: '⚡', title: 'Snapdragon 8 Gen 3', desc: 'IceLoop Dual Cooling' },
-          { icon: '🔋', title: '90W HyperCharge', desc: 'ពេញ 100% ក្នុង 33 នាទី' },
-          { icon: '🎁', title: 'Photography Grip Kit', desc: 'ធានាផ្លូវការ ២ ឆ្នាំ' }
-        ]
-      }
-    ];
-
-    let currentVideoIndex = 0;
-    let isVideoPlaying = false;
-    let isCinemaMode = false;
-
-    function switchCommercialVideo(index) {
-      currentVideoIndex = index;
-      const data = COMMERCIAL_VIDEOS[index];
-
-      // Update tabs
-      document.querySelectorAll('.video-tab-btn').forEach((btn, i) => {
-        btn.classList.toggle('active', i === index);
-      });
-
-      // Update Top Chrome Bar
-      document.getElementById('video-brand-tag').textContent = data.brand;
-      document.getElementById('video-viewers-count').textContent = data.viewers;
-
-      // Update YouTube Direct Link
-      const ytLink = document.getElementById('youtube-direct-link');
-      if (ytLink) {
-        ytLink.href = `https://www.youtube.com/watch?v=${data.youtubeId}`;
+        heroAutoCycleTimer = setInterval(() => {
+          const next = (currentHeroIndex + 1) % HERO_MODELS.length;
+          window.switchHeroPhone(next);
+        }, 5000);
       }
 
-      // Update Ambient Backlight
-      document.getElementById('video-ambient-glow').style.background = data.ambientColor;
+      // ===================================================================
+      // COMMERCIAL VIDEO SHOWCASE THEATER LOGIC
+      // ===================================================================
+      const COMMERCIAL_VIDEOS = [
+        {
+          brand: "APPLE OFFICIAL",
+          model: "iPhone 16 Pro Max",
+          title: "Cinematic Slow Motion | iPhone 16 Pro | Apple",
+          subtitle: "Official Commercial Premiere · 4K Dolby Vision 120fps",
+          youtubeId: "wWwGSavIBl4",
+          ambientColor: "rgba(214, 180, 142, 0.55)",
+          posterImg: "https://i.ytimg.com/vi/wWwGSavIBl4/maxresdefault.jpg",
+          localFallback: "wp-iphone16.jpg",
+          deviceImg: "iphone-16-pro-max.png",
+          currentPrice: "$1,294.92",
+          oldPrice: "$1,399.00",
+          rielPrice: "~៛5,309,000 KHR (ABA Pay KHQR)",
+          viewers: "1,842",
+          productId: "iphone-16-pro-max",
+          features: [
+            { icon: "⚡", title: "A18 Pro 3nm", desc: "Apple Intelligence" },
+            { icon: "📷", title: "48MP Fusion", desc: "4K 120fps Dolby" },
+            { icon: "🛡️", title: "Titanium Grade 5", desc: '6.9" ProMotion' },
+            {
+              icon: "🎁",
+              title: "Free 45W Charger",
+              desc: "ថែម Case + ស្រ្គីន",
+            },
+          ],
+        },
+        {
+          brand: "SAMSUNG OFFICIAL",
+          model: "Galaxy S24 Ultra",
+          title: "Galaxy S24 Ultra Official Film: Interpreter | Samsung",
+          subtitle: "Official Commercial Premiere · 200MP & Galaxy AI",
+          youtubeId: "-yoCeg3SkUQ",
+          ambientColor: "rgba(99, 102, 241, 0.55)",
+          posterImg: "https://i.ytimg.com/vi/-yoCeg3SkUQ/hqdefault.jpg",
+          localFallback: "wp-galaxy-s24.jpg",
+          deviceImg: "galaxy-s24-ultra.png",
+          currentPrice: "$1,299.00",
+          oldPrice: "$1,399.00",
+          rielPrice: "~៛5,325,000 KHR (ABA Pay KHQR)",
+          viewers: "1,620",
+          productId: "galaxy-s24-ultra",
+          features: [
+            {
+              icon: "🧠",
+              title: "Galaxy AI Features",
+              desc: "Live Call Translate",
+            },
+            { icon: "📷", title: "200MP Quad Zoom", desc: "Nightography 100x" },
+            {
+              icon: "✒️",
+              title: "Integrated S-Pen",
+              desc: "សរសេរគូរដូចប៊ិចពិត",
+            },
+            {
+              icon: "🎁",
+              title: "Free 45W Charger",
+              desc: "ធានា ២ ឆ្នាំផ្លូវការ",
+            },
+          ],
+        },
+        {
+          brand: "GOOGLE OFFICIAL",
+          model: "Pixel 9 Pro XL",
+          title: "Meet Pixel 9 and Pixel 9 Pro With Gemini | Google AI",
+          subtitle: "Official Commercial Premiere · Tensor G4 & Gemini AI",
+          youtubeId: "MsAPm8TCFhU",
+          ambientColor: "rgba(6, 182, 212, 0.55)",
+          posterImg: "https://i.ytimg.com/vi/MsAPm8TCFhU/maxresdefault.jpg",
+          localFallback: "wp-pixel9.jpg",
+          deviceImg: "pixel-9-pro-xl.png",
+          currentPrice: "$1,099.00",
+          oldPrice: "$1,199.00",
+          rielPrice: "~៛4,505,000 KHR (ABA Pay KHQR)",
+          viewers: "1,385",
+          productId: "pixel-9-pro-xl",
+          features: [
+            {
+              icon: "🤖",
+              title: "Gemini Nano AI",
+              desc: "Magic Editor & Best Take",
+            },
+            {
+              icon: "📸",
+              title: "Triple Studio Cam",
+              desc: "50MP + 48MP 5x Zoom",
+            },
+            {
+              icon: "✨",
+              title: "Super Actua Screen",
+              desc: "3000 Nits 120Hz LTPO",
+            },
+            {
+              icon: "🎁",
+              title: "Free 30W Charger",
+              desc: "អាប់ដេត Android 7 ឆ្នាំ",
+            },
+          ],
+        },
+        {
+          brand: "XIAOMI OFFICIAL",
+          model: "Xiaomi 14 Ultra",
+          title: "Xiaomi 14 Ultra | Film by Adam Bernstein",
+          subtitle: "Official Commercial Premiere · Leica Summilux Optics",
+          youtubeId: "gjJQLFwoNTc",
+          ambientColor: "rgba(239, 68, 68, 0.55)",
+          posterImg: "https://i.ytimg.com/vi/gjJQLFwoNTc/maxresdefault.jpg",
+          localFallback: "wp-xiaomi14.jpg",
+          deviceImg: "xiaomi-14-ultra.png",
+          currentPrice: "$1,249.00",
+          oldPrice: "$1,349.00",
+          rielPrice: "~៛5,120,000 KHR (ABA Pay KHQR)",
+          viewers: "1,510",
+          productId: "xiaomi-14-ultra",
+          features: [
+            {
+              icon: "🔴",
+              title: "Leica Quad Camera",
+              desc: '1" LYT-900 Variable F',
+            },
+            {
+              icon: "⚡",
+              title: "Snapdragon 8 Gen 3",
+              desc: "IceLoop Dual Cooling",
+            },
+            {
+              icon: "🔋",
+              title: "90W HyperCharge",
+              desc: "ពេញ 100% ក្នុង 33 នាទី",
+            },
+            {
+              icon: "🎁",
+              title: "Photography Grip Kit",
+              desc: "ធានាផ្លូវការ ២ ឆ្នាំ",
+            },
+          ],
+        },
+      ];
 
-      // Update Poster Overlay
-      const posterImg = document.getElementById('video-poster-img');
-      posterImg.src = data.posterImg;
-      posterImg.onerror = () => { posterImg.src = data.localFallback; };
+      let currentVideoIndex = 0;
+      let isVideoPlaying = false;
+      let isCinemaMode = false;
 
-      document.getElementById('video-caption-title').textContent = data.title;
-      document.getElementById('video-caption-sub').textContent = data.subtitle;
-      document.getElementById('video-ctrl-title').textContent = `${data.model} · Official Commercial`;
+      function switchCommercialVideo(index) {
+        currentVideoIndex = index;
+        const data = COMMERCIAL_VIDEOS[index];
 
-      // Reset Video Viewport state
-      const overlay = document.getElementById('video-poster-overlay');
-      const holder = document.getElementById('video-iframe-holder');
+        // Update tabs
+        document.querySelectorAll(".video-tab-btn").forEach((btn, i) => {
+          btn.classList.toggle("active", i === index);
+        });
 
-      if (isVideoPlaying) {
-        holder.innerHTML = `<iframe src="https://www.youtube.com/embed/${data.youtubeId}?autoplay=1&mute=0&rel=0&modestbranding=1&playsinline=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
-        overlay.classList.add('hidden');
-      } else {
-        holder.innerHTML = '';
-        overlay.classList.remove('hidden');
-      }
+        // Update Top Chrome Bar
+        document.getElementById("video-brand-tag").textContent = data.brand;
+        document.getElementById("video-viewers-count").textContent =
+          data.viewers;
 
-      // Update Promotion Card
-      document.getElementById('promo-brand-tag').textContent = `${data.brand} · 100% SEALED`;
-      document.getElementById('promo-device-name').textContent = data.model;
-      document.getElementById('promo-device-img').src = data.deviceImg;
-      document.getElementById('promo-current-price').textContent = data.currentPrice;
-      document.getElementById('promo-old-price').textContent = data.oldPrice;
-      document.getElementById('promo-riel-price').textContent = data.rielPrice;
+        // Update YouTube Direct Link
+        const ytLink = document.getElementById("youtube-direct-link");
+        if (ytLink) {
+          ytLink.href = `https://www.youtube.com/watch?v=${data.youtubeId}`;
+        }
 
-      // Update Features Grid
-      const featuresContainer = document.getElementById('promo-features-list');
-      if (featuresContainer) {
-        featuresContainer.innerHTML = data.features.map(f => `
+        // Update Ambient Backlight
+        document.getElementById("video-ambient-glow").style.background =
+          data.ambientColor;
+
+        // Update Poster Overlay
+        const posterImg = document.getElementById("video-poster-img");
+        posterImg.src = data.posterImg;
+        posterImg.onerror = () => {
+          posterImg.src = data.localFallback;
+        };
+
+        document.getElementById("video-caption-title").textContent = data.title;
+        document.getElementById("video-caption-sub").textContent =
+          data.subtitle;
+        document.getElementById("video-ctrl-title").textContent =
+          `${data.model} · Official Commercial`;
+
+        // Reset Video Viewport state
+        const overlay = document.getElementById("video-poster-overlay");
+        const holder = document.getElementById("video-iframe-holder");
+
+        if (isVideoPlaying) {
+          holder.innerHTML = `<iframe src="https://www.youtube.com/embed/${data.youtubeId}?autoplay=1&mute=0&rel=0&modestbranding=1&playsinline=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+          overlay.classList.add("hidden");
+        } else {
+          holder.innerHTML = "";
+          overlay.classList.remove("hidden");
+        }
+
+        // Update Promotion Card
+        document.getElementById("promo-brand-tag").textContent =
+          `${data.brand} · 100% SEALED`;
+        document.getElementById("promo-device-name").textContent = data.model;
+        document.getElementById("promo-device-img").src = data.deviceImg;
+        document.getElementById("promo-current-price").textContent =
+          data.currentPrice;
+        document.getElementById("promo-old-price").textContent = data.oldPrice;
+        document.getElementById("promo-riel-price").textContent =
+          data.rielPrice;
+
+        // Update Features Grid
+        const featuresContainer = document.getElementById(
+          "promo-features-list",
+        );
+        if (featuresContainer) {
+          featuresContainer.innerHTML = data.features
+            .map(
+              (f) => `
           <div class="feature-chip">
             <span class="feature-chip-icon">${f.icon}</span>
             <div class="feature-chip-text">
@@ -1140,121 +1806,148 @@
               <span>${f.desc}</span>
             </div>
           </div>
-        `).join('');
-      }
-    }
-
-    function startCommercialPlay() {
-      isVideoPlaying = true;
-      const data = COMMERCIAL_VIDEOS[currentVideoIndex];
-      const overlay = document.getElementById('video-poster-overlay');
-      const holder = document.getElementById('video-iframe-holder');
-
-      overlay.classList.add('hidden');
-      holder.innerHTML = `<iframe src="https://www.youtube.com/embed/${data.youtubeId}?autoplay=1&mute=0&rel=0&modestbranding=1&playsinline=1" title="${data.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
-      
-      const closeBtn = document.getElementById('ctrl-btn-close');
-      if (closeBtn) closeBtn.style.display = 'inline-flex';
-
-      PhoneShop.showToast(`កំពុងចាក់វីដេអូពាណិជ្ជកម្ម ${data.model} 4K HDR...`, 'info');
-    }
-
-    function replayCommercial() {
-      const data = COMMERCIAL_VIDEOS[currentVideoIndex];
-      const holder = document.getElementById('video-iframe-holder');
-      holder.innerHTML = `<iframe src="https://www.youtube.com/embed/${data.youtubeId}?autoplay=1&mute=0&rel=0&modestbranding=1&playsinline=1" title="${data.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
-      document.getElementById('video-poster-overlay').classList.add('hidden');
-      isVideoPlaying = true;
-      const closeBtn = document.getElementById('ctrl-btn-close');
-      if (closeBtn) closeBtn.style.display = 'inline-flex';
-    }
-
-    function closeCommercialVideo() {
-      isVideoPlaying = false;
-      const holder = document.getElementById('video-iframe-holder');
-      holder.innerHTML = '';
-      document.getElementById('video-poster-overlay').classList.remove('hidden');
-      const closeBtn = document.getElementById('ctrl-btn-close');
-      if (closeBtn) closeBtn.style.display = 'none';
-      PhoneShop.showToast('បានបិទវីដេអូពាណិជ្ជកម្ម', 'info');
-    }
-
-    function toggleCinemaMode() {
-      isCinemaMode = !isCinemaMode;
-      document.body.classList.toggle('cinema-mode-active', isCinemaMode);
-      const btn = document.getElementById('cinema-mode-btn');
-      if (btn) {
-        btn.innerHTML = isCinemaMode 
-          ? '<span>☀️</span> <span class="cinema-btn-text">Exit Cinema</span>' 
-          : '<span>🌙</span> <span class="cinema-btn-text">Cinema Mode</span>';
-      }
-      PhoneShop.showToast(isCinemaMode ? 'បានបើកមុខងារ Cinema Mode 🎬' : 'បានបិទមុខងារ Cinema Mode', 'info');
-    }
-
-    function openFullscreenVideo() {
-      const frame = document.getElementById('video-viewport');
-      if (frame.requestFullscreen) {
-        frame.requestFullscreen();
-      } else if (frame.webkitRequestFullscreen) {
-        frame.webkitRequestFullscreen();
-      }
-    }
-
-    function copyPromoCode(code) {
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(code).then(() => {
-          PhoneShop.showToast(`បាន Copy Coupon Code: "${code}" រួចរាល់! បញ្ចុះតម្លៃ $100 ភ្លាមៗ`, 'success');
-          const copyBtn = document.getElementById('coupon-copy-btn');
-          if (copyBtn) {
-            copyBtn.innerHTML = '<span>✓ Copied!</span>';
-            setTimeout(() => { copyBtn.innerHTML = '<span>📋 Copy Code</span>'; }, 2500);
-          }
-        }).catch(() => {
-          PhoneShop.showToast(`Coupon Code: ${code}`, 'info');
-        });
-      } else {
-        PhoneShop.showToast(`Coupon Code: ${code}`, 'info');
-      }
-    }
-
-    function orderPromoPhone() {
-      const data = COMMERCIAL_VIDEOS[currentVideoIndex];
-      if (window.PhoneShop && window.PhoneShop.applyPromo) {
-        window.PhoneShop.applyPromo('VIDEO100');
-      }
-      if (window.PhoneShop && window.PhoneShop.addToCart) {
-        window.PhoneShop.addToCart(data.productId, 1);
-        PhoneShop.showToast(`បានបន្ថែម ${data.model} ទៅក្នុងកន្ត្រក និងបានបញ្ចុះតម្លៃ $100 (VIDEO100)!`, 'success');
-        setTimeout(() => {
-          window.location.href = 'checkout.html';
-        }, 600);
-      } else {
-        window.location.href = 'checkout.html';
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      // Initialize Hero Phone Features
-      updateHeroPhoneClock();
-      setInterval(updateHeroPhoneClock, 1000);
-      initHeroParallax();
-      startHeroAutoCycle();
-
-      // Initialize Commercial Video Showcase
-      switchCommercialVideo(0);
-
-      // Render Featured Flagships
-      const container = document.getElementById('featured-products-container');
-      if (container && window.PhoneShop) {
-        const featured = window.PhoneShop.products.slice(0, 8);
-        container.innerHTML = featured.map(p => createProductCardHTML(p)).join('');
+        `,
+            )
+            .join("");
+        }
       }
 
-      // Initialize Flash Sale Countdown
-      if (window.PhoneShop && window.PhoneShop.initCountdown) {
-        window.PhoneShop.initCountdown('home-countdown', 48);
+      function startCommercialPlay() {
+        isVideoPlaying = true;
+        const data = COMMERCIAL_VIDEOS[currentVideoIndex];
+        const overlay = document.getElementById("video-poster-overlay");
+        const holder = document.getElementById("video-iframe-holder");
+
+        overlay.classList.add("hidden");
+        holder.innerHTML = `<iframe src="https://www.youtube.com/embed/${data.youtubeId}?autoplay=1&mute=0&rel=0&modestbranding=1&playsinline=1" title="${data.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+
+        const closeBtn = document.getElementById("ctrl-btn-close");
+        if (closeBtn) closeBtn.style.display = "inline-flex";
+
+        PhoneShop.showToast(
+          `កំពុងចាក់វីដេអូពាណិជ្ជកម្ម ${data.model} 4K HDR...`,
+          "info",
+        );
       }
-    });
-  </script>
-</body>
+
+      function replayCommercial() {
+        const data = COMMERCIAL_VIDEOS[currentVideoIndex];
+        const holder = document.getElementById("video-iframe-holder");
+        holder.innerHTML = `<iframe src="https://www.youtube.com/embed/${data.youtubeId}?autoplay=1&mute=0&rel=0&modestbranding=1&playsinline=1" title="${data.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+        document.getElementById("video-poster-overlay").classList.add("hidden");
+        isVideoPlaying = true;
+        const closeBtn = document.getElementById("ctrl-btn-close");
+        if (closeBtn) closeBtn.style.display = "inline-flex";
+      }
+
+      function closeCommercialVideo() {
+        isVideoPlaying = false;
+        const holder = document.getElementById("video-iframe-holder");
+        holder.innerHTML = "";
+        document
+          .getElementById("video-poster-overlay")
+          .classList.remove("hidden");
+        const closeBtn = document.getElementById("ctrl-btn-close");
+        if (closeBtn) closeBtn.style.display = "none";
+        PhoneShop.showToast("បានបិទវីដេអូពាណិជ្ជកម្ម", "info");
+      }
+
+      function toggleCinemaMode() {
+        isCinemaMode = !isCinemaMode;
+        document.body.classList.toggle("cinema-mode-active", isCinemaMode);
+        const btn = document.getElementById("cinema-mode-btn");
+        if (btn) {
+          btn.innerHTML = isCinemaMode
+            ? '<span>☀️</span> <span class="cinema-btn-text">Exit Cinema</span>'
+            : '<span>🌙</span> <span class="cinema-btn-text">Cinema Mode</span>';
+        }
+        PhoneShop.showToast(
+          isCinemaMode
+            ? "បានបើកមុខងារ Cinema Mode 🎬"
+            : "បានបិទមុខងារ Cinema Mode",
+          "info",
+        );
+      }
+
+      function openFullscreenVideo() {
+        const frame = document.getElementById("video-viewport");
+        if (frame.requestFullscreen) {
+          frame.requestFullscreen();
+        } else if (frame.webkitRequestFullscreen) {
+          frame.webkitRequestFullscreen();
+        }
+      }
+
+      function copyPromoCode(code) {
+        if (navigator.clipboard) {
+          navigator.clipboard
+            .writeText(code)
+            .then(() => {
+              PhoneShop.showToast(
+                `បាន Copy Coupon Code: "${code}" រួចរាល់! បញ្ចុះតម្លៃ $100 ភ្លាមៗ`,
+                "success",
+              );
+              const copyBtn = document.getElementById("coupon-copy-btn");
+              if (copyBtn) {
+                copyBtn.innerHTML = "<span>✓ Copied!</span>";
+                setTimeout(() => {
+                  copyBtn.innerHTML = "<span>📋 Copy Code</span>";
+                }, 2500);
+              }
+            })
+            .catch(() => {
+              PhoneShop.showToast(`Coupon Code: ${code}`, "info");
+            });
+        } else {
+          PhoneShop.showToast(`Coupon Code: ${code}`, "info");
+        }
+      }
+
+      function orderPromoPhone() {
+        const data = COMMERCIAL_VIDEOS[currentVideoIndex];
+        if (window.PhoneShop && window.PhoneShop.applyPromo) {
+          window.PhoneShop.applyPromo("VIDEO100");
+        }
+        if (window.PhoneShop && window.PhoneShop.addToCart) {
+          window.PhoneShop.addToCart(data.productId, 1);
+          PhoneShop.showToast(
+            `បានបន្ថែម ${data.model} ទៅក្នុងកន្ត្រក និងបានបញ្ចុះតម្លៃ $100 (VIDEO100)!`,
+            "success",
+          );
+          setTimeout(() => {
+            window.location.href = "checkout.html";
+          }, 600);
+        } else {
+          window.location.href = "checkout.html";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Initialize Hero Phone Features
+        updateHeroPhoneClock();
+        setInterval(updateHeroPhoneClock, 1000);
+        initHeroParallax();
+        startHeroAutoCycle();
+
+        // Initialize Commercial Video Showcase
+        switchCommercialVideo(0);
+
+        // Render Featured Flagships
+        const container = document.getElementById(
+          "featured-products-container",
+        );
+        if (container && window.PhoneShop) {
+          const featured = window.PhoneShop.products.slice(0, 8);
+          container.innerHTML = featured
+            .map((p) => createProductCardHTML(p))
+            .join("");
+        }
+
+        // Initialize Flash Sale Countdown
+        if (window.PhoneShop && window.PhoneShop.initCountdown) {
+          window.PhoneShop.initCountdown("home-countdown", 48);
+        }
+      });
+    </script>
+  </body>
 </html>
